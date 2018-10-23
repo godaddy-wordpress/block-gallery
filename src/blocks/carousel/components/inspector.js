@@ -28,21 +28,6 @@ class Inspector extends Component {
 		this.setAutoPlaySpeedTo = this.setAutoPlaySpeedTo.bind( this );
 	}
 
-	componentDidUpdate( prevProps ) {
-		if ( this.props.attributes.gutter <= 0 ) {
-			this.props.setAttributes( {
-				radius: 0,
-			} );
-		}
-
-		if ( this.props.attributes.gridSize == 'xlrg' && prevProps.attributes.align == undefined ) {
-			this.props.setAttributes( {
-				gutter: 0,
-				gutterMobile: 0,
-			} );
-		}
-	}
-
 	setRadiusTo( value ) {
 		this.props.setAttributes( { radius: value } );
 	}
