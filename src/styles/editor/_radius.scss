@@ -16,6 +16,11 @@
 		.components-blockgallery-gallery-item__upload.components-button {
 			border-radius: #{ $i }px;
 		}
+
+		figcaption {
+			border-bottom-right-radius: #{ $i - 4}px !important;
+			border-bottom-left-radius: #{ $i - 4 }px !important;
+		}
 	}
 }
 
