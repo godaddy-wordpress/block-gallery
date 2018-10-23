@@ -1,0 +1,13 @@
+.wp-block-blockgallery-carousel {
+	height: 100%;
+	position: relative;
+
+	ul {
+		padding: 0 !important;
+		list-style: none !important;
+	}
+
+	.blockgallery--figure {
+		height: 100%;
+	}
+}

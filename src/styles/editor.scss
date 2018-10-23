@@ -1,0 +1,35 @@
+// Core Gutenberg modules
+@import "editor/core/colors";
+@import "editor/core/variables";
+@import "editor/core/breakpoints";
+@import "editor/core/mixins";
+@import "editor/core/animations";
+
+// Our modules
+@import "editor/gallery-item";
+@import "editor/remove-gallery-item-button";
+@import "editor/gallery-upload";
+@import "editor/inspector";
+@import "editor/inspector-tabs";
+@import "editor/radius";
+@import "editor/is-background-transient";
+@import "editor/flickity-arrows";
+@import "editor/notices";
+
+.components-toolbar {
+
+	.components-dropdown-menu {
+		padding: 0;
+	}
+}
+
+.blockgallery {
+
+	.components-resizable-box__handle {
+		z-index: 9999;
+	}
+}
+
+.components-blockgallery-inspector__lightbox {
+	display: none !important;
+}

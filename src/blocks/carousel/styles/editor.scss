@@ -1,0 +1,27 @@
+.editor-block-list__block[data-type="blockgallery/carousel"] {
+
+	// Fix fullwidth alignment bug where gutters would not display.
+	&.editor-block-list__block[data-align="full"] > .editor-block-list__block-edit figure {
+		width: auto;
+	}
+
+	// Fullwidth upload image button.
+	.blockgallery--item-uploader {
+
+		.components-form-file-upload,
+		.components-blockgallery-gallery-item__upload {
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	// Dots.
+	.has-no-dots .flickity-page-dots {
+		display: none !important;
+	}
+
+	.flickity-enabled {
+		position: inherit;
+		height: 100% !important;
+	}
+}

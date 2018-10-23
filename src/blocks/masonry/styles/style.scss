@@ -1,0 +1,34 @@
+.wp-block-blockgallery-masonry {
+	position: relative;
+
+	ul {
+		padding: 0 !important;
+		list-style: none !important;
+	}
+
+	li {
+		margin: 0 !important;
+	}
+
+	img {
+		vertical-align: bottom;
+	}
+
+	figcaption {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		max-height: 100%;
+		overflow: auto;
+		padding: 30px 10px 10px;
+		// color: $white;
+		opacity: 0.9;
+		text-align: center;
+		font-size: 13px;
+		background: linear-gradient(0deg, rgba($color: $black, $alpha: 0.7) 0, rgba($color: $black, $alpha: 0.3) 50%, transparent);
+
+		img {
+			display: inline;
+		}
+	}
+}

@@ -1,0 +1,48 @@
+.components-blockgallery-inspector__tabs {
+	margin-bottom: 1em;
+	position: relative;
+
+	&-item {
+		appearance: none;
+		background: $white;
+		border-radius: 4px;
+		border: 2px solid #6c7781;
+		color: #6c7781;
+		height: 22px;
+		line-height: 1;
+		padding-left: 9px;
+		padding-right: 9px;
+
+		&.is-active {
+			background: #6c7781;
+			color: $white;
+			z-index: 1;
+		}
+
+		svg {
+			height: 14px;
+			width: 14px;
+		}
+
+		&--desktop {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+
+		&--mobile {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			margin-left: -4px;
+		}
+	}
+
+	.components-tab-panel__tabs {
+		position: absolute;
+		right: -1px;
+		top: -2px;
+	}
+
+	.components-base-control__label {
+		margin-bottom: 8px;
+	}
+}

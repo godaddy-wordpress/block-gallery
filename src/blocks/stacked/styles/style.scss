@@ -1,0 +1,28 @@
+.wp-block-blockgallery-stacked {
+	position: relative;
+	text-align: center;
+
+	&:not(.has-caption-color) {
+		color: #333 !important;
+	}
+
+	.blockgallery--item {
+		margin-left: auto;
+		margin-right: auto;
+
+		&:last-child figure {
+			margin-bottom: 0 !important;
+		}
+	}
+
+	.blockgallery--caption {
+		padding-bottom: 1em;
+		margin-top: 1em;
+		text-align: center;
+		font-size: 13px;
+	}
+
+	&.has-fullwidth-images img {
+		width: 100%;
+	}
+}

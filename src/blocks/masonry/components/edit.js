@@ -1,0 +1,238 @@
+/**
+ * External dependencies
+ */
+import classnames from 'classnames';
+import filter from 'lodash/filter';
+import Masonry from 'react-masonry-component';
+
+/**
+ * Internal dependencies
+ */
+import GalleryImage from '../../../components/gallery-image';
+import GalleryPlaceholder from '../../../components/gallery-placeholder';
+import GalleryDropZone from '../../../components/gallery-dropzone';
+import GalleryUpload from '../../../components/gallery-upload';
+import Inspector from './inspector';
+import { BackgroundStyles } from '../../../components/background/';
+import { blockName, blockIcon } from '../'
+import { GlobalClasses, GlobalToolbar, GlobalStyles } from '../../../components/global/';
+
+/**
+ * WordPress dependencies
+ */
+const { __, sprintf } = wp.i18n;
+const { Component, Fragment } = wp.element;
+const { compose } = wp.compose;
+const { withSelect } = wp.data;
+const { withNotices } = wp.components;
+const { withColors } = wp.editor;
+
+/**
+ * Block consts
+ */
+const masonryOptions = {
+	transitionDuration: 0,
+	percentPosition: true,
+};
+
+/**
+ * Block edit function
+ */
+class Edit extends Component {
+	constructor() {
+		super( ...arguments );
+
+		this.onSelectImage = this.onSelectImage.bind( this );
+		this.onRemoveImage = this.onRemoveImage.bind( this );
+		this.setImageAttributes = this.setImageAttributes.bind( this );
+
+		this.state = {
+			selectedImage: null,
+		};
+	}
+
+	componentDidMount() {
+
+		if ( this.props.wideControlsEnabled == true && ! this.props.attributes.align && this.props.attributes.gridSize == 'xlrg' ) {
+			this.props.setAttributes( {
+				align: 'wide',
+				gridSize: 'lrg'
+			} );
+		}
+	}
+
+	componentDidUpdate( prevProps ) {
+		// Deselect images when deselecting the block.
+		if ( ! this.props.isSelected && prevProps.isSelected ) {
+			this.setState( {
+				selectedImage: null,
+				captionSelected: false,
+			} );
+		}
+	}
+
+	onSelectImage( index ) {
+		return () => {
+			if ( this.state.selectedImage !== index ) {
+				this.setState( {
+					selectedImage: index,
+				} );
+			}
+		};
+	}
+
+	onRemoveImage( index ) {
+		return () => {
+			const images = filter( this.props.attributes.images, ( img, i ) => index !== i );
+			const { gridSize } = this.props.attributes;
+			this.setState( { selectedImage: null } );
+			this.props.setAttributes( {
+				images,
+			} );
+		};
+	}
+
+	setImageAttributes( index, attributes ) {
+		const { attributes: { images }, setAttributes } = this.props;
+		if ( ! images[ index ] ) {
+			return;
+		}
+		setAttributes( {
+			images: [
+				...images.slice( 0, index ),
+				{
+					...images[ index ],
+					...attributes,
+				},
+				...images.slice( index + 1 ),
+			],
+		} );
+	}
+
+	render() {
+		const {
+			attributes,
+			backgroundColor,
+			className,
+			editorSidebarOpened,
+			isSelected,
+			noticeOperations,
+			noticeUI,
+			pluginSidebarOpened,
+			publishSidebarOpened,
+			setAttributes,
+			captionColor,
+		} = this.props;
+
+		const {
+			align,
+			customBackgroundColor,
+			gridSize,
+			gutter,
+			gutterMobile,
+			images,
+			linkTo,
+		} = attributes;
+
+		const dropZone = (
+			<GalleryDropZone
+				{ ...this.props }
+				label={ sprintf( __( 'Drop to add to the %s gallery' ), blockName.toLowerCase() ) }
+			/>
+		);
+
+		const sidebarIsOpened = editorSidebarOpened || pluginSidebarOpened || publishSidebarOpened;
+
+		const wrapperClasses = classnames(
+			className,
+			...GlobalClasses( attributes ),
+			sidebarIsOpened, {
+				[ `align${ align }` ] : align,
+				[ `has-gutter` ] : gutter > 0,
+			}
+		);
+
+		const wrapperStyles = {
+			...BackgroundStyles( attributes ),
+		};
+
+		const masonryClasses = classnames(
+			`has-grid-${ gridSize }`, {
+				[ `has-gutter-${ gutter }` ] : gutter > 0,
+				[ `has-gutter-mobile-${ gutterMobile }` ] : gutterMobile > 0,
+			}
+		);
+
+		const masonryStyles = {
+			color: captionColor.color,
+		};
+
+		if ( images.length === 0 ) {
+			return (
+				<GalleryPlaceholder
+					{ ...this.props }
+					label={ sprintf( __( '%s Gallery' ), blockName ) }
+					icon={ blockIcon }
+				/>
+			);
+		}
+
+		return (
+			<Fragment>
+				<GlobalToolbar
+					{ ...this.props }
+				/>
+				<Inspector
+					{ ...this.props }
+				/>
+				{ noticeUI }
+				<div
+					className={ wrapperClasses }
+					style={ wrapperStyles }
+				>
+					{ dropZone }
+					<Masonry
+						elementType={ 'ul' }
+						className={ masonryClasses }
+						style={ masonryStyles }
+						options={ masonryOptions }
+						disableImagesLoaded={ false }
+						updateOnEachImageLoad={ false }
+					>
+						{ images.map( ( img, index ) => (
+							<li className="blockgallery--item" key={ img.id || img.url }>
+								<GalleryImage
+									url={ img.url }
+									alt={ img.alt }
+									id={ img.id }
+									isSelected={ isSelected && this.state.selectedImage === index }
+									onRemove={ this.onRemoveImage( index ) }
+									onSelect={ this.onSelectImage( index ) }
+									setAttributes={ ( attrs ) => this.setImageAttributes( index, attrs ) }
+									caption={ img.caption }
+									supportsCaption={ true }
+								/>
+							</li>
+						) ) }
+						{ isSelected && (
+							<GalleryUpload
+								{ ...this.props }
+							/>
+						) }
+					</Masonry>
+				</div>
+			</Fragment>
+		);
+	}
+}
+
+export default compose( [
+	withSelect( ( select ) => ( {
+		editorSidebarOpened: select( 'core/edit-post' ).isEditorSidebarOpened(),
+		pluginSidebarOpened: select( 'core/edit-post' ).isPluginSidebarOpened(),
+		publishSidebarOpened: select( 'core/edit-post' ).isPublishSidebarOpened(),
+		wideControlsEnabled: select( 'core/editor' ).getEditorSettings().alignWide,
+	} ) ),
+	withColors( { backgroundColor : 'background-color', captionColor : 'color' } ),
+	withNotices,
+] )( Edit );

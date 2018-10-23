@@ -1,0 +1,35 @@
+// Animation effect when a background image is uploaded
+@keyframes background_loading_fade {
+
+	0% {
+		opacity: 0.5;
+	}
+
+	50% {
+		opacity: 0.75;
+	}
+
+	100% {
+		opacity: 0.5;
+	}
+}
+
+@mixin background_loading_fade {
+	animation: background_loading_fade 1.6s ease-in-out infinite;
+}
+
+.has-background-image-transient > div {
+	z-index: 2;
+}
+
+.has-background-image-transient::after {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: #fff;
+	content: "";
+	z-index: 1;
+	@include background_loading_fade;
+}
