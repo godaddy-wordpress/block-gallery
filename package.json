@@ -7,7 +7,7 @@
   "author_uri": "https://wpblockgallery.com",
   "description": "Block Gallery is a suite of beautiful gallery blocks for the WordPress Gutenberg block editor.",
   "requires": "4.9",
-  "tested_up_to": "4.9.8",
+  "tested_up_to": "5.0.0",
   "license": "GPL-3.0",
   "copyright": "Copyright (c) 2018, Inventionn LLC",
   "downloadid": "",
