@@ -215,7 +215,6 @@ class Edit extends Component {
 							width: '100%',
 						} }
 						className={ classnames(
-							'components-resizable-box__container',
 							{ 'is-selected': isSelected }
 						) }
 						minHeight="200"
