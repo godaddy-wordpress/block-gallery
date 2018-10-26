@@ -219,9 +219,6 @@ class Edit extends Component {
 							{ 'is-selected': isSelected }
 						) }
 						minHeight="200"
-						handleClasses={ {
-							bottom: 'components-resizable-box__handle components-resizable-box__handle-bottom',
-						} }
 						enable={ {
 							bottom: true,
 							bottomLeft: false,
