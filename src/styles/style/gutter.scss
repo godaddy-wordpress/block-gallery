@@ -26,7 +26,7 @@
 
 		.has-gutter-#{ $i * 5 } {
 
-			figure {
+			.blockgallery--figure {
 				margin: #{ round($i * 5 / 2) }px;
 			}
 		}
@@ -42,7 +42,7 @@
 			margin: -#{ round($i * 5 / 2) }px !important;
 			max-width: calc(100% + #{ round($i * 5) }px) !important;
 
-			figure {
+			.blockgallery--figure {
 				margin: #{ round($i * 5 / 2) }px;
 			}
 		}
