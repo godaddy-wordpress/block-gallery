@@ -58,6 +58,10 @@ class Inspector extends Component {
 		}
 	}
 
+	getFullwidthImagesHelp( checked ) {
+		return checked ? __( 'Using full bleed images.' ) : __( 'Toggle to enable full bleed images.' );
+	}
+
 	render() {
 
 		const {
@@ -95,19 +99,20 @@ class Inspector extends Component {
 								max={ 20 }
 								step={ 1 }
 							/> }
+							{ wideControlsEnabled &&
+								<ToggleControl
+									label={ images.length > 1 ? __( 'Fullwidth Images' ) : __( 'Fullwidth Image' ) }
+									checked={ !! fullwidth }
+									onChange={ this.setFullwidthTo }
+									help={ this.getFullwidthImagesHelp }
+								/>
+							}
 							<SizeControl { ...this.props }
 								onChange={ this.setShadowTo }
 								value={ shadow }
 								label={ __( 'Box Shadow' ) }
 								reset={ false }
 							/>
-							{ wideControlsEnabled &&
-								<ToggleControl
-									label={ images.length > 1 ? __( 'Fullwidth Images' ) : __( 'Fullwidth Image' ) }
-									checked={ !! fullwidth }
-									onChange={ this.setFullwidthTo }
-								/>
-							}
 							<LightboxControl { ...this.props } />
 							{ ! lightbox && <SelectControl
 								label={ __( 'Link To' ) }
