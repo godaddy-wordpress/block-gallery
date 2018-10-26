@@ -36,12 +36,20 @@ const blockKeywords = [
 const blockAttributes = {
 	...GlobalAttributes,
 
-	// Block specific attributes.
+	// Block specific attributes and overrides.
 	fullwidth: {
 		type: 'boolean',
 	},
 	captionStyle: {
 		type: 'string',
+	},
+	gutter: {
+		type: 'number',
+		default: 0,
+	},
+	gutterMobile: {
+		type: 'number',
+		default: 0,
 	},
 };
 
