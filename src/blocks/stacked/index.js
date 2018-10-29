@@ -17,17 +17,19 @@ import { GlobalAttributes, GlobalTransforms, GlobalClasses, GlobalStyles } from 
  * WordPress dependencies
  */
 const { __ } = wp.i18n;
-const { registerBlockType, createBlock } = wp.blocks;
+const { createBlock } = wp.blocks;
 const { RichText } = wp.editor;
 
 /**
  * Block constants.
  */
-const blockName = __( 'Stacked' );
+const name = 'stacked';
 
-const blockIcon = icons.stacked;
+const title = __( 'Stacked' );
 
-const blockKeywords = [
+const icon = icons.stacked;
+
+const keywords = [
 	__( 'gallery' ),
 	__( 'images' ),
 	__( 'photos' ),
@@ -53,22 +55,17 @@ const blockAttributes = {
 	},
 };
 
-/**
- * Block registration
- */
-registerBlockType( 'blockgallery/stacked', {
+const settings = {
 
-	title: blockName,
+	title: title,
 
 	description: __( 'Display multiple images in an single column stacked gallery.' ),
 
 	icon: {
-		src: blockIcon,
+		src: icon,
 	},
 
-	category: 'block-gallery',
-
-	keywords: blockKeywords,
+	keywords: keywords,
 
 	attributes: blockAttributes,
 
@@ -82,7 +79,7 @@ registerBlockType( 'blockgallery/stacked', {
 				type: 'block',
 				blocks: [ 'blockgallery/masonry' ],
 				transform: ( attributes ) => (
-					createBlock( 'blockgallery/stacked', {
+					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
 					} )
 				),
@@ -91,7 +88,7 @@ registerBlockType( 'blockgallery/stacked', {
 				type: 'block',
 				blocks: [ 'blockgallery/carousel' ],
 				transform: ( attributes ) => (
-					createBlock( 'blockgallery/stacked', {
+					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
 					} )
 				),
@@ -100,7 +97,7 @@ registerBlockType( 'blockgallery/stacked', {
 				type: 'block',
 				blocks: [ 'blockgallery/thumbnails' ],
 				transform: ( attributes ) => (
-					createBlock( 'blockgallery/stacked', {
+					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
 					} )
 				),
@@ -109,7 +106,7 @@ registerBlockType( 'blockgallery/stacked', {
 				type: 'block',
 				blocks: [ 'blockgallery/offset' ],
 				transform: ( attributes ) => (
-					createBlock( 'blockgallery/stacked', {
+					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
 					} )
 				),
@@ -118,7 +115,7 @@ registerBlockType( 'blockgallery/stacked', {
 				type: 'block',
 				blocks: [ 'blockgallery/auto-height' ],
 				transform: ( attributes ) => (
-					createBlock( 'blockgallery/stacked', {
+					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
 					} )
 				),
@@ -127,7 +124,7 @@ registerBlockType( 'blockgallery/stacked', {
 				type: 'block',
 				blocks: [ 'core/gallery' ],
 				transform: ( attributes ) => (
-					createBlock( 'blockgallery/stacked', {
+					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
 					} )
 				),
@@ -214,6 +211,6 @@ registerBlockType( 'blockgallery/stacked', {
 			</ul>
 		);
 	},
-} );
+};
 
-export { blockName, blockIcon };
+export { name, title, icon, settings };

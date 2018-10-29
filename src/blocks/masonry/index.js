@@ -17,17 +17,19 @@ import { GlobalAttributes, GlobalTransforms, GlobalClasses, GlobalStyles } from 
  * WordPress dependencies
  */
 const { __ } = wp.i18n;
-const { registerBlockType, createBlock } = wp.blocks;
+const { createBlock } = wp.blocks;
 const { RichText } = wp.editor;
 
 /**
  * Block constants.
  */
-const blockName = __( 'Masonry' );
+const name = 'masonry';
 
-const blockIcon = icons.masonry;
+const title = __( 'Masonry' );
 
-const blockKeywords = [
+const icon = icons.masonry;
+
+const keywords = [
 	__( 'gallery' ),
 	__( 'images' ),
 	__( 'photos' ),
@@ -43,22 +45,17 @@ const blockAttributes = {
 	},
 };
 
-/**
- * Block registration
- */
-registerBlockType( 'blockgallery/masonry', {
+const settings = {
 
-	title: blockName,
+	title: title,
 
 	description: __( 'Display multiple images in an organized masonry gallery.' ),
 
 	icon: {
-		src: blockIcon,
+		src: icon,
 	},
 
-	category: 'block-gallery',
-
-	keywords: blockKeywords,
+	keywords: keywords,
 
 	attributes: blockAttributes,
 
@@ -72,7 +69,7 @@ registerBlockType( 'blockgallery/masonry', {
 				type: 'block',
 				blocks: [ 'blockgallery/stacked' ],
 				transform: ( attributes ) => (
-					createBlock( 'blockgallery/masonry', {
+					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
 					} )
 				),
@@ -81,7 +78,7 @@ registerBlockType( 'blockgallery/masonry', {
 				type: 'block',
 				blocks: [ 'blockgallery/carousel' ],
 				transform: ( attributes ) => (
-					createBlock( 'blockgallery/masonry', {
+					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
 					} )
 				),
@@ -90,7 +87,7 @@ registerBlockType( 'blockgallery/masonry', {
 				type: 'block',
 				blocks: [ 'blockgallery/thumbnails' ],
 				transform: ( attributes ) => (
-					createBlock( 'blockgallery/masonry', {
+					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
 					} )
 				),
@@ -99,7 +96,7 @@ registerBlockType( 'blockgallery/masonry', {
 				type: 'block',
 				blocks: [ 'blockgallery/offset' ],
 				transform: ( attributes ) => (
-					createBlock( 'blockgallery/masonry', {
+					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
 					} )
 				),
@@ -108,7 +105,7 @@ registerBlockType( 'blockgallery/masonry', {
 				type: 'block',
 				blocks: [ 'blockgallery/auto-height' ],
 				transform: ( attributes ) => (
-					createBlock( 'blockgallery/masonry', {
+					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
 					} )
 				),
@@ -117,7 +114,7 @@ registerBlockType( 'blockgallery/masonry', {
 				type: 'block',
 				blocks: [ 'core/gallery' ],
 				transform: ( attributes ) => (
-					createBlock( 'blockgallery/masonry', {
+					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
 					} )
 				),
@@ -207,6 +204,6 @@ registerBlockType( 'blockgallery/masonry', {
 			</div>
 		);
 	},
-} );
+};
 
-export { blockName, blockIcon };
+export { name, title, icon, settings };

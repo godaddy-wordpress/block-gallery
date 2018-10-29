@@ -14,7 +14,7 @@ import GalleryDropZone from '../../../components/gallery-dropzone';
 import GalleryUpload from '../../../components/gallery-upload';
 import Inspector from './inspector';
 import { BackgroundStyles } from '../../../components/background/';
-import { blockName, blockIcon } from '../'
+import { title, icon } from '../'
 import { GlobalClasses, GlobalToolbar, GlobalStyles } from '../../../components/global/';
 
 /**
@@ -137,7 +137,7 @@ class Edit extends Component {
 		const dropZone = (
 			<GalleryDropZone
 				{ ...this.props }
-				label={ sprintf( __( 'Drop to add to the %s gallery' ), blockName.toLowerCase() ) }
+				label={ sprintf( __( 'Drop to add to the %s gallery' ), title.toLowerCase() ) }
 			/>
 		);
 
@@ -171,8 +171,8 @@ class Edit extends Component {
 			return (
 				<GalleryPlaceholder
 					{ ...this.props }
-					label={ sprintf( __( '%s Gallery' ), blockName ) }
-					icon={ blockIcon }
+					label={ sprintf( __( '%s Gallery' ), title ) }
+					icon={ icon }
 				/>
 			);
 		}

@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { blockName } from '../'
+import { title } from '../'
 import ResponsiveTabsControl from '../../../components/responsive-tabs-control';
 import linkOptions from '../../../utils/link-options';
 import SizeControl from '../../../components/size-control';
@@ -85,7 +85,7 @@ class Inspector extends Component {
 			isSelected && (
 				<Fragment>
 					<InspectorControls>
-						<PanelBody title={ sprintf( __( '%s Settings' ), blockName ) }>
+						<PanelBody title={ sprintf( __( '%s Settings' ), title ) }>
 							{ images.length > 1 &&
 								<ResponsiveTabsControl { ...this.props }
 									label={ __( 'Gutter' ) }

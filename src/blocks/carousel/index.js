@@ -17,17 +17,18 @@ import { GlobalAttributes, GlobalTransforms, GlobalClasses } from '../../compone
  * WordPress dependencies
  */
 const { __ } = wp.i18n;
-const { registerBlockType, createBlock } = wp.blocks;
-const { RichText } = wp.editor;
+const { createBlock } = wp.blocks;
 
 /**
  * Block constants.
  */
-const blockName = __( 'Carousel' );
+const name = 'carousel';
 
-const blockIcon = icons.carousel;
+const title = __( 'Carousel' );
 
-const blockKeywords = [
+const icon = icons.carousel;
+
+const keywords = [
 	__( 'gallery' ),
 	__( 'images' ),
 	__( 'photos' ),
@@ -77,22 +78,17 @@ const blockAttributes = {
 	},
 };
 
-/**
- * Block registration
- */
-registerBlockType( 'blockgallery/carousel', {
+const settings = {
 
-	title: blockName,
+	title: title,
 
 	description: __( 'Display multiple images in a beautiful carousel gallery.' ),
 
 	icon: {
-		src: blockIcon,
+		src: icon,
 	},
 
-	category: 'block-gallery',
-
-	keywords: blockKeywords,
+	keywords: keywords,
 
 	attributes: blockAttributes,
 
@@ -106,7 +102,7 @@ registerBlockType( 'blockgallery/carousel', {
 				type: 'block',
 				blocks: [ 'blockgallery/stacked' ],
 				transform: ( attributes ) => (
-					createBlock( 'blockgallery/carousel', {
+					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
 					} )
 				),
@@ -115,7 +111,7 @@ registerBlockType( 'blockgallery/carousel', {
 				type: 'block',
 				blocks: [ 'blockgallery/masonry' ],
 				transform: ( attributes ) => (
-					createBlock( 'blockgallery/carousel', {
+					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
 					} )
 				),
@@ -124,7 +120,7 @@ registerBlockType( 'blockgallery/carousel', {
 				type: 'block',
 				blocks: [ 'blockgallery/thumbnails' ],
 				transform: ( attributes ) => (
-					createBlock( 'blockgallery/carousel', {
+					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
 					} )
 				),
@@ -133,7 +129,7 @@ registerBlockType( 'blockgallery/carousel', {
 				type: 'block',
 				blocks: [ 'blockgallery/offset' ],
 				transform: ( attributes ) => (
-					createBlock( 'blockgallery/carousel', {
+					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
 					} )
 				),
@@ -142,7 +138,7 @@ registerBlockType( 'blockgallery/carousel', {
 				type: 'block',
 				blocks: [ 'blockgallery/auto-height' ],
 				transform: ( attributes ) => (
-					createBlock( 'blockgallery/carousel', {
+					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
 					} )
 				),
@@ -151,7 +147,7 @@ registerBlockType( 'blockgallery/carousel', {
 				type: 'block',
 				blocks: [ 'core/gallery' ],
 				transform: ( attributes ) => (
-					createBlock( 'blockgallery/carousel', {
+					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
 					} )
 				),
@@ -261,6 +257,6 @@ registerBlockType( 'blockgallery/carousel', {
 			</div>
 		);
 	},
-} );
+}
 
-export { blockName, blockIcon };
+export { name, title, icon, settings };
