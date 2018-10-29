@@ -41,6 +41,14 @@ We've built a highly interactive and intuitive experience with a focus on speed 
 = From a trusted developer =
 This plugin is created and maintained by [Rich Tabor](https://richtabor.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery).
 
+== Screenshots ==
+
+1. Masonry Grid block
+2. Carousel Slideshow block
+3. Stacked Fullwidth block
+4. Offset Grid block
+5. Auto-height Slider block
+
 == Installation ==
 
 1. Upload the `block-gallery` folder to your `/wp-content/plugins/` directory or alternatively upload the block-gallery.zip file via the plugin page of WordPress by clicking 'Add New' and selecting the zip from your computer.
