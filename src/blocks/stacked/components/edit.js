@@ -175,35 +175,37 @@ class Edit extends Component {
 					{ ...this.props }
 				/>
 				{ noticeUI }
-				<ul className={ galleryClasses } style={ galleryStyles }>
-					{ dropZone }
-					{ images.map( ( img, index ) => (
-						<li className="blockgallery--item" key={ img.id || img.url }>
-							<GalleryImage
-								url={ img.url }
-								alt={ img.alt }
-								id={ img.id }
+				<div className={ className }>
+					<ul className={ galleryClasses } style={ galleryStyles }>
+						{ dropZone }
+						{ images.map( ( img, index ) => (
+							<li className="blockgallery--item" key={ img.id || img.url }>
+								<GalleryImage
+									url={ img.url }
+									alt={ img.alt }
+									id={ img.id }
+									gutter={ gutter }
+									gutterMobile={ gutterMobile }
+									marginBottom={ true }
+									shadow={ shadow }
+									isSelected={ isSelected && this.state.selectedImage === index }
+									onRemove={ this.onRemoveImage( index ) }
+									onSelect={ this.onSelectImage( index ) }
+									setAttributes={ ( attrs ) => this.setImageAttributes( index, attrs ) }
+									caption={ img.caption }
+									supportsCaption={ true }
+								/>
+							</li>
+						) ) }
+						{ isSelected && (
+							<GalleryUpload { ...this.props }
 								gutter={ gutter }
 								gutterMobile={ gutterMobile }
 								marginBottom={ true }
-								shadow={ shadow }
-								isSelected={ isSelected && this.state.selectedImage === index }
-								onRemove={ this.onRemoveImage( index ) }
-								onSelect={ this.onSelectImage( index ) }
-								setAttributes={ ( attrs ) => this.setImageAttributes( index, attrs ) }
-								caption={ img.caption }
-								supportsCaption={ true }
 							/>
-						</li>
-					) ) }
-					{ isSelected && (
-						<GalleryUpload { ...this.props }
-							gutter={ gutter }
-							gutterMobile={ gutterMobile }
-							marginBottom={ true }
-						/>
-					) }
-				</ul>
+						) }
+					</ul>
+				</div>
 			</Fragment>
 		);
 	}

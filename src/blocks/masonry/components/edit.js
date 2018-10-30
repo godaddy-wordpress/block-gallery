@@ -186,40 +186,42 @@ class Edit extends Component {
 					{ ...this.props }
 				/>
 				{ noticeUI }
-				<div
-					className={ wrapperClasses }
-					style={ wrapperStyles }
-				>
-					{ dropZone }
-					<Masonry
-						elementType={ 'ul' }
-						className={ masonryClasses }
-						style={ masonryStyles }
-						options={ masonryOptions }
-						disableImagesLoaded={ false }
-						updateOnEachImageLoad={ false }
+				<div className={ className }>
+					<div
+						className={ wrapperClasses }
+						style={ wrapperStyles }
 					>
-						{ images.map( ( img, index ) => (
-							<li className="blockgallery--item" key={ img.id || img.url }>
-								<GalleryImage
-									url={ img.url }
-									alt={ img.alt }
-									id={ img.id }
-									isSelected={ isSelected && this.state.selectedImage === index }
-									onRemove={ this.onRemoveImage( index ) }
-									onSelect={ this.onSelectImage( index ) }
-									setAttributes={ ( attrs ) => this.setImageAttributes( index, attrs ) }
-									caption={ img.caption }
-									supportsCaption={ true }
+						{ dropZone }
+						<Masonry
+							elementType={ 'ul' }
+							className={ masonryClasses }
+							style={ masonryStyles }
+							options={ masonryOptions }
+							disableImagesLoaded={ false }
+							updateOnEachImageLoad={ false }
+						>
+							{ images.map( ( img, index ) => (
+								<li className="blockgallery--item" key={ img.id || img.url }>
+									<GalleryImage
+										url={ img.url }
+										alt={ img.alt }
+										id={ img.id }
+										isSelected={ isSelected && this.state.selectedImage === index }
+										onRemove={ this.onRemoveImage( index ) }
+										onSelect={ this.onSelectImage( index ) }
+										setAttributes={ ( attrs ) => this.setImageAttributes( index, attrs ) }
+										caption={ img.caption }
+										supportsCaption={ true }
+									/>
+								</li>
+							) ) }
+							{ isSelected && (
+								<GalleryUpload
+									{ ...this.props }
 								/>
-							</li>
-						) ) }
-						{ isSelected && (
-							<GalleryUpload
-								{ ...this.props }
-							/>
-						) }
-					</Masonry>
+							) }
+						</Masonry>
+					</div>
 				</div>
 			</Fragment>
 		);

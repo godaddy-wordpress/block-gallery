@@ -145,7 +145,7 @@ const settings = {
 
 	edit: Edit,
 
-	save( { attributes } ) {
+	save( { attributes, className } ) {
 
 		const {
 			captionColor,
@@ -177,38 +177,40 @@ const settings = {
 		} );
 
 		return (
-			<ul className={ ulClasses } style={ ulStyles }>
-				{ images.map( ( image ) => {
-					let href;
+			<div className={ className }>
+				<ul className={ ulClasses } style={ ulStyles }>
+					{ images.map( ( image ) => {
+						let href;
 
-					switch ( linkTo ) {
-						case 'media':
-							href = image.url;
-							break;
-						case 'attachment':
-							href = image.link;
-							break;
-					}
+						switch ( linkTo ) {
+							case 'media':
+								href = image.url;
+								break;
+							case 'attachment':
+								href = image.link;
+								break;
+						}
 
-					const imgClasses = classnames(
-						image.id ? [ `wp-image-${ image.id }` ] : null, {
-							[ `has-shadow-${ shadow }` ] : shadow != 'none',
-					} );
+						const imgClasses = classnames(
+							image.id ? [ `wp-image-${ image.id }` ] : null, {
+								[ `has-shadow-${ shadow }` ] : shadow != 'none',
+						} );
 
-					const img = <img src={ image.url } alt={ image.alt } data-id={ image.id } data-link={ image.link } className={ imgClasses } />;
+						const img = <img src={ image.url } alt={ image.alt } data-id={ image.id } data-link={ image.link } className={ imgClasses } />;
 
-					return (
-						<li key={ image.id || image.url } className="blockgallery--item">
-							<figure className={ figureClasses }>
-								{ href ? <a href={ href }>{ img }</a> : img }
-								{ image.caption && image.caption.length > 0 && (
-									<RichText.Content tagName="figcaption" className="blockgallery--caption" value={ image.caption } />
-								) }
-							</figure>
-						</li>
-					);
-				} ) }
-			</ul>
+						return (
+							<li key={ image.id || image.url } className="blockgallery--item">
+								<figure className={ figureClasses }>
+									{ href ? <a href={ href }>{ img }</a> : img }
+									{ image.caption && image.caption.length > 0 && (
+										<RichText.Content tagName="figcaption" className="blockgallery--caption" value={ image.caption } />
+									) }
+								</figure>
+							</li>
+						);
+					} ) }
+				</ul>
+			</div>
 		);
 	},
 };

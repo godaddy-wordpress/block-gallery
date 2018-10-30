@@ -239,44 +239,46 @@ class Edit extends Component {
 						} }
 					>
 					{ dropZone }
-					<div
-						className={ wrapperClasses }
-						style={ wrapperStyles }
-					>
-						<Flickity
-							className={ flickityClasses }
-							options={ flickityOptions }
-							disableImagesLoaded={ false }
-							updateOnEachImageLoad={ true }
-							reloadOnUpdate={ true }
-							flickityRef={ c => this.flkty = c }
+					<div className={ className }>
+						<div
+							className={ wrapperClasses }
+							style={ wrapperStyles }
 						>
-							{ images.map( ( img, index ) => (
-								<div className="blockgallery--item" key={ img.id || img.url }>
-									<GalleryImage
-										url={ img.url }
-										alt={ img.alt }
-										id={ img.id }
-										gutter={ gutter }
-										gutterMobile={ gutterMobile }
-										marginRight={ true }
-										marginLeft={ true }
-										isSelected={ isSelected && this.state.selectedImage === index }
-										onRemove={ this.onRemoveImage( index ) }
-										onSelect={ this.onSelectImage( index ) }
-										setAttributes={ ( attrs ) => this.setImageAttributes( index, attrs ) }
-										caption={ img.caption }
-										supportsCaption={ false }
-									/>
-								</div>
-							) ) }
-							<GalleryUpload { ...this.props }
-								gutter={ gutter }
-								gutterMobile={ gutterMobile }
-								marginRight={ true }
-								marginLeft={ true }
-							/>
-						</Flickity>
+							<Flickity
+								className={ flickityClasses }
+								options={ flickityOptions }
+								disableImagesLoaded={ false }
+								updateOnEachImageLoad={ true }
+								reloadOnUpdate={ true }
+								flickityRef={ c => this.flkty = c }
+							>
+								{ images.map( ( img, index ) => (
+									<div className="blockgallery--item" key={ img.id || img.url }>
+										<GalleryImage
+											url={ img.url }
+											alt={ img.alt }
+											id={ img.id }
+											gutter={ gutter }
+											gutterMobile={ gutterMobile }
+											marginRight={ true }
+											marginLeft={ true }
+											isSelected={ isSelected && this.state.selectedImage === index }
+											onRemove={ this.onRemoveImage( index ) }
+											onSelect={ this.onSelectImage( index ) }
+											setAttributes={ ( attrs ) => this.setImageAttributes( index, attrs ) }
+											caption={ img.caption }
+											supportsCaption={ false }
+										/>
+									</div>
+								) ) }
+								<GalleryUpload { ...this.props }
+									gutter={ gutter }
+									gutterMobile={ gutterMobile }
+									marginRight={ true }
+									marginLeft={ true }
+								/>
+							</Flickity>
+						</div>
 					</div>
 				</ResizableBox>
 			</Fragment>

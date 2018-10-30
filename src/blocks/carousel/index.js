@@ -104,6 +104,7 @@ const settings = {
 				transform: ( attributes ) => (
 					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
+						gridSize: 'lrg',
 					} )
 				),
 			},
@@ -113,6 +114,7 @@ const settings = {
 				transform: ( attributes ) => (
 					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
+						gridSize: 'lrg',
 					} )
 				),
 			},
@@ -122,6 +124,7 @@ const settings = {
 				transform: ( attributes ) => (
 					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
+						gridSize: 'lrg',
 					} )
 				),
 			},
@@ -131,6 +134,7 @@ const settings = {
 				transform: ( attributes ) => (
 					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
+						gridSize: 'lrg',
 					} )
 				),
 			},
@@ -140,6 +144,7 @@ const settings = {
 				transform: ( attributes ) => (
 					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
+						gridSize: 'lrg',
 					} )
 				),
 			},
@@ -149,6 +154,7 @@ const settings = {
 				transform: ( attributes ) => (
 					createBlock( `blockgallery/${ name }`, {
 						...GlobalTransforms( attributes ),
+						gridSize: 'lrg',
 					} )
 				),
 			},
@@ -168,7 +174,7 @@ const settings = {
 
 	edit: Edit,
 
-	save( { attributes } ) {
+	save( { attributes, className } ) {
 
 		const {
 			autoPlay,
@@ -232,27 +238,29 @@ const settings = {
 		}
 
 		return (
-			<div
-				className={ wrapperClasses }
-				style={ wrapperStyles }
-			>
+			<div className={ className }>
 				<div
-					className={ flickityClasses }
-					style={ flickityStyles }
-					data-flickity={ JSON.stringify( flickityOptions ) }
+					className={ wrapperClasses }
+					style={ wrapperStyles }
 				>
-					{ images.map( ( image ) => {
+					<div
+						className={ flickityClasses }
+						style={ flickityStyles }
+						data-flickity={ JSON.stringify( flickityOptions ) }
+					>
+						{ images.map( ( image ) => {
 
-						const img = <img src={ image.url } alt={ image.alt } data-id={ image.id } data-link={ image.link } className={ image.id ? `wp-image-${ image.id }` : null } />;
+							const img = <img src={ image.url } alt={ image.alt } data-id={ image.id } data-link={ image.link } className={ image.id ? `wp-image-${ image.id }` : null } />;
 
-						return (
-							<li key={ image.id || image.url } className="blockgallery--item">
-								<figure className={ figureClasses }>
-									{ img }
-								</figure>
-							</li>
-						);
-					} ) }
+							return (
+								<li key={ image.id || image.url } className="blockgallery--item">
+									<figure className={ figureClasses }>
+										{ img }
+									</figure>
+								</li>
+							);
+						} ) }
+					</div>
 				</div>
 			</div>
 		);

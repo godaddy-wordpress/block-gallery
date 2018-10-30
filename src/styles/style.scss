@@ -4,14 +4,6 @@
 	margin-right: auto !important;
 	padding: 0;
 
-	&.alignfull,
-	&.alignwide {
-
-		ul {
-			max-width: 100%;
-		}
-	}
-
 	&--item {
 		list-style: none !important;
 		margin: 0;
@@ -59,6 +51,14 @@
 				}
 			}
 		}
+	}
+}
+
+.alignfull,
+.alignwide {
+
+	ul.blockgallery {
+		max-width: 100%;
 	}
 }
 
