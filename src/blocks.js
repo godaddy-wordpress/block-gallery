@@ -3,7 +3,6 @@
  */
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { dispatch, select } = wp.data;
 
 // Category slug and title.
 const category = {
