@@ -1,8 +1,8 @@
-=== Block Gallery - Gutenberg Photo Gallery Blocks ===
+=== Block Gallery - Photo Gallery Gutenberg Blocks ===
 Author URI: https://wpblockgallery.com
 Plugin URI: https://wpblockgallery.com
 Contributors: richtabor, thatplugincompany, themebeans
-Tags: blocks, gutenberg, gallery, page builder, gutenberg blocks, editor, photo gallery, masonry
+Tags: blocks, gutenberg, gallery, page builder, gutenberg blocks, editor, photo gallery, masonry, block, slider, carousel
 Requires at least: 4.7.0
 Tested up to: @@pkg.tested_up_to
 Requires PHP: 5.2.4
@@ -75,6 +75,9 @@ Yes! Block Gallery's core features are absolutely free. I am working on a a Pro 
 Please reach out via the official [support forum on WordPress.org](https://wordpress.org/support/plugin/block-gallery/).
 
 == Changelog ==
+
+= 1.0.1, October 30, 2018 =
+* New: Improve block registration
 
 = 1.0.0, October 25, 2018 =
 * Initial release on WordPress.org. Enjoy!
