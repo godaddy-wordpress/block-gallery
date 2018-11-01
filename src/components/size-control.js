@@ -19,7 +19,7 @@ class SizeControl extends Component {
 
 	componentDidUpdate( prevProps ) {
 
-		const { align, gridSize } = this.props.attributes;
+		const { align, columns, gridSize } = this.props.attributes;
 
 		// Prevent small and medium column grid sizes without wide or full alignments.
 		if ( align == undefined ) {
