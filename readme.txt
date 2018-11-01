@@ -12,7 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-[Block Gallery](https://wpblockgallery.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery) is a suite of beautiful WordPress gallery blocks built exclusivly for Gutenberg and WordPress 5.0. [Block Gallery](https://wpblockgallery.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery) is a suite of beautiful gallery Gutenberg blocks for photographers, artists, writers and content marketers, built by the fine folks at [ThemeBeans](https://themebeans.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery).
+[Block Gallery](https://wpblockgallery.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery) is a suite of beautiful gallery Gutenberg blocks for photographers, artists, writers and content marketers, built by the fine folks at [ThemeBeans](https://themebeans.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery).
 
 **This is the smartest, most powerful photo gallery plugin for WordPress. Block Gallery is absolutely brilliant any way you look at it.**
 
