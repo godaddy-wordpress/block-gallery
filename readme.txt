@@ -1,5 +1,5 @@
 === Block Gallery - Photo Gallery Gutenberg Blocks ===
-Author URI: https://wpblockgallery.com
+Author URI: https://richtabor.com
 Plugin URI: https://wpblockgallery.com
 Contributors: richtabor, thatplugincompany, themebeans
 Tags: blocks, gutenberg, gallery, page builder, gutenberg blocks, editor, photo gallery, masonry, block, slider, carousel
