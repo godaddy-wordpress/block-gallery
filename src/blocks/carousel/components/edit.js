@@ -183,6 +183,7 @@ class Edit extends Component {
 
 		const wrapperStyles = {
 			...BackgroundStyles( attributes ),
+			backgroundColor: backgroundColor.color,
 		};
 
 		const flickityClasses = classnames(

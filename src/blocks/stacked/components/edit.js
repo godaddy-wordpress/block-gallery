@@ -140,7 +140,7 @@ class Edit extends Component {
 			/>
 		);
 
-		const galleryClasses = classnames(
+		const wrapperClasses = classnames(
 			className,
 			...GlobalClasses( attributes ), {
 				'has-fullwidth-images': fullwidth,
@@ -151,8 +151,9 @@ class Edit extends Component {
 			}
 		);
 
-		const galleryStyles = {
+		const wrapperStyles = {
 			...BackgroundStyles( attributes ),
+			backgroundColor: backgroundColor.color,
 			color: captionColor.color,
 		};
 
@@ -176,7 +177,7 @@ class Edit extends Component {
 				/>
 				{ noticeUI }
 				<div className={ className }>
-					<ul className={ galleryClasses } style={ galleryStyles }>
+					<ul className={ wrapperClasses } style={ wrapperStyles }>
 						{ dropZone }
 						{ images.map( ( img, index ) => (
 							<li className="blockgallery--item" key={ img.id || img.url }>

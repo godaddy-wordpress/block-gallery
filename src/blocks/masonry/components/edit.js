@@ -154,6 +154,7 @@ class Edit extends Component {
 
 		const wrapperStyles = {
 			...BackgroundStyles( attributes ),
+			backgroundColor: backgroundColor.color,
 		};
 
 		const masonryClasses = classnames(
