@@ -3,7 +3,7 @@ Author URI: https://wpblockgallery.com
 Plugin URI: https://wpblockgallery.com
 Contributors: richtabor, thatplugincompany, themebeans
 Tags: blocks, gutenberg, gallery, page builder, gutenberg blocks, editor, photo gallery, masonry, block, slider, carousel
-Requires at least: 4.7.0
+Requires at least: 4.9.0
 Tested up to: @@pkg.tested_up_to
 Requires PHP: 5.2.4
 Stable tag: @@pkg.version
@@ -75,6 +75,11 @@ Yes! Block Gallery's core features are absolutely free. I am working on a a Pro 
 Please reach out via the official [support forum on WordPress.org](https://wordpress.org/support/plugin/block-gallery/).
 
 == Changelog ==
+= 1.0.2, November 02, 2018 =
+* Tweak: Improve figcaption display
+* Tweak: Improve block category registration
+* Tweak: Add icon to the block category for Gutenberg 4.2+
+* Fix: Color palette colors properly render in the editor
 
 = 1.0.1, October 30, 2018 =
 * New: Improve block registration
