@@ -21,7 +21,7 @@ const { createBlock } = wp.blocks;
 const { RichText } = wp.editor;
 
 /**
- * Block constants.
+ * Block constants
  */
 const name = 'masonry';
 

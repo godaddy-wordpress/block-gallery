@@ -20,7 +20,7 @@ const { __ } = wp.i18n;
 const { createBlock } = wp.blocks;
 
 /**
- * Block constants.
+ * Block constants
  */
 const name = 'carousel';
 
