@@ -135,7 +135,6 @@ if ( ! class_exists( 'Block_Gallery' ) ) :
 		 */
 		private function includes() {
 			require_once BLOCKGALLERY_PLUGIN_DIR . 'includes/class-block-gallery-block-assets.php';
-			require_once BLOCKGALLERY_PLUGIN_DIR . 'includes/class-block-gallery-block-category.php';
 
 			if ( is_admin() || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
 				require_once BLOCKGALLERY_PLUGIN_DIR . 'includes/admin/class-block-gallery-gutenberg-checker.php';
