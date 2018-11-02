@@ -16,6 +16,16 @@
 @import "editor/flickity-arrows";
 @import "editor/notices";
 
+.blockgallery-logo--svg {
+	fill: currentColor;
+	position: relative;
+
+	&.components-panel__icon {
+		margin-left: 7px;
+		top: 1px;
+	}
+}
+
 .components-toolbar {
 
 	.components-dropdown-menu {

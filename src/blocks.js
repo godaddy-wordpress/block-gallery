@@ -1,13 +1,15 @@
 /**
  * WordPress dependencies
  */
-const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
+
+// Register block category.
+import icons from './utils/block-category';
 
 // Category slug and title.
 const category = {
 	slug: 'block-gallery',
-	title: __( 'Block Gallery' ),
+	title: 'Block Gallery',
 };
 
 /**
