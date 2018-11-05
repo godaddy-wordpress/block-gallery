@@ -281,9 +281,7 @@ const settings = {
 						} ) }
 					</div>
 				</div>
-				{ ! RichText.isEmpty( primaryCaption ) && (
-					<RichText.Content tagName="figcaption" className={ captionClasses } value={ primaryCaption } style={ captionStyles }/>
-				) }
+				{ ! RichText.isEmpty( primaryCaption ) && <RichText.Content tagName="figcaption" className={ captionClasses } value={ primaryCaption } style={ captionStyles }/> }
 			</div>
 		);
 	},
