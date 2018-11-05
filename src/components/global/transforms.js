@@ -25,6 +25,9 @@ function GlobalTransforms( props ) {
 		primaryCaption: props.primaryCaption,
 		captionColor: props.captionColor,
 		customCaptionColor: props.customCaptionColor,
+		autoPlay: props.autoPlay,
+		autoPlaySpeed: props.autoPlaySpeed,
+		draggable: props.draggable,
 		...LightboxTransforms( props ),
 		...BackgroundTransforms( props ),
 	};
