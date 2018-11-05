@@ -26,6 +26,7 @@ class Inspector extends Component {
 		this.setRadiusTo = this.setRadiusTo.bind( this );
 		this.setHeightTo = this.setHeightTo.bind( this );
 		this.setAutoPlaySpeedTo = this.setAutoPlaySpeedTo.bind( this );
+		this.getAutoPlayHelp = this.getAutoPlayHelp.bind( this );
 	}
 
 	setRadiusTo( value ) {
@@ -42,6 +43,13 @@ class Inspector extends Component {
 
 	setAutoPlaySpeedTo( value ) {
 		this.props.setAttributes( { autoPlaySpeed: value } );
+	}
+
+	getAutoPlayHelp( checked ) {
+		// Retrieve the height value and divide it to display full seconds.
+		const speed = this.props.attributes.autoPlaySpeed / 1000;
+
+		return checked ? sprintf( __( 'Automatically advancing to the next gallery item after %s seconds.' ), speed ) : __( 'Automatically advance to the next gallery item after a set duration.' );
 	}
 
 	render() {
@@ -111,7 +119,7 @@ class Inspector extends Component {
 								label={ __( 'Autoplay' ) }
 								checked={ !! autoPlay }
 								onChange={ () => setAttributes( {  autoPlay: ! autoPlay } ) }
-								help={ __( 'Automatically advance to the next gallery item after a set duration.' ) }
+								help={ this.getAutoPlayHelp }
 							/>
 							{ autoPlay && <SelectControl
 								label={ __( 'Autoplay Speed' ) }
