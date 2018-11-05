@@ -39,11 +39,16 @@ const blockAttributes = {
 	...GlobalAttributes,
 
 	// Block specific attributes and overrides.
-	fullwidth: {
-		type: 'boolean',
+	align: {
+		type: 'string',
+		default: 'full',
 	},
 	captionStyle: {
 		type: 'string',
+	},
+	fullwidth: {
+		type: 'boolean',
+		default: true,
 	},
 	gutter: {
 		type: 'number',

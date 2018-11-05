@@ -43,18 +43,10 @@ class Edit extends Component {
 	}
 
 	componentDidMount() {
-
 		// This block does not support caption style.
 		this.props.setAttributes( {
 			captionStyle: undefined,
 		} );
-
-		if ( this.props.wideControlsEnabled == true && ! this.props.attributes.align  ) {
-			this.props.setAttributes( {
-				align: 'full',
-				fullwidth: true
-			} );
-		}
 	}
 
 	componentDidUpdate( prevProps ) {
@@ -63,13 +55,6 @@ class Edit extends Component {
 			this.setState( {
 				selectedImage: null,
 				captionSelected: false,
-			} );
-		}
-
-		// Turn off the Fullwidth toggle, if align is switched off of full.
-		if ( this.props.attributes.align != 'full' && this.props.attributes.fullwidth  ) {
-			this.props.setAttributes( {
-				fullwidth: 'full',
 			} );
 		}
 	}
@@ -141,7 +126,6 @@ class Edit extends Component {
 		);
 
 		const wrapperClasses = classnames(
-			className,
 			...GlobalClasses( attributes ), {
 				'has-fullwidth-images': fullwidth,
 				[ `align${ align }` ] : align,

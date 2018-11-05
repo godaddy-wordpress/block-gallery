@@ -44,18 +44,7 @@ class Inspector extends Component {
 	}
 
 	setFullwidthTo() {
-		this.props.setAttributes( {
-			fullwidth: ! this.props.attributes.fullwidth,
-			align: 'full',
-			radius: 0,
-			backgroundRadius: 0,
-		} );
-
-		if ( this.props.attributes.align == 'full' && this.props.attributes.fullwidth ) {
-			this.props.setAttributes( {
-				align: undefined,
-			} );
-		}
+		this.props.setAttributes( { fullwidth: ! this.props.attributes.fullwidth, } );
 	}
 
 	getFullwidthImagesHelp( checked ) {
@@ -72,6 +61,7 @@ class Inspector extends Component {
 		} = this.props;
 
 		const {
+			align,
 			images,
 			linkTo,
 			gutter,
@@ -103,10 +93,11 @@ class Inspector extends Component {
 								<ToggleControl
 									label={ images.length > 1 ? __( 'Fullwidth Images' ) : __( 'Fullwidth Image' ) }
 									checked={ !! fullwidth }
-									onChange={ this.setFullwidthTo }
 									help={ this.getFullwidthImagesHelp }
+									onChange={ this.setFullwidthTo }
 								/>
 							}
+							{ console.log( align ) }
 							<SizeControl { ...this.props }
 								onChange={ this.setShadowTo }
 								value={ shadow }
