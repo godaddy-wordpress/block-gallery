@@ -75,6 +75,17 @@ Yes! Block Gallery's core features are absolutely free. I am working on a a Pro 
 Please reach out via the official [support forum on WordPress.org](https://wordpress.org/support/plugin/block-gallery/).
 
 == Changelog ==
+
+= 1.0.3, November XX, 2018 =
+* New Add support for adding a primary caption to the Carousel block
+* Tweak: Improve UI of the slider arrows within the editor
+* Tweak: Improve help language of the slider autoplay setting for better context and understanding
+* Tweak: Improve UI of the ResponsiveTabsControl component
+* Tweak: Add slider controls to global transforms
+* Fix: Improve display of fullwidth images in the Stacked gallery block
+* Fix Improved reliablity of the Stacked block when triggering fullwidth imagery
+* Fix: Improve display of carousel arrows
+
 = 1.0.2, November 02, 2018 =
 * Tweak: Improve figcaption display
 * Tweak: Improve block category registration
