@@ -42,12 +42,12 @@ class LightboxControl extends Component {
 			<Fragment>
 			<div className="components-blockgallery-inspector__lightbox">
 				<ToggleControl
-					label={ __( 'Display as Lightbox' ) }
+					label={ __( 'Enable Lightbox' ) }
 					checked={ !! lightbox }
 					onChange={ this.setLightboxTo }
 				/>
 				{ lightbox && <SelectControl
-					label={ __( 'Lightbox Theme' ) }
+					label={ __( 'Lightbox style' ) }
 					value={ lightboxStyle }
 					onChange={ this.setLightboxStyleTo }
 					options={ lightboxStyleOptions }
