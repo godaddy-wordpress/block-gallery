@@ -78,6 +78,7 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 
 = 1.0.3, November XX, 2018 =
 * New Add support for adding a primary caption to the Carousel block
+* New Add font size option for the Stacked gallery block
 * Tweak: Improve UI of the slider arrows within the editor
 * Tweak: Improve help language of the slider autoplay setting for better context and understanding
 * Tweak: Improve UI of the ResponsiveTabsControl component
