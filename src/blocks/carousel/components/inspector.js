@@ -52,6 +52,10 @@ class Inspector extends Component {
 		return checked ? sprintf( __( 'Automatically advancing to the next gallery item after %s seconds.' ), speed ) : __( 'Automatically advance to the next gallery item after a set duration.' );
 	}
 
+	getDraggableHelp( checked ) {
+		return checked ? __( 'Dragging & flicking enabled on desktop and mobile devices.' ) : __( 'Enable dragging & flicking on desktop and mobile devices.' );
+	}
+
 	render() {
 
 		const {
@@ -132,7 +136,7 @@ class Inspector extends Component {
 								label={ __( 'Draggable' ) }
 								checked={ !! draggable }
 								onChange={ () => setAttributes( {  draggable: ! draggable } ) }
-								help={ __( 'Enable dragging & flicking on desktop and mobile devices.' ) }
+								help={ this.getDraggableHelp }
 							/>
 							<ToggleControl
 								label={ __( 'Arrow Navigation' ) }

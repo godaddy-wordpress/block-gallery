@@ -18,7 +18,7 @@ import { GlobalAttributes, GlobalTransforms, GlobalClasses, GlobalStyles } from 
  */
 const { __ } = wp.i18n;
 const { createBlock } = wp.blocks;
-const { RichText } = wp.editor;
+const { RichText, getFontSizeClass } = wp.editor;
 
 /**
  * Block constants
@@ -161,6 +161,8 @@ const settings = {
 			images,
 			linkTo,
 			shadow,
+			fontSize,
+			customFontSize,
 		} = attributes;
 
 		const wrapperClasses = classnames(
@@ -175,11 +177,23 @@ const settings = {
 			...BackgroundStyles( attributes ),
 		};
 
+		const fontSizeClass = getFontSizeClass( fontSize );
+
 		const figureClasses = classnames(
 			'blockgallery--figure', {
 				[ `has-margin-bottom-${ gutter }` ] : gutter > 0,
 				[ `has-margin-bottom-mobile-${ gutterMobile }` ] : gutterMobile > 0,
+				[ fontSizeClass ]: fontSizeClass,
 		} );
+
+		const captionClasses = classnames(
+			'blockgallery--caption', {
+				[ fontSizeClass ]: fontSizeClass,
+		} );
+
+		const captionStyles = {
+			fontSize: fontSizeClass ? undefined : customFontSize,
+		};
 
 		return (
 			<div className={ className }>
@@ -208,7 +222,7 @@ const settings = {
 								<figure className={ figureClasses }>
 									{ href ? <a href={ href }>{ img }</a> : img }
 									{ image.caption && image.caption.length > 0 && (
-										<RichText.Content tagName="figcaption" className="blockgallery--caption" value={ image.caption } />
+										<RichText.Content tagName="figcaption" className={ captionClasses } value={ image.caption } styles={ captionStyles }/>
 									) }
 								</figure>
 							</li>

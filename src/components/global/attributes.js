@@ -77,6 +77,12 @@ const GlobalAttributes = {
 	customCaptionColor: {
 		type: 'string',
 	},
+	fontSize: {
+		type: 'string',
+	},
+	customFontSize: {
+		type: 'number',
+	},
 	primaryCaption: {
 		type: 'array',
 		source: 'children',

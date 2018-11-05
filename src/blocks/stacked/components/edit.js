@@ -24,7 +24,7 @@ const { Component, Fragment } = wp.element;
 const { compose } = wp.compose;
 const { withSelect } = wp.data;
 const { withNotices } = wp.components;
-const { withColors } = wp.editor;
+const { withColors, withFontSizes } = wp.editor;
 
 /**
  * Block edit function
@@ -106,6 +106,7 @@ class Edit extends Component {
 			noticeOperations,
 			noticeUI,
 			setAttributes,
+			fontSize,
 		} = this.props;
 
 		const {
@@ -179,6 +180,7 @@ class Edit extends Component {
 									setAttributes={ ( attrs ) => this.setImageAttributes( index, attrs ) }
 									caption={ img.caption }
 									supportsCaption={ true }
+									fontSize={ fontSize.size }
 								/>
 							</li>
 						) ) }
@@ -204,5 +206,6 @@ export default compose( [
 		wideControlsEnabled: select( 'core/editor' ).getEditorSettings().alignWide,
 	} ) ),
 	withColors( { backgroundColor : 'background-color', captionColor : 'color' } ),
+	withFontSizes( 'fontSize' ),
 	withNotices,
 ] )( Edit );

@@ -92,6 +92,7 @@ class GalleryImage extends Component {
 	}
 
 	render() {
+
 		const {
 			alt,
 			caption,
@@ -110,6 +111,7 @@ class GalleryImage extends Component {
 			shadow,
 			url,
 			supportsCaption,
+			fontSize,
 		} = this.props;
 
 		let href;
@@ -145,6 +147,10 @@ class GalleryImage extends Component {
 			[ `has-margin-left-mobile-${ gutterMobile }` ] : marginLeft && gutterMobile > 0,
 		} );
 
+		const captionStyles = {
+			fontSize: fontSize ? fontSize + 'px' : undefined,
+		};
+
 		// Disable reason: Each block can be selected by clicking on it and we should keep the same saved markup
 		/* eslint-disable jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/onclick-has-role, jsx-a11y/click-events-have-key-events */
 		return (
@@ -165,6 +171,7 @@ class GalleryImage extends Component {
 						tagName="figcaption"
 						placeholder={ __( 'Write caption…' ) }
 						className="blockgallery--caption"
+						style={ captionStyles }
 						value={ caption }
 						isSelected={ this.state.captionSelected }
 						onChange={ ( newCaption ) => setAttributes( { caption: newCaption } ) }
@@ -178,11 +185,13 @@ class GalleryImage extends Component {
 	}
 }
 
-export default withSelect( ( select, ownProps ) => {
-	const { getMedia } = select( 'core' );
-	const { id } = ownProps;
+export default compose( [
+	withSelect( ( select, ownProps ) => {
+		const { getMedia } = select( 'core' );
+		const { id } = ownProps;
 
-	return {
-		image: id ? getMedia( id ) : null,
-	};
-} )( GalleryImage );
+		return {
+			image: id ? getMedia( id ) : null,
+		};
+	} ),
+] )( GalleryImage );

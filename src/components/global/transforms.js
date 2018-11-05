@@ -28,6 +28,8 @@ function GlobalTransforms( props ) {
 		autoPlay: props.autoPlay,
 		autoPlaySpeed: props.autoPlaySpeed,
 		draggable: props.draggable,
+		fontSize: props.fontSize,
+		customFontSize: props.customFontSize,
 		...LightboxTransforms( props ),
 		...BackgroundTransforms( props ),
 	};
