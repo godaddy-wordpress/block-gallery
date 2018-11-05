@@ -28,6 +28,7 @@ class GalleryImage extends Component {
 
 		this.state = {
 			captionSelected: false,
+			captionFocused: false,
 		};
 	}
 
@@ -55,6 +56,7 @@ class GalleryImage extends Component {
 		if ( this.state.captionSelected ) {
 			this.setState( {
 				captionSelected: false,
+				captionFocused: false,
 			} );
 		}
 	}
@@ -84,6 +86,7 @@ class GalleryImage extends Component {
 		if ( this.state.captionSelected && ! isSelected && prevProps.isSelected ) {
 			this.setState( {
 				captionSelected: false,
+				captionFocused: false,
 			} );
 		}
 	}

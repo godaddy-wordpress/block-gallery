@@ -54,9 +54,12 @@ class Edit extends Component {
 		this.onSelectImage = this.onSelectImage.bind( this );
 		this.onRemoveImage = this.onRemoveImage.bind( this );
 		this.setImageAttributes = this.setImageAttributes.bind( this );
+		this.onFocusCaption = this.onFocusCaption.bind( this );
+		this.onItemClick = this.onItemClick.bind( this );
 
 		this.state = {
 			selectedImage: null,
+			captionFocused: false,
 		};
 	}
 
@@ -77,6 +80,13 @@ class Edit extends Component {
 			this.setState( {
 				selectedImage: null,
 				captionSelected: false,
+				captionFocused: false,
+			} );
+		}
+
+		if ( ! this.props.isSelected && prevProps.isSelected && this.state.captionFocused ) {
+			this.setState( {
+				captionFocused: false,
 			} );
 		}
 
@@ -99,6 +109,7 @@ class Edit extends Component {
 			if ( this.state.selectedImage !== index ) {
 				this.setState( {
 					selectedImage: index,
+					captionFocused: false,
 				} );
 			}
 		};
@@ -130,6 +141,26 @@ class Edit extends Component {
 				...images.slice( index + 1 ),
 			],
 		} );
+	}
+
+	onFocusCaption() {
+		if ( ! this.state.captionFocused ) {
+			this.setState( {
+				captionFocused: true,
+			} );
+		}
+	}
+
+	onItemClick() {
+		if ( ! this.props.isSelected ) {
+			this.props.onSelect();
+		}
+
+		if ( this.state.captionFocused ) {
+			this.setState( {
+				captionFocused: false,
+			} );
+		}
 	}
 
 	render() {
@@ -204,6 +235,7 @@ class Edit extends Component {
 
 		return (
 			<Fragment>
+			{console.log(this.state.captionFocused)}
 				<GlobalToolbar
 					{ ...this.props }
 				/>
@@ -255,7 +287,7 @@ class Edit extends Component {
 								flickityRef={ c => this.flkty = c }
 							>
 								{ images.map( ( img, index ) => (
-									<div className="blockgallery--item" key={ img.id || img.url }>
+									<div className="blockgallery--item" key={ img.id || img.url } onClick={ this.onItemClick }>
 										<GalleryImage
 											url={ img.url }
 											alt={ img.alt }
@@ -287,10 +319,12 @@ class Edit extends Component {
 					<RichText
 						tagName="figcaption"
 						placeholder={ __( 'Write caption…' ) }
-						className="blockgallery--caption blockgallery--primary-caption"
 						value={ primaryCaption }
-						onChange={ ( newPrimaryCaption ) => setAttributes( { primaryCaption: newPrimaryCaption } ) }
+						className="blockgallery--caption blockgallery--primary-caption"
 						style={ captionStyles }
+						unstableOnFocus={ this.onFocusCaption }
+						onChange={ ( value ) => setAttributes( { primaryCaption: value } ) }
+						isSelected={ this.state.captionFocused }
 						keepPlaceholderOnFocus
 						inlineToolbar
 					/>
