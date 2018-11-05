@@ -49,16 +49,17 @@ class ResponsiveTabsControl extends Component {
 				<TabPanel
 					className="components-blockgallery-inspector__tabs"
 					activeClass="is-active"
+					initialTabName="desk"
 					tabs={ [
-						{
-							name: 'desk',
-							title: icons.desktopChrome,
-							className: 'components-blockgallery-inspector__tabs-item components-blockgallery-inspector__tabs-item--desktop',
-						},
 						{
 							name: 'mobile',
 							title: icons.mobile,
 							className: 'components-blockgallery-inspector__tabs-item components-blockgallery-inspector__tabs-item--mobile',
+						},
+						{
+							name: 'desk',
+							title: icons.desktopChrome,
+							className: 'components-blockgallery-inspector__tabs-item components-blockgallery-inspector__tabs-item--desktop',
 						},
 					] }>
 					{
