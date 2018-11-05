@@ -80,7 +80,7 @@ const GlobalAttributes = {
 	primaryCaption: {
 		type: 'array',
 		source: 'children',
-		selector: 'figcaption.blockgallery--primary-caption',
+		selector: '.blockgallery--primary-caption',
 	},
 	...LightboxAttributes,
 	...BackgroundAttributes,
