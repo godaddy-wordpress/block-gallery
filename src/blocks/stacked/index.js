@@ -163,14 +163,14 @@ const settings = {
 			shadow,
 		} = attributes;
 
-		const ulClasses = classnames(
+		const wrapperClasses = classnames(
 			...GlobalClasses( attributes ), {
 				'has-fullwidth-images': fullwidth,
 				[ `has-margin` ] : gutter > 0,
 			}
 		);
 
-		const ulStyles = {
+		const wrapperStyles = {
 			...GlobalStyles( attributes ),
 			...BackgroundStyles( attributes ),
 		};
@@ -183,7 +183,7 @@ const settings = {
 
 		return (
 			<div className={ className }>
-				<ul className={ ulClasses } style={ ulStyles }>
+				<ul className={ wrapperClasses } style={ wrapperStyles }>
 					{ images.map( ( image ) => {
 						let href;
 

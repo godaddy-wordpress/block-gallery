@@ -155,14 +155,14 @@ const settings = {
 			...BackgroundStyles( attributes ),
 		};
 
-		const ulClasses = classnames(
+		const masonryClasses = classnames(
 			`has-grid-${ gridSize }`, {
 				[ `has-gutter-${ gutter }` ] : gutter > 0,
 				[ `has-gutter-mobile-${ gutterMobile }` ] : gutterMobile > 0,
 			}
 		);
 
-		const ulStyles = {
+		const masonryStyles = {
 			...GlobalStyles( attributes ),
 		};
 
@@ -173,8 +173,8 @@ const settings = {
 					style={ wrapperStyles }
 				>
 					<ul
-						className={ ulClasses }
-						style={ ulStyles }
+						className={ masonryClasses }
+						style={ masonryStyles }
 						>
 						{ images.map( ( image ) => {
 							let href;
