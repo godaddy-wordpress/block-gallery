@@ -3,29 +3,31 @@
 
 	.flickity-prev-next-button {
 		background-color: $blue;
-		border: 2px solid #fff;
-		color: #191e23;
-		box-shadow: none;
-		width: 34px;
-		height: 34px;
-		border-radius: 50%;
+		border: none;
+		box-shadow: 0 0 0 1px rgba(#000, 0.08);
+		width: 38px;
+		height: 38px;
+		border-radius: 4px;
 		opacity: 1;
-
-		&:active {
-			background-color: #006a95;
-		}
+		display: none;
 
 		&:hover {
 			background-color: #007eb1;
 		}
 
+		&:active {
+			background-color: #006a95;
+		}
+
 		.flickity-button-icon {
 			fill: $white;
-			top: 24%;
+			top: 22.5%;
+			width: 55%;
+			height: 55%;
 		}
 
 		&.previous {
-			left: 10px;
+			left: 15px;
 
 			.flickity-button-icon {
 				left: 27%;
@@ -33,7 +35,15 @@
 		}
 
 		&.next {
-			right: 10px;
+			right: 15px;
+
+			.flickity-button-icon {
+				left: 20%;
+			}
 		}
 	}
+}
+
+.blockgallery.is-selected .flickity-prev-next-button {
+	display: block;
 }

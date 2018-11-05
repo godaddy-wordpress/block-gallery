@@ -180,6 +180,7 @@ class Edit extends Component {
 		const wrapperStyles = {
 			...BackgroundStyles( attributes ),
 			backgroundColor: backgroundColor.color,
+			'is-selected': isSelected,
 		};
 
 		const captionStyles = {
