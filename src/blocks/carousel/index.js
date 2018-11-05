@@ -18,6 +18,7 @@ import { GlobalAttributes, GlobalTransforms, GlobalClasses } from '../../compone
  */
 const { __ } = wp.i18n;
 const { createBlock } = wp.blocks;
+const { getColorClassName, RichText } = wp.editor;
 
 /**
  * Block constants
@@ -187,6 +188,9 @@ const settings = {
 			images,
 			pageDots,
 			prevNextButtons,
+			primaryCaption,
+			captionColor,
+			customCaptionColor,
 		} = attributes;
 
 		const wrapperClasses = classnames(
@@ -232,6 +236,21 @@ const settings = {
 			},
 		};
 
+		const captionColorClass = getColorClassName( 'color', captionColor );
+
+		const captionClasses = classnames(
+			'blockgallery--caption',
+			captionColorClass,
+			'blockgallery--primary-caption', {
+				'has-caption-color': captionColorClass,
+
+			}
+		);
+
+		const captionStyles = {
+			color: captionColorClass ? undefined : customCaptionColor,
+		};
+
 		// Return early if there are no images.
 		if ( images.length <= 0 ) {
 			return;
@@ -262,6 +281,9 @@ const settings = {
 						} ) }
 					</div>
 				</div>
+				{ ! RichText.isEmpty( primaryCaption ) && (
+					<RichText.Content tagName="figcaption" className={ captionClasses } value={ primaryCaption } style={ captionStyles }/>
+				) }
 			</div>
 		);
 	},

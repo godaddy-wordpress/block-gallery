@@ -19,7 +19,7 @@
 		}
 	}
 
-	&--caption {
+	&--caption:not(.blockgallery--primary-caption) {
 		color: inherit;
 		margin: 0;
 	}
@@ -63,7 +63,6 @@
 	}
 }
 
-// Flickity thumbnails.
 .blockgallery--item-thumbnail {
 	list-style: none !important;
 	margin: 0;
@@ -76,6 +75,17 @@
 
 	img {
 		vertical-align: middle;
+	}
+}
+
+.blockgallery--primary-caption {
+	font-size: 13px;
+	padding-top: 15px;
+	margin-bottom: -10px !important;
+	text-align: center;
+
+	&:not(.has-caption-color) {
+		color: #555d66;
 	}
 }
 

@@ -24,4 +24,10 @@
 		position: inherit;
 		height: 100% !important;
 	}
+
+	// Outside caption.
+	.editor-rich-text {
+		margin-top: 15px;
+		margin-bottom: -7px;
+	}
 }

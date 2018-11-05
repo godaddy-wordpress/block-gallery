@@ -145,7 +145,9 @@ class Inspector extends Component {
 								onChange={ () => setAttributes( {  pageDots: ! pageDots } ) }
 							/>
 						</PanelBody>
-						<BackgroundPanel { ...this.props } />
+						<BackgroundPanel { ...this.props }
+							hasCaption={ true }
+						/>
 					</InspectorControls>
 				</Fragment>
 			)

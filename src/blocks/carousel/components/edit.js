@@ -24,13 +24,8 @@ const { __, sprintf } = wp.i18n;
 const { Component, Fragment } = wp.element;
 const { compose } = wp.compose;
 const { withSelect } = wp.data;
-const {
-	withNotices,
-	ResizableBox,
-} = wp.components;
-const {
-	withColors,
-} = wp.editor;
+const { withNotices, ResizableBox } = wp.components;
+const { withColors, RichText } = wp.editor;
 
 /**
  * Block consts.
@@ -147,6 +142,7 @@ class Edit extends Component {
 			noticeUI,
 			setAttributes,
 			toggleSelection,
+			captionColor,
 		} = this.props;
 
 		const {
@@ -159,6 +155,7 @@ class Edit extends Component {
 			images,
 			pageDots,
 			prevNextButtons,
+			primaryCaption,
 		} = attributes;
 
 		const dropZone = (
@@ -169,7 +166,6 @@ class Edit extends Component {
 		);
 
 		const wrapperClasses = classnames(
-			className,
 			'is-cropped',
 			...GlobalClasses( attributes ), {
 				[ `align${ align }` ] : align,
@@ -184,6 +180,10 @@ class Edit extends Component {
 		const wrapperStyles = {
 			...BackgroundStyles( attributes ),
 			backgroundColor: backgroundColor.color,
+		};
+
+		const captionStyles = {
+			color: captionColor.color,
 		};
 
 		const flickityClasses = classnames(
@@ -282,12 +282,24 @@ class Edit extends Component {
 						</div>
 					</div>
 				</ResizableBox>
+				{ ( ! RichText.isEmpty( primaryCaption ) || isSelected ) && (
+					<RichText
+						tagName="figcaption"
+						placeholder={ __( 'Write caption…' ) }
+						className="blockgallery--caption blockgallery--primary-caption"
+						value={ primaryCaption }
+						onChange={ ( newOutsideCaption ) => setAttributes( { primaryCaption: newOutsideCaption } ) }
+						inlineToolbar
+						style={ captionStyles }
+						keepPlaceholderOnFocus
+					/>
+				) }
 			</Fragment>
 		);
 	}
 }
 
 export default compose( [
-	withColors( { backgroundColor : 'background-color' } ),
+	withColors( { backgroundColor : 'background-color', captionColor : 'color' } ),
 	withNotices,
 ] )( Edit );

@@ -77,6 +77,11 @@ const GlobalAttributes = {
 	customCaptionColor: {
 		type: 'string',
 	},
+	primaryCaption: {
+		type: 'array',
+		source: 'children',
+		selector: 'figcaption.blockgallery--primary-caption',
+	},
 	...LightboxAttributes,
 	...BackgroundAttributes,
 };

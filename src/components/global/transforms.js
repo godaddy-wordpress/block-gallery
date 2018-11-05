@@ -22,6 +22,7 @@ function GlobalTransforms( props ) {
 		shadow: props.shadow,
 		filter: props.filter,
 		height: props.height,
+		primaryCaption: props.primaryCaption,
 		captionColor: props.captionColor,
 		customCaptionColor: props.customCaptionColor,
 		...LightboxTransforms( props ),
