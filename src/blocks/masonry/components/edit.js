@@ -144,7 +144,6 @@ class Edit extends Component {
 		const sidebarIsOpened = editorSidebarOpened || pluginSidebarOpened || publishSidebarOpened;
 
 		const wrapperClasses = classnames(
-			className,
 			...GlobalClasses( attributes ),
 			sidebarIsOpened, {
 				[ `align${ align }` ] : align,
