@@ -95,12 +95,6 @@ class Inspector extends Component {
 								step={ 1 }
 							/> }
 							<LightboxControl { ...this.props } />
-							{ ! lightbox && <SelectControl
-								label={ __( 'Link To' ) }
-								value={ linkTo }
-								onChange={ this.setLinkTo }
-								options={ linkOptions }
-							/> }
 							<SelectControl
 								label={ __( 'Caption style' ) }
 								value={ captionStyle }
@@ -108,6 +102,17 @@ class Inspector extends Component {
 								options={ captionOptions }
 							/>
 						</PanelBody>
+						{ ! lightbox && <PanelBody
+							title={ __( 'Link Settings' ) }
+							initialOpen={ false }
+							>
+							<SelectControl
+								label={ __( 'Link To' ) }
+								value={ linkTo }
+								options={ linkOptions }
+								onChange={ this.setLinkTo }
+							/>
+						</PanelBody> }
 						<BackgroundPanel { ...this.props }
 							hasCaption={ true }
 						/>

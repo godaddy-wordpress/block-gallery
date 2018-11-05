@@ -105,13 +105,18 @@ class Inspector extends Component {
 								reset={ false }
 							/>
 							<LightboxControl { ...this.props } />
-							{ ! lightbox && <SelectControl
+						</PanelBody>
+						{ ! lightbox && <PanelBody
+							title={ __( 'Link Settings' ) }
+							initialOpen={ false }
+							>
+							<SelectControl
 								label={ __( 'Link To' ) }
 								value={ linkTo }
-								onChange={ this.setLinkTo }
 								options={ linkOptions }
-							/> }
-						</PanelBody>
+								onChange={ this.setLinkTo }
+							/>
+						</PanelBody> }
 						<BackgroundPanel { ...this.props }
 							hasCaption={ true }
 						/>
