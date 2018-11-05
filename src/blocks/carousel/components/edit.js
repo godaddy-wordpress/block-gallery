@@ -288,10 +288,10 @@ class Edit extends Component {
 						placeholder={ __( 'Write caption…' ) }
 						className="blockgallery--caption blockgallery--primary-caption"
 						value={ primaryCaption }
-						onChange={ ( newOutsideCaption ) => setAttributes( { primaryCaption: newOutsideCaption } ) }
-						inlineToolbar
+						onChange={ ( newPrimaryCaption ) => setAttributes( { primaryCaption: newPrimaryCaption } ) }
 						style={ captionStyles }
 						keepPlaceholderOnFocus
+						inlineToolbar
 					/>
 				) }
 			</Fragment>

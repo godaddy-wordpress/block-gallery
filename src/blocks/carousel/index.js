@@ -180,6 +180,8 @@ const settings = {
 		const {
 			autoPlay,
 			autoPlaySpeed,
+			captionColor,
+			customCaptionColor,
 			draggable,
 			gridSize,
 			gutter,
@@ -189,8 +191,6 @@ const settings = {
 			pageDots,
 			prevNextButtons,
 			primaryCaption,
-			captionColor,
-			customCaptionColor,
 		} = attributes;
 
 		const wrapperClasses = classnames(
@@ -240,8 +240,8 @@ const settings = {
 
 		const captionClasses = classnames(
 			'blockgallery--caption',
-			captionColorClass,
-			'blockgallery--primary-caption', {
+			'blockgallery--primary-caption',
+			captionColorClass, {
 				'has-caption-color': captionColorClass,
 
 			}
