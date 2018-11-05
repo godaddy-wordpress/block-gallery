@@ -15,7 +15,7 @@ const { __, sprintf } = wp.i18n;
 const { Component, Fragment } = wp.element;
 const { compose } = wp.compose;
 const { withSelect } = wp.data;
-const { InspectorControls, PanelColorSettings } = wp.editor;
+const { InspectorControls, FontSizePicker, withFontSizes } = wp.editor;
 const { PanelBody, RangeControl, ToggleControl, SelectControl } = wp.components;
 
 /**
@@ -48,7 +48,7 @@ class Inspector extends Component {
 	}
 
 	getFullwidthImagesHelp( checked ) {
-		return checked ? __( 'Using full bleed images.' ) : __( 'Toggle to enable full bleed images.' );
+		return checked ? __( 'Full width images are enabled.' ) : __( 'Toggle to fill the available gallery area with completely fullwidth images.' );
 	}
 
 	render() {
@@ -57,6 +57,8 @@ class Inspector extends Component {
 			attributes,
 			setAttributes,
 			isSelected,
+			setFontSize,
+			fontSize,
 			wideControlsEnabled = false,
 		} = this.props;
 
@@ -76,6 +78,14 @@ class Inspector extends Component {
 				<Fragment>
 					<InspectorControls>
 						<PanelBody title={ sprintf( __( '%s Settings' ), title ) }>
+							{ wideControlsEnabled &&
+								<ToggleControl
+									label={ images.length > 1 ? __( 'Fullwidth Images' ) : __( 'Fullwidth Image' ) }
+									checked={ !! fullwidth }
+									help={ this.getFullwidthImagesHelp }
+									onChange={ this.setFullwidthTo }
+								/>
+							}
 							{ images.length > 1 &&
 								<ResponsiveTabsControl { ...this.props }
 									label={ __( 'Gutter' ) }
@@ -89,15 +99,6 @@ class Inspector extends Component {
 								max={ 20 }
 								step={ 1 }
 							/> }
-							{ wideControlsEnabled &&
-								<ToggleControl
-									label={ images.length > 1 ? __( 'Fullwidth Images' ) : __( 'Fullwidth Image' ) }
-									checked={ !! fullwidth }
-									help={ this.getFullwidthImagesHelp }
-									onChange={ this.setFullwidthTo }
-								/>
-							}
-							{ console.log( align ) }
 							<SizeControl { ...this.props }
 								onChange={ this.setShadowTo }
 								value={ shadow }
@@ -105,6 +106,11 @@ class Inspector extends Component {
 								reset={ false }
 							/>
 							<LightboxControl { ...this.props } />
+							<FontSizePicker
+								value={ fontSize.size }
+								onChange={ setFontSize }
+								className="components-blockgallery-inspector__size-control--label"
+							/>
 						</PanelBody>
 						{ ! lightbox && <PanelBody
 							title={ __( 'Link Settings' ) }
@@ -131,4 +137,5 @@ export default compose( [
 	withSelect( ( select ) => ( {
 		wideControlsEnabled: select( 'core/editor' ).getEditorSettings().alignWide,
 	} ) ),
+	withFontSizes( 'fontSize' ),
 ] )( Inspector );
