@@ -139,12 +139,6 @@ class BackgroundPanel extends Component {
 			{ value: 'contain', label: __( 'Contain' ) },
 		];
 
-		const overlayStyleOptions = [
-			{ value: 'dark', label: __( 'Dark' ) },
-			{ value: 'gray', label: __( 'Gray' ) },
-			{ value: 'light', label: __( 'Light' ) },
-		];
-
 		const backgroundSizeDefault = ( typeof options !== 'undefined' && typeof options.backgroundSize !== 'undefined' ) ? options.backgroundSize : 'cover';
 
 		return (

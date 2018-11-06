@@ -187,6 +187,7 @@ class Edit extends Component {
 			pageDots,
 			prevNextButtons,
 			primaryCaption,
+			autoPlaySpeed,
 		} = attributes;
 
 		const dropZone = (
@@ -235,7 +236,6 @@ class Edit extends Component {
 
 		return (
 			<Fragment>
-			{console.log(this.state.captionFocused)}
 				<GlobalToolbar
 					{ ...this.props }
 				/>

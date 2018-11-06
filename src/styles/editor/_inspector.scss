@@ -21,8 +21,7 @@
 	margin-top: -0.75em !important;
 }
 
-.components-blockgallery-inspector__background-overlay-style-control,
-.components-blockgallery-inspector__autoplayspeed-select {
+.components-blockgallery-inspector__background-overlay-style-control {
 	margin-bottom: 1.8em !important;
 
 	.components-select-control__input {
@@ -32,6 +31,10 @@
 	label {
 		display: none;
 	}
+}
+
+.components-blockgallery-inspector__autoplayspeed-select {
+	margin-bottom: 1.75em !important;
 }
 
 .components-blockgallery-inspector__background-size {

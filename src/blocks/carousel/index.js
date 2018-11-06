@@ -57,6 +57,8 @@ const blockAttributes = {
 		type: 'number',
 		default: 400,
 	},
+
+	// Slider attributes.
 	pageDots: {
 		type: 'boolean',
 		default: false,
@@ -70,7 +72,7 @@ const blockAttributes = {
 		default: false,
 	},
 	autoPlaySpeed: {
-		type: 'number',
+		type: 'string',
 		default: 3000,
 	},
 	draggable: {
