@@ -41,7 +41,8 @@ We've built a highly interactive and intuitive experience with a focus on speed 
 * More in the works! — ([subscribe for updates](https://wpblockgallery.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=subscribe-for-updates))
 
 ## From a trusted developer
-This plugin is created and maintained by [Rich Tabor](https://richtabor.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery) from [ThemeBeans](https://themebeans.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery).
+This plugin is created and maintained by [Rich Tabor](https://richtabor.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery) from [ThemeBeans](https://themebeans.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery) and open for contributions on [GitHub](https://github.com/thatplugincompany/block-gallery).
+
 
 == Screenshots ==
 
