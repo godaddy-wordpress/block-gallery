@@ -33,7 +33,7 @@ Our Gutenberg gallery blocks are second-to-none, featuring fullscale responsive 
 ## A Super-fast experience
 We've built a highly interactive and intuitive experience with a focus on speed and ease of use. Drag. Drop. Transform. Style. Watch the video below and see for yourself just how empowering [Block Gallery](https://wpblockgallery.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery) is.
 
-= Included Gallery Gutenberg Blocks =
+## Included Gallery Gutenberg Blocks
 
 * Masonry Gallery
 * Fullscreen Stacked Gallery
@@ -60,7 +60,7 @@ This plugin is created and maintained by [Rich Tabor](https://richtabor.com?utm_
 == Frequently Asked Questions ==
 
 = How do I start using Gutenberg? =
-To get the full experience of the next-generation WordPress block editor,  you'll need a Gutenberg-ready WordPress theme, like [Tabor](https://themebeans.com/themes/tabor?utm_medium=block-gallery-lite&utm_source=readme&utm_campaign=readme&utm_content=tabor). Then install the [Gutenberg](https://wordpress.org/plugins/gutenberg/) WordPress plugin. That's it! 💥
+To get the full experience of the next-generation WordPress block editor,  you'll need a Gutenberg-ready WordPress theme, like [Tabor](https://themebeans.com/themes/tabor?utm_medium=block-gallery-lite&utm_source=readme&utm_campaign=readme&utm_content=tabor) or [Stash](https://themebeans.com/themes/stash?utm_medium=block-gallery-lite&utm_source=readme&utm_campaign=readme&utm_content=stash). Then install the [Gutenberg](https://wordpress.org/plugins/gutenberg/) WordPress plugin. That's it! 💥
 
 = What themes work with Block Gallery =
 Most WordPress themes that have baked in Gutenberg support will work with Block Gallery. If you’re looking for exceptional themes, check out my theme catalogue at [ThemeBeans](https://themebeans.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery).
@@ -77,8 +77,11 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 == Changelog ==
 
 = 1.0.3, November 06, 2018 =
-* New Add support for adding a primary caption to the Carousel block
-* New Add font size option for the Stacked gallery block
+* Fix: Resolve issue with the Stacked block shadow attribute
+
+= 1.0.3, November 06, 2018 =
+* New: Add support for adding a primary caption to the Carousel block
+* New: Add font size option for the Stacked gallery block
 * Tweak: Improve UI of the slider arrows within the editor
 * Tweak: Improve help language of the Slider Settings panel for better context and understanding
 * Tweak: Improve UI of the ResponsiveTabsControl component
