@@ -69,7 +69,7 @@ class Edit extends Component {
 		this.props.setAttributes( {
 			lightbox: undefined,
 			lightboxStyle: undefined,
-			shadow: null,
+			shadow: undefined,
 		} );
 	}
 
