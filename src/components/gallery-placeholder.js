@@ -42,7 +42,7 @@ class GalleryPlaceholder extends Component {
 					className={ className }
 					labels={ {
 						title: this.props.label,
-						name: __( 'images' ),
+						instructions: __( 'Drag images, upload new ones or select files from your library.' ),
 					} }
 					onSelect={ this.onSelectImages }
 					accept="image/*"
