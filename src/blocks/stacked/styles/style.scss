@@ -10,8 +10,16 @@
 		margin-left: auto;
 		margin-right: auto;
 
-		&:last-child figure {
-			margin-bottom: 0 !important;
+		&:last-child {
+			margin-bottom: 0;
+
+			figure {
+				margin-bottom: 0 !important;
+			}
+
+			figcaption {
+				padding-bottom: 0;
+			}
 		}
 	}
 
