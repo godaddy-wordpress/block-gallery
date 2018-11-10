@@ -123,7 +123,7 @@ class Block_Gallery_Gutenberg_Checker {
 	public function fire_notices() {
 
 		// Check if the Gutenberg plugin exists.
-		if ( ! function_exists( 'is_gutenberg_page' ) ) {
+		if ( ! function_exists( 'register_block_type' ) ) {
 			add_action( 'admin_notices', array( $this, 'gutenberg_plugin_notice' ) );
 		}
 
