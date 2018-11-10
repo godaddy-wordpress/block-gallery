@@ -281,6 +281,10 @@ gulp.task( 'variables', function(done) {
 			replacement: pkg.version
 		},
 		{
+			match: 'pkg.author_uri',
+			replacement: pkg.author_uri
+		},
+		{
 			match: 'pkg.author',
 			replacement: pkg.author
 		},
