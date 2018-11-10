@@ -175,11 +175,11 @@ class Block_Gallery_Feedback {
 
 		<style>
 		.notice.blockgallery-notice {
-			border-left-color: #0085ba !important;
+			border-left-color: #4F22FE !important;
 			padding: 20px;
 		}
 		.rtl .notice.blockgallery-notice {
-			border-right-color: #0085ba !important;
+			border-right-color: #4F22FE !important;
 		}
 		.notice.notice.blockgallery-notice .blockgallery-notice-inner {
 			display: table;
@@ -216,13 +216,13 @@ class Block_Gallery_Feedback {
 			padding: 6px 50px;
 			height: auto;
 			line-height: 20px;
-			/*background: #595AFF;*/
-			/*border-color: #4848cd #4848cd #4848cd;*/
-			/*box-shadow: 0 1px 0 #4848cd;*/
-			/*text-shadow: 0 -1px 1px #4848cd, 1px 0 1px #4848cd, 0 1px 1px #4848cd, -1px 0 1px #4848cd;*/
+			background: #4F22FE;
+			border-color: #4F22FE #4F22FE #4F22FE;
+			box-shadow: 0 1px 0 #4F22FE;
+			text-shadow: 0 -1px 1px #4F22FE, 1px 0 1px #4F22FE, 0 1px 1px #4F22FE, -1px 0 1px #4F22FE;
 		}
 		.notice.blockgallery-notice .blockgallery-install-now .blockgallery-install-button:hover {
-			/*background: #4a4cff;*/
+			background: #613ffe;
 		}
 		.notice.blockgallery-notice a.no-thanks {
 			display: block;
