@@ -164,26 +164,32 @@ class Edit extends Component {
 				<div className={ className }>
 					<ul className={ wrapperClasses } style={ wrapperStyles }>
 						{ dropZone }
-						{ images.map( ( img, index ) => (
-							<li className="blockgallery--item" key={ img.id || img.url }>
-								<GalleryImage
-									url={ img.url }
-									alt={ img.alt }
-									id={ img.id }
-									gutter={ gutter }
-									gutterMobile={ gutterMobile }
-									marginBottom={ true }
-									shadow={ shadow }
-									isSelected={ isSelected && this.state.selectedImage === index }
-									onRemove={ this.onRemoveImage( index ) }
-									onSelect={ this.onSelectImage( index ) }
-									setAttributes={ ( attrs ) => this.setImageAttributes( index, attrs ) }
-									caption={ img.caption }
-									supportsCaption={ true }
-									fontSize={ fontSize.size }
-								/>
-							</li>
-						) ) }
+						{ images.map( ( img, index ) => {
+							/* translators: %1$d is the order number of the image, %2$d is the total number of images. */
+							const ariaLabel = __( sprintf( 'image %1$d of %2$d in gallery', ( index + 1 ), images.length ) );
+
+							return (
+								<li className="blockgallery--item" key={ img.id || img.url }>
+									<GalleryImage
+										url={ img.url }
+										alt={ img.alt }
+										id={ img.id }
+										gutter={ gutter }
+										gutterMobile={ gutterMobile }
+										marginBottom={ true }
+										shadow={ shadow }
+										isSelected={ isSelected && this.state.selectedImage === index }
+										onRemove={ this.onRemoveImage( index ) }
+										onSelect={ this.onSelectImage( index ) }
+										setAttributes={ ( attrs ) => this.setImageAttributes( index, attrs ) }
+										caption={ img.caption }
+										aria-label={ ariaLabel }
+										supportsCaption={ true }
+										fontSize={ fontSize.size }
+									/>
+								</li>
+							);
+						} ) }
 						{ isSelected && (
 							<GalleryUpload { ...this.props }
 								gutter={ gutter }

@@ -200,21 +200,27 @@ class Edit extends Component {
 							disableImagesLoaded={ false }
 							updateOnEachImageLoad={ false }
 						>
-							{ images.map( ( img, index ) => (
-								<li className="blockgallery--item" key={ img.id || img.url }>
-									<GalleryImage
-										url={ img.url }
-										alt={ img.alt }
-										id={ img.id }
-										isSelected={ isSelected && this.state.selectedImage === index }
-										onRemove={ this.onRemoveImage( index ) }
-										onSelect={ this.onSelectImage( index ) }
-										setAttributes={ ( attrs ) => this.setImageAttributes( index, attrs ) }
-										caption={ img.caption }
-										supportsCaption={ true }
-									/>
-								</li>
-							) ) }
+							{ images.map( ( img, index ) => {
+								/* translators: %1$d is the order number of the image, %2$d is the total number of images. */
+								const ariaLabel = __( sprintf( 'image %1$d of %2$d in gallery', ( index + 1 ), images.length ) );
+
+								return (
+									<li className="blockgallery--item" key={ img.id || img.url }>
+										<GalleryImage
+											url={ img.url }
+											alt={ img.alt }
+											id={ img.id }
+											isSelected={ isSelected && this.state.selectedImage === index }
+											onRemove={ this.onRemoveImage( index ) }
+											onSelect={ this.onSelectImage( index ) }
+											setAttributes={ ( attrs ) => this.setImageAttributes( index, attrs ) }
+											caption={ img.caption }
+											aria-label={ ariaLabel }
+											supportsCaption={ true }
+										/>
+									</li>
+								);
+							} ) }
 							{ isSelected && (
 								<GalleryUpload
 									{ ...this.props }

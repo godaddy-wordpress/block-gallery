@@ -286,25 +286,31 @@ class Edit extends Component {
 								reloadOnUpdate={ true }
 								flickityRef={ c => this.flkty = c }
 							>
-								{ images.map( ( img, index ) => (
-									<div className="blockgallery--item" key={ img.id || img.url } onClick={ this.onItemClick }>
-										<GalleryImage
-											url={ img.url }
-											alt={ img.alt }
-											id={ img.id }
-											gutter={ gutter }
-											gutterMobile={ gutterMobile }
-											marginRight={ true }
-											marginLeft={ true }
-											isSelected={ isSelected && this.state.selectedImage === index }
-											onRemove={ this.onRemoveImage( index ) }
-											onSelect={ this.onSelectImage( index ) }
-											setAttributes={ ( attrs ) => this.setImageAttributes( index, attrs ) }
-											caption={ img.caption }
-											supportsCaption={ false }
-										/>
-									</div>
-								) ) }
+								{ images.map( ( img, index ) => {
+									/* translators: %1$d is the order number of the image, %2$d is the total number of images. */
+									const ariaLabel = __( sprintf( 'image %1$d of %2$d in gallery', ( index + 1 ), images.length ) );
+
+									return (
+										<div className="blockgallery--item" key={ img.id || img.url } onClick={ this.onItemClick }>
+											<GalleryImage
+												url={ img.url }
+												alt={ img.alt }
+												id={ img.id }
+												gutter={ gutter }
+												gutterMobile={ gutterMobile }
+												marginRight={ true }
+												marginLeft={ true }
+												isSelected={ isSelected && this.state.selectedImage === index }
+												onRemove={ this.onRemoveImage( index ) }
+												onSelect={ this.onSelectImage( index ) }
+												setAttributes={ ( attrs ) => this.setImageAttributes( index, attrs ) }
+												caption={ img.caption }
+												aria-label={ ariaLabel }
+												supportsCaption={ false }
+											/>
+										</div>
+									);
+								} ) }
 								<GalleryUpload { ...this.props }
 									gutter={ gutter }
 									gutterMobile={ gutterMobile }
