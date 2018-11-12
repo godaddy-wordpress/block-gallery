@@ -47,19 +47,19 @@ class ResponsiveTabsControl extends Component {
 		return (
 			<Fragment>
 				<TabPanel
-					className="components-blockgallery-inspector__tabs"
+					className="components-base-control components-blockgallery-inspector__tabs"
 					activeClass="is-active"
 					initialTabName="desk"
 					tabs={ [
 						{
-							name: 'mobile',
-							title: icons.mobile,
-							className: 'components-blockgallery-inspector__tabs-item components-blockgallery-inspector__tabs-item--mobile',
-						},
-						{
 							name: 'desk',
 							title: icons.desktopChrome,
 							className: 'components-blockgallery-inspector__tabs-item components-blockgallery-inspector__tabs-item--desktop',
+						},
+						{
+							name: 'mobile',
+							title: icons.mobile,
+							className: 'components-blockgallery-inspector__tabs-item components-blockgallery-inspector__tabs-item--mobile',
 						},
 					] }>
 					{
