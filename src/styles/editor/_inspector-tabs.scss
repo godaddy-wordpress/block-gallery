@@ -4,6 +4,11 @@
 	flex-direction: row-reverse;
 	align-items: center;
 
+	.components-base-control,
+	.components-base-control__field {
+		margin-bottom: 0 !important;
+	}
+
 	.components-tab-panel__tab-content {
 		width: 100%;
 	}
@@ -86,6 +91,6 @@
 		margin-left: 7px;
 		margin-right: 1px;
 		position: relative;
-		top: 7px;
+		top: 11px;
 	}
 }
