@@ -76,6 +76,11 @@ Yes! Block Gallery's core features are absolutely free. I am working on a a Pro 
 Please reach out via the official [support forum on WordPress.org](https://wordpress.org/support/plugin/block-gallery/).
 
 == Changelog ==
+= 1.0.6, November 16, 2018 =
+* Tweak: Adjust mobile styles for the block inspector controls UI
+* Tweak: Adjust UI of SizeControl controls
+* Tweak: Adjust pickRelevantMediaFiles
+* Tweak: Hide shadow controls if Stacked block is fullwidth
 
 = 1.0.5, November 15, 2018 =
 * Tweak: Ensure the last figcaption in the Stacked Block is styled appropriately
