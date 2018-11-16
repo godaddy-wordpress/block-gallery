@@ -1,4 +1,4 @@
-# Block Gallery — WordPress gallery blocks built exclusively for Gutenberg
+# Block Gallery — WordPress Gallery Gutenberg blocks
 
 [![WordPress plugin](https://img.shields.io/wordpress/plugin/dt/block-gallery.svg?style=flat)](https://wordpress.org/plugins/block-gallery/) [![WordPress plugin](https://img.shields.io/wordpress/plugin/v/block-gallery.svg?style=flat)](https://wordpress.org/plugins/block-gallery/) [![WordPress](https://img.shields.io/wordpress/v/block-gallery.svg?style=flat)]() [![License](https://img.shields.io/badge/license-GPL--3.0%2B-red.svg)](https://github.com/thatplugincompany/block-gallery/blob/master/license.txt)
 
