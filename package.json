@@ -2,7 +2,6 @@
   "name": "block-gallery",
   "title": "Block Gallery",
   "version": "1.0.4",
-  "private": true,
   "author": "Rich Tabor",
   "author_uri": "https://wpblockgallery.com",
   "description": "Block Gallery is a suite of beautiful gallery blocks for the WordPress Gutenberg block editor.",
