@@ -44,7 +44,7 @@ class Inspector extends Component {
 	}
 
 	setFullwidthTo() {
-		this.props.setAttributes( { fullwidth: ! this.props.attributes.fullwidth, } );
+		this.props.setAttributes( { fullwidth: ! this.props.attributes.fullwidth, shadow: 'none' } );
 	}
 
 	getFullwidthImagesHelp( checked ) {
@@ -71,6 +71,7 @@ class Inspector extends Component {
 			fullwidth,
 			radius,
 			shadow,
+			backgroundPadding,
 		} = attributes;
 
 		return (
@@ -99,12 +100,12 @@ class Inspector extends Component {
 								max={ 20 }
 								step={ 1 }
 							/> }
-							<SizeControl { ...this.props }
+							{ ! fullwidth && <SizeControl { ...this.props }
 								onChange={ this.setShadowTo }
 								value={ shadow }
 								label={ __( 'Box Shadow' ) }
 								reset={ false }
-							/>
+							/> }
 							<LightboxControl { ...this.props } />
 							<FontSizePicker
 								value={ fontSize.size }
