@@ -2,17 +2,18 @@
  * External dependencies
  */
 import pick from 'lodash/pick';
+import get from 'lodash/get';
 
-// Set dim ratio.
 export function overlayToClass( ratio ) {
 	return ( ratio === 0 || ratio === 50 ) ?
 		null :
 		'has-background-overlay-' + ( 10 * Math.round( ratio / 10 ) );
 }
 
-// Retreive relevant file attributes.
 export const pickRelevantMediaFiles = ( image ) => {
-	return pick( image, [ 'alt', 'id', 'link', 'url', 'caption' ] );
+	const imageProps = pick( image, [ 'alt', 'id', 'link', 'caption' ] );
+	imageProps.url = get( image, [ 'sizes', 'large', 'url' ] ) || get( image, [ 'media_details', 'sizes', 'large', 'source_url' ] ) || image.url;
+	return imageProps;
 };
 
 export const ALLOWED_MEDIA_TYPES = [ 'image' ];
