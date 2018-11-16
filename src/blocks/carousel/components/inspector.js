@@ -63,6 +63,7 @@ class Inspector extends Component {
 						<PanelBody title={ sprintf( __( '%s Settings' ), title ) }>
 							<SizeControl { ...this.props }
 								type={ 'grid' }
+								label={ __( 'Size' ) }
 								onChange={ this.setSizeControl }
 								value={ gridSize }
 								resetValue={ 'xlrg' }

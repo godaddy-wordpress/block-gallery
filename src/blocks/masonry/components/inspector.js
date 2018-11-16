@@ -80,6 +80,7 @@ class Inspector extends Component {
 						<PanelBody title={ sprintf( __( '%s Settings' ), title ) }>
 							<SizeControl { ...this.props }
 								type={ 'grid' }
+								label={ __( 'Column Size' ) }
 								onChange={ this.setSizeControl }
 								value={ gridSize }
 								resetValue={ 'xlrg' }
@@ -96,7 +97,7 @@ class Inspector extends Component {
 							/> }
 							<LightboxControl { ...this.props } />
 							<SelectControl
-								label={ __( 'Caption style' ) }
+								label={ __( 'Caption Style' ) }
 								value={ captionStyle }
 								onChange={ this.setCaptionStyleTo }
 								options={ captionOptions }

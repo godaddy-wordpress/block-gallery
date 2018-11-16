@@ -48,7 +48,7 @@ class Inspector extends Component {
 	}
 
 	getFullwidthImagesHelp( checked ) {
-		return checked ? __( 'Full width images are enabled.' ) : __( 'Toggle to fill the available gallery area with completely fullwidth images.' );
+		return checked ? __( 'Fullwidth images are enabled.' ) : __( 'Toggle to fill the available gallery area with completely fullwidth images.' );
 	}
 
 	render() {

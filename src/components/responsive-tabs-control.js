@@ -33,7 +33,7 @@ class ResponsiveTabsControl extends Component {
 
 		const {
 			attributes,
-			label = __( 'Grid Gutter' ),
+			label = __( 'Gutter' ),
 			max = 50,
 			min = 0,
 			onChange = this.setGutterTo,
