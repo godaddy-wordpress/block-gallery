@@ -36,18 +36,17 @@ There are various ways you can contribute:
 
 ## Screenshots
 
----
 ### Masonry Block
 [![Block Gallery — Masonry Block](https://user-images.githubusercontent.com/1813435/48589254-c80b6400-e908-11e8-8ab7-1217cb0b6cba.jpg)](https://block-gallery.com?utm_medium=block-gallery-github&utm_source=readme&utm_campaign=readme&utm_content=masonry-screenshot)
----
+
 ### Carousel Block
 [![Block Gallery — Carousel Block](https://user-images.githubusercontent.com/1813435/48589270-d5285300-e908-11e8-80a9-8f4c977830a7.jpg)](https://block-gallery.com?utm_medium=block-gallery-github&utm_source=readme&utm_campaign=readme&utm_content=carousel-screenshot)
----
+
 ### Stacked Block
 [![Block Gallery — Stacked Block](https://user-images.githubusercontent.com/1813435/48589301-f2f5b800-e908-11e8-968e-1b2b27db3d15.jpg)](https://block-gallery.com?utm_medium=block-gallery-github&utm_source=readme&utm_campaign=readme&utm_content=stacked-screenshot)
----
+
 ### Offset Grid Block
 [![Block Gallery — Offset Grid Block](https://user-images.githubusercontent.com/1813435/48589317-03a62e00-e909-11e8-920c-0a28ba2ee945.jpg)](https://block-gallery.com?utm_medium=block-gallery-github&utm_source=readme&utm_campaign=readme&utm_content=offset-screenshot)
----
+
 ### Auto-Height Block
 [![Block Gallery — Auto-Height Block](https://user-images.githubusercontent.com/1813435/48589341-17ea2b00-e909-11e8-92bd-e2e2c00a81b1.jpg)](https://block-gallery.com?utm_medium=block-gallery-github&utm_source=readme&utm_campaign=readme&utm_content=autoheight-screenshot)
