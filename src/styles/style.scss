@@ -20,8 +20,8 @@
 	}
 
 	&--caption:not(.blockgallery--primary-caption) {
-		color: inherit;
-		margin: 0;
+		// color: inherit;
+		// margin: 0;
 	}
 
 	&:not(.has-padding) {
@@ -80,8 +80,6 @@
 
 .blockgallery--primary-caption {
 	font-size: 13px;
-	padding-top: 15px;
-	margin-bottom: -10px !important;
 	text-align: center;
 }
 
