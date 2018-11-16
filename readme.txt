@@ -77,13 +77,16 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 
 == Changelog ==
 
-= 1.0.5, November XX, 2018 =
+= 1.0.5, November 15, 2018 =
 * Tweak: Ensure the last figcaption in the Stacked Block is styled appropriately
 * Tweak: Update styling of feedback notice
 * Tweak: Improve language of the gallery instructions for placeholders
 * Tweak: Tweak icon placement in the placeholder label
 * Tweak: Remove caption color that was overriding theme styles
 * Tweak: Use register_block_type to check if the block editor is live
+* Tweak: Improve UI of the ResponsiveTabsControl component
+* Tweak: Add tab navigation support for gallery images
+* Tweak: Tweak editor styles for captions
 
 = 1.0.4, November 06, 2018 =
 * Fix: Resolve issue with the Stacked block shadow attribute
