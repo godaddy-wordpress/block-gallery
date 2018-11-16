@@ -184,7 +184,7 @@ class SizeControl extends Component {
 					</ButtonGroup>
 					{ reset &&
 						<Button
-							isLarge
+							isSmall
 							onClick={ () => onChange( resetValue ) }
 						>
 							{ __( 'Reset' ) }
