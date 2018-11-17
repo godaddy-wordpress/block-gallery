@@ -19,11 +19,6 @@
 		}
 	}
 
-	&--caption:not(.blockgallery--primary-caption) {
-		// color: inherit;
-		// margin: 0;
-	}
-
 	&:not(.has-padding) {
 		padding: 0 !important;
 	}
@@ -82,7 +77,7 @@ figcaption.blockgallery--primary-caption {
 	color: #555d66;
 	font-size: 13px;
 	margin-bottom: 1em;
-	margin-top: .5em;
+	margin-top: 1.2em;
 	text-align: center;
 }
 
