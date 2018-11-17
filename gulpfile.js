@@ -215,7 +215,7 @@ gulp.task( 'adminStyles', function (done) {
 
 gulp.task( 'frontendScripts', function(done) {
 
-	gulp.src( scriptMasonrySRCDirectory )
+	gulp.src( scriptMasonrySRCDirectory, { allowEmpty: true } )
 	.pipe( rename( {
 		basename: scriptMasonrySRC,
 		suffix: '.min'
@@ -224,7 +224,7 @@ gulp.task( 'frontendScripts', function(done) {
 	.pipe( lineec() )
 	.pipe( gulp.dest( scriptDestination ) )
 
-	gulp.src( scriptAutoHeightSRCDirectory )
+	gulp.src( scriptAutoHeightSRCDirectory, { allowEmpty: true } )
 	.pipe( rename( {
 		basename: scriptAutoHeightSRC,
 		suffix: '.min'
@@ -237,7 +237,7 @@ gulp.task( 'frontendScripts', function(done) {
 });
 
 gulp.task( 'vendorsScripts', function(done) {
-	return gulp.src( scriptFlickityVendorSRCDirectory )
+	return gulp.src( scriptFlickityVendorSRCDirectory, { allowEmpty: true } )
 	.pipe( rename( {
 		basename: scriptFlickityVendorSRC,
 		suffix: '.min'
