@@ -9,10 +9,6 @@
 	&.is-draggable {
 		user-select: none;
 	}
-
-	// .is-cropped & {
-	// 	position: inherit;
-	// }
 }
 
 .flickity-viewport {
@@ -101,21 +97,37 @@
 }
 
 .flickity-prev-next-button.previous {
-	left: 20px;
+	left: 10px;
+
+	@media (min-width: 600px) {
+		left: 20px;
+	}
 }
 
 .flickity-prev-next-button.next {
-	right: 20px;
+	right: 10px;
+
+	@media (min-width: 600px) {
+		right: 20px;
+	}
 }
 
 .flickity-rtl .flickity-prev-next-button.previous {
 	left: auto;
 	right: 10px;
+
+	@media (min-width: 600px) {
+		right: 20px;
+	}
 }
 
 .flickity-rtl .flickity-prev-next-button.next {
 	right: auto;
 	left: 10px;
+
+	@media (min-width: 600px) {
+		left: 20px;
+	}
 }
 
 .flickity-prev-next-button .flickity-button-icon {
