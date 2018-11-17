@@ -78,8 +78,11 @@
 	}
 }
 
-.blockgallery--primary-caption {
+figcaption.blockgallery--primary-caption {
+	color: #555d66;
 	font-size: 13px;
+	margin-bottom: 1em;
+	margin-top: .5em;
 	text-align: center;
 }
 
