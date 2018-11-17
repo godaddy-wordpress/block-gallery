@@ -13,6 +13,7 @@ const { IconButton, Spinner } = wp.components;
 const { RichText } = wp.editor;
 const { withSelect } = wp.data;
 const { BACKSPACE, DELETE } = wp.keycodes;
+const { isBlobURL } = wp.blob;
 
 /**
  * Gallery Image Component
@@ -133,7 +134,25 @@ class GalleryImage extends Component {
 		// Disable reason: Image itself is not meant to be
 		// interactive, but should direct image selection and unfocus caption fields
 		// eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/click-events-have-key-events
-		const img = url ? <img src={ url } alt={ alt } className={ imgClasses } data-id={ id } onClick={ this.onImageClick } tabIndex="0" onKeyDown={ this.onImageClick } aria-label={ ariaLabel }/> : <Spinner />;
+		const img = (
+			// Disable reason: Image itself is not meant to be interactive, but should
+			// direct image selection and unfocus caption fields.
+			/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+			<Fragment>
+				<img
+					src={ url }
+					className={ imgClasses }
+					alt={ alt }
+					data-id={ id }
+					onClick={ this.onImageClick }
+					tabIndex="0"
+					onKeyDown={ this.onImageClick }
+					aria-label={ ariaLabel }
+				/>
+				{ isBlobURL( url ) && <Spinner /> }
+			</Fragment>
+			/* eslint-enable jsx-a11y/no-noninteractive-element-interactions */
+		);
 
 		const className = classnames( {
 			'is-selected': isSelected,
@@ -167,7 +186,7 @@ class GalleryImage extends Component {
 					</div>
 				}
 				{ href ? <a href={ href }>{ img }</a> : img }
-				{ ( supportsCaption === true ) && ( ( caption && caption.length > 0 ) || isSelected ) ? (
+				{ ( supportsCaption === true ) && ( ! RichText.isEmpty( caption ) || isSelected ) ? (
 					<RichText
 						tagName="figcaption"
 						placeholder={ __( 'Write caption…' ) }

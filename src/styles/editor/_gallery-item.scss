@@ -25,7 +25,7 @@
 	}
 
 	.is-transient img {
-		@include loading_fade;
+		opacity: 0.3;
 	}
 
 	.editor-rich-text {
@@ -36,6 +36,7 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
+		margin-top: -9px;
+		margin-left: -9px;
 	}
 }
