@@ -81,6 +81,9 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 * Tweak: Adjust UI of SizeControl controls
 * Tweak: Adjust pickRelevantMediaFiles
 * Tweak: Hide shadow controls if Stacked block is fullwidth
+* Tweak: Improve default caption style for Carousel
+* Tweak: Tweak mobile styles for Carousel block arrows
+* Tweak: Adjust height of Stacked image uploader
 
 = 1.0.5, November 15, 2018 =
 * Tweak: Ensure the last figcaption in the Stacked Block is styled appropriately
