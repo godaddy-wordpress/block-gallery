@@ -74,8 +74,9 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 
 == Changelog ==
 
-= 1.0.7, November XX, 2018 =
+= 1.0.7, November 19, 2018 =
 * Tweak: Indicate uploading using a spinner
+* Tweak: Adjust figcaption margin for better theme compatibility
 
 = 1.0.6, November 16, 2018 =
 * Tweak: Adjust mobile styles for the block inspector controls UI
