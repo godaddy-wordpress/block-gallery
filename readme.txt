@@ -74,6 +74,9 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 
 == Changelog ==
 
+= 1.0.8, November 20, 2018 =
+* Tweak: Remove unnecessary style dependancies
+
 = 1.0.7, November 19, 2018 =
 * Tweak: Indicate uploading using a spinner
 * Tweak: Adjust figcaption margin for better theme compatibility
