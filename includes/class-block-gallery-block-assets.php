@@ -137,7 +137,7 @@ class Block_Gallery_Block_Assets {
 		wp_register_style(
 			$this->_slug . '-frontend',
 			$this->_url . '/dist/blocks.style.build.css',
-			array( 'wp-blocks', 'media-views' ),
+			array(),
 			$this->_version
 		);
 	}
@@ -153,7 +153,7 @@ class Block_Gallery_Block_Assets {
 		wp_register_style(
 			$this->_slug . '-editor',
 			$this->_url . '/dist/blocks.editor.build.css',
-			array( 'wp-edit-blocks' ),
+			array(),
 			$this->_version
 		);
 
