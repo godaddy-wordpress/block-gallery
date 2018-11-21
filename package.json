@@ -16,7 +16,6 @@
     "eject": "cgb-scripts eject"
   },
   "dependencies": {
-    "@wordpress/plugins": "^1.0.0-alpha.2",
     "cgb-scripts": "1.11.0",
     "classnames": "2.2.5",
     "compose": "^0.1.2",
@@ -24,7 +23,6 @@
     "gutenberg-sortable": "^1.0.5",
     "lodash": "4.17.10",
     "memize": "^1.0.5",
-    "re-resizable": "4.0.3",
     "react": "^16.2.0",
     "react-flickity-component": "^3.1.0",
     "react-masonry-component": "^6.2.1",
