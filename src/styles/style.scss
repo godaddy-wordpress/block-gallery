@@ -14,13 +14,13 @@
 			position: relative;
 		}
 
-		figcaption {
-			margin: 0 !important;
-		}
-
 		img {
 			vertical-align: middle;
 		}
+	}
+
+	& &--item figcaption {
+		margin: 0 !important;
 	}
 
 	&:not(.has-padding) {
