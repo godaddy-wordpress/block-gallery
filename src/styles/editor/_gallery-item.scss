@@ -40,3 +40,10 @@
 		margin-left: -9px;
 	}
 }
+
+.has-caption-color .blockgallery--caption {
+
+	a {
+		color: inherit !important;
+	}
+}
