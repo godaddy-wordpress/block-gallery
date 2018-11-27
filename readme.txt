@@ -74,6 +74,10 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 
 == Changelog ==
 
+= 1.0.9, November 26, 2018 =
+Tweak: Use better specificity for figcaption margins
+Tweak: Add inherit color for caption link hovers
+
 = 1.0.8, November 20, 2018 =
 * Tweak: Remove unnecessary style dependancies
 
