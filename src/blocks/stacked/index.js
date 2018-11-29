@@ -150,6 +150,15 @@ const settings = {
 					return createBlock( `blockgallery/${ name }` );
 				},
 			},
+			{
+				type: 'prefix',
+				prefix: '!stacked',
+				transform: function( content ) {
+					return createBlock( `blockgallery/${ name }`, {
+						content,
+					} );
+				},
+			},
 		],
 		to: [
 			{

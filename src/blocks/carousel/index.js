@@ -177,6 +177,15 @@ const settings = {
 					return createBlock( `blockgallery/${ name }` );
 				},
 			},
+			{
+				type: 'prefix',
+				prefix: '!carousel',
+				transform: function( content ) {
+					return createBlock( `blockgallery/${ name }`, {
+						content,
+					} );
+				},
+			},
 		],
 		to: [
 			{
