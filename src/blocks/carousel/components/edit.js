@@ -311,12 +311,14 @@ class Edit extends Component {
 										</div>
 									);
 								} ) }
-								<GalleryUpload { ...this.props }
-									gutter={ gutter }
-									gutterMobile={ gutterMobile }
-									marginRight={ true }
-									marginLeft={ true }
-								/>
+								{ isSelected && (
+									<GalleryUpload { ...this.props }
+										gutter={ gutter }
+										gutterMobile={ gutterMobile }
+										marginRight={ true }
+										marginLeft={ true }
+									/>
+								) }
 							</Flickity>
 						</div>
 					</div>
