@@ -74,6 +74,11 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 
 == Changelog ==
 
+= 1.0.10, November XX, 2018 =
+New: Add prefix transforms using each blocks' name
+	- I.e. type "!masonry", followed by a trailing space, in the paragraph block to launch the Masonry block
+New: Add ability to transform Image blocks to Block Gallery blocks
+
 = 1.0.9, November 26, 2018 =
 Tweak: Use better specificity for figcaption margins
 Tweak: Add inherit color for caption link hovers
