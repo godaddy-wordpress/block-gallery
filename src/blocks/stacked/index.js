@@ -2,6 +2,7 @@
  * External dependencies
  */
 import classnames from 'classnames';
+import filter from 'lodash/filter';
 
 /**
  * Internal dependencies
@@ -133,6 +134,21 @@ const settings = {
 						...GlobalTransforms( attributes ),
 					} )
 				),
+			},
+			{
+				type: 'block',
+				isMultiBlock: true,
+				blocks: [ 'core/image' ],
+				transform: ( attributes ) => {
+					const validImages = filter( attributes, ( { id, url } ) => id && url );
+					if ( validImages.length > 0 ) {
+						return createBlock( `blockgallery/${ name }`, {
+							images: validImages.map( ( { id, url, alt, caption } ) => ( { id, url, alt, caption } ) ),
+							ids: validImages.map( ( { id } ) => id ),
+						} );
+					}
+					return createBlock( `blockgallery/${ name }` );
+				},
 			},
 		],
 		to: [
