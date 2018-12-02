@@ -193,7 +193,7 @@ class Block_Gallery_Block_Assets {
 		// Carousel block.
 		if ( null !== $post->post_content && strpos( $post->post_content, 'wp-block-blockgallery-carousel' ) ) {
 			wp_enqueue_script(
-				'block-gallery-carousel',
+				$this->_slug . '-flickity',
 				$vendors_dir . 'flickity' . BLOCKGALLERY_ASSET_SUFFIX . '.js',
 				array( 'jquery' ),
 				$this->_version,
