@@ -74,11 +74,10 @@ class Block_Gallery_Block_Assets {
 		$this->_dir     = untrailingslashit( plugin_dir_path( '/', __FILE__ ) );
 		$this->_url     = untrailingslashit( plugins_url( '/', dirname( __FILE__ ) ) );
 
-		add_action( 'init', array( $this, 'register_blocks' ) );
+		add_action( 'init', array( $this, 'register_blocks' ), 99 );
 		add_action( 'init', array( $this, 'block_assets' ) );
 		add_action( 'init', array( $this, 'editor_assets' ) );
-		add_action( 'init', array( $this, 'frontend_scripts' ) );
-
+		add_action( 'wp_enqueue_scripts', array( $this, 'frontend_scripts' ) );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'localization' ) );
 	}
 
@@ -103,7 +102,6 @@ class Block_Gallery_Block_Assets {
 				'editor_script' => $slug . '-editor',
 				'editor_style'  => $slug . '-editor',
 				'style'         => $slug . '-frontend',
-				'script'        => $slug . '-carousel',
 			)
 		);
 		register_block_type(
@@ -112,7 +110,6 @@ class Block_Gallery_Block_Assets {
 				'editor_script' => $slug . '-editor',
 				'editor_style'  => $slug . '-editor',
 				'style'         => $slug . '-frontend',
-				'script'        => $slug . '-masonry',
 			)
 		);
 
@@ -168,11 +165,14 @@ class Block_Gallery_Block_Assets {
 	}
 
 	/**
-	 * Enqueue front-end assets for the masonry block.
+	 * Enqueue front-end assets for blocks.
 	 *
 	 * @access public
 	 */
 	public function frontend_scripts() {
+
+		global $post;
+
 		// Define where the asset is loaded from.
 		$dir = Block_Gallery()->asset_source( 'js' );
 
@@ -180,22 +180,26 @@ class Block_Gallery_Block_Assets {
 		$vendors_dir = Block_Gallery()->asset_source( 'js', 'vendors' );
 
 		// Masonry block.
-		wp_register_script(
-			$this->_slug . '-masonry',
-			$dir . $this->_slug . '-masonry' . BLOCKGALLERY_ASSET_SUFFIX . '.js',
-			array( 'jquery', 'masonry', 'imagesloaded' ),
-			$this->_version,
-			true
-		);
+		if ( null !== $post->post_content && strpos( $post->post_content, 'wp-block-blockgallery-masonry' ) ) {
+			wp_enqueue_script(
+				$this->_slug . '-masonry',
+				$dir . $this->_slug . '-masonry' . BLOCKGALLERY_ASSET_SUFFIX . '.js',
+				array( 'jquery', 'masonry', 'imagesloaded' ),
+				$this->_version,
+				true
+			);
+		}
 
 		// Carousel block.
-		wp_register_script(
-			$this->_slug . '-carousel',
-			$vendors_dir . 'flickity' . BLOCKGALLERY_ASSET_SUFFIX . '.js',
-			array( 'jquery' ),
-			$this->_version,
-			true
-		);
+		if ( null !== $post->post_content && strpos( $post->post_content, 'wp-block-blockgallery-carousel' ) ) {
+			wp_enqueue_script(
+				'block-gallery-carousel',
+				$vendors_dir . 'flickity' . BLOCKGALLERY_ASSET_SUFFIX . '.js',
+				array( 'jquery' ),
+				$this->_version,
+				true
+			);
+		}
 	}
 
 	/**
