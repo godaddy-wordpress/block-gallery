@@ -152,7 +152,7 @@ const settings = {
 			},
 			{
 				type: 'prefix',
-				prefix: '!stacked',
+				prefix: ':stacked',
 				transform: function( content ) {
 					return createBlock( `blockgallery/${ name }`, {
 						content,

@@ -137,7 +137,7 @@ const settings = {
 			},
 			{
 				type: 'prefix',
-				prefix: '!masonry',
+				prefix: ':masonry',
 				transform: function( content ) {
 					return createBlock( `blockgallery/${ name }`, {
 						content,

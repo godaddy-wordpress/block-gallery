@@ -179,7 +179,7 @@ const settings = {
 			},
 			{
 				type: 'prefix',
-				prefix: '!carousel',
+				prefix: ':carousel',
 				transform: function( content ) {
 					return createBlock( `blockgallery/${ name }`, {
 						content,
