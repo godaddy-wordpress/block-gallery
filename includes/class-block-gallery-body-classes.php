@@ -55,7 +55,6 @@ class Block_Gallery_Body_Classes {
 			'twentythirteen',
 			'twentyeleven',
 			'twentytwelve',
-			'twentyten',
 		);
 
 		return apply_filters( 'blockgallery_theme_body_classes', $themes );
