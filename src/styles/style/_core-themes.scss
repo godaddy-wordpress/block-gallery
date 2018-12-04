@@ -86,3 +86,24 @@
 		font-size: 13px !important;
 	}
 }
+
+.is-twentytwelve {
+
+	.entry-content div[class*="wp-block-blockgallery"] {
+		margin-top: 32px;
+		margin-bottom: 32px;
+
+		// Override the theme's border radius behavior for our blocks.
+		.blockgallery:not([class*="border-radius"]) img {
+			border-radius: inherit;
+		}
+
+		.blockgallery--primary-caption {
+			margin-bottom: -10px;
+		}
+	}
+
+	.wp-block-blockgallery-masonry figcaption {
+		padding-bottom: 6px;
+	}
+}
