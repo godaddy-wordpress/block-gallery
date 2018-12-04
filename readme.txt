@@ -86,6 +86,7 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 * New: Add styling for the core Twenty Fourteen theme
 * New: Add styling for the core Twenty Twelve theme
 * New: Add styling for the core Twenty Eleven theme
+* New: Add block-gallery-translations.php for referencing PHP translatable strings
 * Tweak: Improve grid size responsiveness for the Masonry block
 * Tweak: Hide the GalleryUpload component if not selected
 * Tweak: Improve Flickity focus styles for better theme compatibility
