@@ -43,7 +43,7 @@ class Block_Gallery_Footer_Text {
 		}
 
 		$footer_text = sprintf(
-			/* translators: 1: Block Architect, 2: Link to plugin review */
+			/* translators: 1: Plugin Name, 2: Link to plugin review */
 			__( 'Enjoying %1$s? Please leave a %2$s rating — we appreciate your support!', '@@textdomain' ),
 			'Block Gallery',
 			'<a href="' . esc_url( BLOCKGALLERY_REVIEW_URL ) . '" target="_blank">&#9733;&#9733;&#9733;&#9733;&#9733;</a>'

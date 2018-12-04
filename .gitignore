@@ -6,6 +6,7 @@
 **/dist/blocks.editor.build.css
 **/dist/blocks.style.build.css
 **/build/**
+**/languages/**
 build
 coverage
 cypress

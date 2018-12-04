@@ -27,7 +27,8 @@ class SliderPanel extends Component {
 		const speed = this.props.attributes.autoPlaySpeed / 1000;
 		const time = ( speed > 1 ) ? __( 'seconds' ) : __( 'second' );
 
-		return checked ? sprintf( __( 'Automatically advancing to the next gallery item after %s %s.' ), speed, time ) : __( 'Automatically advance to the next gallery item after a set duration.' );
+		// translators: 1. Speed of the slider, 2: Time until the slide advances
+		return checked ? sprintf( __( 'Automatically advancing to the next gallery item after %1$s %2$d.' ), speed, time ) : __( 'Automatically advance to the next gallery item after a set duration.' );
 	}
 
 	getDraggableHelp( checked ) {

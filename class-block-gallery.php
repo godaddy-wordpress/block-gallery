@@ -6,8 +6,8 @@
  * Author: Rich Tabor
  * Author URI: https://richtabor.com/
  * Version: 1.0.9
- * Text Domain: '@@textdomain'
- * Domain Path: languages
+ * Text Domain: @@textdomain
+ * Domain Path: /languages
  * Tested up to: @@pkg.tested_up_to
  *
  * @@pkg.title is distributed in the hope that it will be useful,
@@ -81,7 +81,7 @@ if ( ! class_exists( 'Block_Gallery' ) ) :
 		 */
 		public function __clone() {
 			// Cloning instances of the class is forbidden.
-			_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', '@@textdomain' ), '1.0' );
+			_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheating huh?', '@@textdomain' ), '1.0' );
 		}
 
 		/**
@@ -93,7 +93,7 @@ if ( ! class_exists( 'Block_Gallery' ) ) :
 		 */
 		public function __wakeup() {
 			// Unserializing instances of the class is forbidden.
-			_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', '@@textdomain' ), '1.0' );
+			_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheating huh?', '@@textdomain' ), '1.0' );
 		}
 
 		/**
@@ -152,7 +152,7 @@ if ( ! class_exists( 'Block_Gallery' ) ) :
 		 * @return void
 		 */
 		private function init() {
-			add_action( 'plugins_loaded', array( $this, 'load_textdomain' ) );
+			add_action( 'init', array( $this, 'load_textdomain' ) );
 			add_action( 'init', array( $this, 'load_dynamic_blocks' ) );
 		}
 

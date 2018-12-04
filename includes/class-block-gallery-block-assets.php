@@ -77,8 +77,8 @@ class Block_Gallery_Block_Assets {
 		add_action( 'init', array( $this, 'register_blocks' ), 99 );
 		add_action( 'init', array( $this, 'block_assets' ) );
 		add_action( 'init', array( $this, 'editor_assets' ) );
-		add_action( 'wp_enqueue_scripts', array( $this, 'frontend_scripts' ) );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'localization' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'frontend_scripts' ) );
 	}
 
 	/**
@@ -208,16 +208,9 @@ class Block_Gallery_Block_Assets {
 	 * @access public
 	 */
 	public function localization() {
-
-		// Check if this function exists.
-		if ( ! function_exists( 'gutenberg_get_jed_locale_data' ) ) {
-			return;
+		if ( function_exists( 'wp_set_script_translations' ) ) {
+			wp_set_script_translations( $this->_slug . '-editor', '@@textdomain' );
 		}
-
-		$locale  = gutenberg_get_jed_locale_data( $this->_slug );
-		$content = 'wp.i18n.setLocaleData( ' . wp_json_encode( $locale ) . ' );';
-
-		wp_script_add_data( $this->_slug . '-editor', 'data', $content );
 	}
 }
 

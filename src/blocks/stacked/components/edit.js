@@ -165,7 +165,7 @@ class Edit extends Component {
 					<ul className={ wrapperClasses } style={ wrapperStyles }>
 						{ dropZone }
 						{ images.map( ( img, index ) => {
-							/* translators: %1$d is the order number of the image, %2$d is the total number of images. */
+							// translators: %1$d is the order number of the image, %2$d is the total number of images.
 							const ariaLabel = __( sprintf( 'image %1$d of %2$d in gallery', ( index + 1 ), images.length ) );
 
 							return (

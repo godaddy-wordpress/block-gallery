@@ -60,7 +60,12 @@ class Inspector extends Component {
 			isSelected && (
 				<Fragment>
 					<InspectorControls>
-						<PanelBody title={ sprintf( __( '%s Settings' ), title ) }>
+						<PanelBody
+							title={
+								// translators: %s: Block title
+								sprintf( __( '%s Settings' ), title )
+							}
+						>
 							<SizeControl { ...this.props }
 								type={ 'grid' }
 								label={ __( 'Size' ) }
