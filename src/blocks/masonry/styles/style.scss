@@ -10,6 +10,10 @@
 		margin: 0 !important;
 	}
 
+	figure {
+		overflow: hidden;
+	}
+
 	img {
 		vertical-align: bottom;
 	}
@@ -21,7 +25,6 @@
 		max-height: 100%;
 		overflow: auto;
 		padding: 30px 10px 10px;
-		// color: $white;
 		opacity: 0.9;
 		text-align: center;
 		font-size: 13px;
