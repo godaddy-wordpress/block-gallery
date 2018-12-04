@@ -1,0 +1,88 @@
+.is-twentyseventeen {
+
+	.entry-content div[class*="wp-block-blockgallery"] {
+		margin-top: 1.65em;
+		margin-bottom: 1.75em;
+
+		.blockgallery--primary-caption {
+			font-style: italic;
+			margin-bottom: -10px;
+			margin-top: 1em;
+		}
+
+		&:not([class*="masonry"]) {
+
+			.blockgallery:not(.has-caption-color) figcaption {
+				color: #555d66;
+			}
+		}
+	}
+
+	.wp-block-blockgallery-masonry figcaption {
+		padding-bottom: 6px;
+	}
+}
+
+.is-twentysixteen {
+
+	.entry-content div[class*="wp-block-blockgallery"] {
+		margin-top: 2.3em;
+		margin-bottom: 2.3em;
+
+		.blockgallery--primary-caption {
+			margin-bottom: -10px;
+			margin-top: 0.6em;
+		}
+	}
+
+	.wp-block-blockgallery-masonry figcaption {
+		padding-bottom: 6px;
+	}
+}
+
+.is-twentyfifteen {
+
+	.entry-content div[class*="wp-block-blockgallery"] {
+		margin-top: 2.2em;
+		margin-bottom: 2.2em;
+
+		.blockgallery--primary-caption {
+			margin-top: 0.5em;
+			padding-bottom: 0;
+			margin-bottom: -15px;
+		}
+	}
+
+	.wp-block-blockgallery-masonry figcaption {
+		font-size: 13px !important;
+	}
+}
+
+.is-twentyfourteen {
+
+	.entry-content div[class*="wp-block-blockgallery"] {
+		margin-top: 30px;
+		margin-bottom: 30px;
+
+		.blockgallery--primary-caption {
+			text-align: left;
+			margin-bottom: -7px;
+		}
+	}
+}
+
+.is-twentythirteen {
+
+	.entry-content div[class*="wp-block-blockgallery"] {
+		margin-top: 34px;
+		margin-bottom: 30px;
+
+		.blockgallery--primary-caption {
+			margin-bottom: -10px;
+		}
+	}
+
+	.wp-block-blockgallery-masonry figcaption {
+		font-size: 13px !important;
+	}
+}
