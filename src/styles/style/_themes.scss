@@ -7,7 +7,7 @@
 
 	.entry-content div[class*="wp-block-blockgallery"] {
 		margin-top: 1.65em;
-		margin-bottom: 1.85em;
+		margin-bottom: 1.75em;
 
 		.blockgallery--primary-caption {
 			font-style: italic;
@@ -20,6 +20,32 @@
 			.blockgallery:not(.has-caption-color) figcaption {
 				color: #555d66;
 			}
+		}
+	}
+
+	// Editor.
+	.blockgallery--primary-caption.editor-rich-text__tinymce {
+		text-align: left;
+		font-style: italic;
+		margin-bottom: 0;
+	}
+}
+
+
+.is-twenty-sixteen {
+
+	// Frontend.
+	.wp-block-blockgallery-masonry figcaption {
+		padding-bottom: 6px;
+	}
+
+	.entry-content div[class*="wp-block-blockgallery"] {
+		margin-top: 2.3em;
+		margin-bottom: 2.3em;
+
+		.blockgallery--primary-caption {
+			margin-bottom: -10px;
+			margin-top: 0.6em;
 		}
 	}
 
