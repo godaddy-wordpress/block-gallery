@@ -74,12 +74,21 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 
 == Changelog ==
 
-= 1.0.10, December XX, 2018 =
-New: Add ability to transform Image blocks to Block Gallery blocks
-New: Load frontend assets only on pages that need them
-New: Hide the GalleryUpload component if not selected
-New: Add ":" prefix transforms using each blocks' name.
-Tweak: Hide the GalleryUpload component if not selected
+= 1.1.0, December 04, 2018 =
+* New: Add ability to transform Image blocks to Block Gallery blocks
+* New: Add ":" prefix transforms using each blocks' name - i.e. ":masonry",
+* New: Load frontend assets only on pages that need them
+* New: Add translation strings in /languages/block-gallery.pot
+* New: Add support for the WP 5.0 wp_set_script_translations() function
+* New: Add styling for the core Twenty Seventeen theme
+* New: Add styling for the core Twenty Sixteen theme
+* New: Add styling for the core Twenty Fifteen theme
+* New: Add styling for the core Twenty Fourteen theme
+* New: Add styling for the core Twenty Twelve theme
+* New: Add styling for the core Twenty Eleven theme
+* Tweak: Improve grid size responsiveness for the Masonry block
+* Tweak: Hide the GalleryUpload component if not selected
+* Tweak: Improve Flickity focus styles for better theme compatibility
 
 = 1.0.9, November 26, 2018 =
 Tweak: Use better specificity for figcaption margins
