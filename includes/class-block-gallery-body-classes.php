@@ -54,7 +54,7 @@ class Block_Gallery_Body_Classes {
 	public function add_theme_class() {
 
 		// Add a class if selective sharing is enabled.
-		if ( 'twenty-seventeen' || 'twenty-sixteen' === $this->get_theme() ) {
+		if ( 'twenty-seventeen' || 'twenty-sixteen' || 'twenty-fifteen' === $this->get_theme() ) {
 			$classes[] = 'is-' . $this->get_theme();
 		}
 
@@ -69,7 +69,7 @@ class Block_Gallery_Body_Classes {
 	public function add_theme_class_admin() {
 
 		// Add a class if selective sharing is enabled.
-		if ( 'twenty-seventeen' || 'twenty-sixteen' === $this->get_theme() ) {
+		if ( 'twenty-seventeen' || 'twenty-sixteen' || 'twenty-fifteen' === $this->get_theme() ) {
 			$classes = 'is-' . $this->get_theme();
 		}
 
