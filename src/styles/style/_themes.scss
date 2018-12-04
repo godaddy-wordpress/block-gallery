@@ -56,6 +56,40 @@
 	}
 }
 
+.is-twenty-fourteen {
+
+	// Frontend.
+	.entry-content div[class*="wp-block-blockgallery"] {
+		margin-top: 28px;
+		margin-bottom: 28px;
+
+		.blockgallery--primary-caption {
+			text-align: left;
+		}
+	}
+
+	// .wp-block-blockgallery-masonry figcaption {
+	// 	padding-bottom: 6px;
+	// }
+
+	// Editor.
+	.blockgallery--primary-caption.editor-rich-text__tinymce {
+		text-align: left;
+		font-style: italic;
+		margin-bottom: 0;
+		padding: 0;
+		margin-top: 8px;
+	}
+}
+
+
+
+
+
+
+
+
+
 .is-twenty-fifteen {
 
 	// Frontend.
