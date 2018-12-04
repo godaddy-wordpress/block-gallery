@@ -3,3 +3,16 @@ $blue: #0085ba;
 $white: #fff;
 $black: rgb(41, 41, 41);
 $black-000: #000;
+
+// Output all blocks
+@mixin blockGalleryEditorBlocks {
+
+	.wp-block[data-type="blockgallery/offset"],
+	.wp-block[data-type="blockgallery/masonry"],
+	.wp-block[data-type="blockgallery/stacked"],
+	.wp-block[data-type="blockgallery/carousel"],
+	.wp-block[data-type="blockgallery/thumbnails"],
+	.wp-block[data-type="blockgallery/auto-height"] {
+		@content;
+	}
+}
