@@ -12,8 +12,10 @@
   "downloadid": "",
   "scripts": {
     "start": "gulp | cgb-scripts start",
-    "build": "cgb-scripts build",
-    "eject": "cgb-scripts eject"
+    "build": "cgb-scripts build | babel src",
+    "eject": "cgb-scripts eject",
+    "makepot": "wp i18n make-pot . --merge=languages/block-gallery-js.pot --skip-js",
+    "makepot:php": "npx pot-to-php languages/block-gallery.pot languages/block-gallery-translations.php block-gallery"
   },
   "dependencies": {
     "cgb-scripts": "1.11.0",
@@ -30,6 +32,12 @@
     "stylelint-config-wordpress": "^13.0.0"
   },
   "devDependencies": {
+    "@wordpress/babel-plugin-makepot": "^2.1.2",
+    "@wordpress/babel-preset-default": "^1.1.2",
+    "@wordpress/i18n": "^1.2.3",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.4",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^5.0.0",
