@@ -27,7 +27,6 @@
 	height: 100%;
 }
 
-
 .flickity-enabled.is-draggable .flickity-viewport {
 	cursor: move;
 	cursor: -webkit-grab;
@@ -44,6 +43,7 @@
 	border: none;
 	color: #000;
 	position: absolute;
+	padding: 0;
 	transition: background 100ms, opacity 100ms;
 
 	&:hover {
@@ -53,10 +53,13 @@
 
 	&:focus {
 		outline: none;
-		box-shadow: 0 0 0 5px #19f;
+		border: none;
+		background: $white;
+		box-shadow: 0 0 0 2px #000;
 	}
 
 	&:active {
+		border: none;
 		opacity: 0.6;
 	}
 
