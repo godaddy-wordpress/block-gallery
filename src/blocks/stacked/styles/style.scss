@@ -31,6 +31,12 @@
 		&:not([class*="font-size"]) {
 			font-size: 13px;
 		}
+
+		.is-selected &,
+		.is-typing & {
+			padding-left: 1em;
+			padding-right: 1em;
+		}
 	}
 
 	.has-fullwidth-images img {

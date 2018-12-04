@@ -78,11 +78,14 @@
 }
 
 figcaption.blockgallery--primary-caption {
-	color: #555d66;
 	font-size: 13px;
 	margin-bottom: 1em;
 	margin-top: 1.2em;
 	text-align: center;
+
+	&:not(.has-caption-color) {
+		color: #555d66;
+	}
 }
 
 // Front-end modules
@@ -107,3 +110,4 @@ figcaption.blockgallery--primary-caption {
 @import "style/background-parallax";
 @import "style/background-radius";
 @import "style/flickity";
+@import "style/core-themes";
