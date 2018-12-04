@@ -151,12 +151,11 @@ class Block_Gallery_Gutenberg_Checker {
 
 		$url = wp_nonce_url( admin_url( 'plugins.php?action=deactivate&plugin=' . $this->classic_editor_base ), 'deactivate-plugin_' . $this->classic_editor_base );
 
-		/* translators: Name of this pluign */
-		$link = '<a href="' . esc_url( $url ) . '">' . sprintf( __( 'deactivate %1$s', '@@textdomain' ), 'Classic Editor' ) . '</a>';
-
+		/* translators: Classic Editor plugin name */
+		$link   = '<a href="' . esc_url( $url ) . '">' . sprintf( __( 'deactivate %1$s', '@@textdomain' ), 'Classic Editor' ) . '</a>';
 		$plugin = '<a href="http://wordpress.org/gutenberg" target="_blank">Gutenberg</a>';
 
-		/* translators: 1: Required plugin 2: Name of this plugin 3: Activate or Install, from $link above */
+		/* translators: 1: Required plugin, 2: Name of this plugin, 3: Deactivation link */
 		echo '<div class="notice notice-error"><p>' . wp_kses( sprintf( __( '%1$s requires the %2$s block editor. Please %3$s to continue.', '@@textdomain' ), 'Block Gallery', $plugin, $link ), $allowed_html_array ) . '</p></div>';
 	}
 
@@ -177,17 +176,17 @@ class Block_Gallery_Gutenberg_Checker {
 
 		if ( $this->has_gutenberg ) {
 			$url = wp_nonce_url( admin_url( 'plugins.php?action=activate&plugin=' . $this->base ), 'activate-plugin_' . $this->base );
-			/* translators: Name of this pluign */
+			/* translators: Name of this plugin */
 			$link = '<a href="' . esc_url( $url ) . '">' . sprintf( __( 'activate %1$s', '@@textdomain' ), $this->name ) . '</a>';
 		} else {
 			$url = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $this->slug ), 'install-plugin_' . $this->slug );
-			/* translators: Name of this pluign */
+			/* translators: Name of this plugin */
 			$link = '<a href="' . esc_url( $url ) . '">' . sprintf( __( 'install %1$s', '@@textdomain' ), $this->name ) . '</a>';
 		}
 
 		$plugin = '<a href="http://wordpress.org/gutenberg" target="_blank">Gutenberg</a>';
 
-		/* translators: 1: Required plugin 2: Name of this pluign 3: Activate or Install, from $link above */
+		/* translators: 1: Required plugin, 2: Name of this plugin, 3: "Activate" or "Install" */
 		echo '<div class="notice notice-error"><p>' . wp_kses( sprintf( __( '%1$s requires the %2$s block editor. Please %3$s to continue.', '@@textdomain' ), 'Block Gallery', $plugin, $link ), $allowed_html_array ) . '</p></div>';
 	}
 }

@@ -137,6 +137,7 @@ class Edit extends Component {
 		const dropZone = (
 			<GalleryDropZone
 				{ ...this.props }
+				// translators: %s: Lowercase block title
 				label={ sprintf( __( 'Drop to add to the %s gallery' ), title.toLowerCase() ) }
 			/>
 		);
@@ -171,6 +172,7 @@ class Edit extends Component {
 			return (
 				<GalleryPlaceholder
 					{ ...this.props }
+					// translators: %s: Block title
 					label={ sprintf( __( '%s Gallery' ), title ) }
 					icon={ icon }
 				/>
@@ -201,7 +203,7 @@ class Edit extends Component {
 							updateOnEachImageLoad={ false }
 						>
 							{ images.map( ( img, index ) => {
-								/* translators: %1$d is the order number of the image, %2$d is the total number of images. */
+								// translators: %1$d is the order number of the image, %2$d is the total number of images
 								const ariaLabel = __( sprintf( 'image %1$d of %2$d in gallery', ( index + 1 ), images.length ) );
 
 								return (
