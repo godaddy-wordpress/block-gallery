@@ -53,7 +53,7 @@
 	}
 
 	.editor-rich-text figcaption:not([data-is-placeholder-visible="true"]) {
-		position: relative;
+		position: relative !important;
 		overflow: hidden;
 	}
 
@@ -68,7 +68,7 @@
 		}
 
 		figcaption {
-			padding-bottom: 6px;
+			padding-bottom: 6px !important;
 		}
 
 		// Override negative margins so this toolbar isn't hidden by overflow.
