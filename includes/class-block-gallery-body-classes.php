@@ -24,53 +24,88 @@ class Block_Gallery_Body_Classes {
 	 * The Constructor.
 	 */
 	public function __construct() {
-		add_action( 'body_class', array( $this, 'add_theme_class' ) );
-		add_action( 'admin_body_class', array( $this, 'add_theme_class_admin' ) );
+		add_filter( 'body_class', array( $this, 'body_class' ) );
+		add_filter( 'admin_body_class', array( $this, 'admin_body_class' ) );
 	}
 
 	/**
-	 * Add actions to enqueue assets.
+	 * See if theme is activate or not.
 	 *
-	 * @access public
+	 * @since 1.1.0
+	 * @param string|array $theme Theme name or array of theme names to check.
+	 * @return boolean
 	 */
-	public function get_theme() {
-
-		// Get the parent theme's name.
-		$theme = esc_attr( wp_get_theme( get_template() )->get( 'Name' ) );
-
-		// Replace spaces with hypens, and makes it lowercase for links.
-		$theme = strtolower( $theme );
-		$theme = str_replace( ' ', '-', $theme );
-		$theme = preg_replace( '#[ -]+#', '-', $theme );
-
-		return esc_attr( $theme );
+	public function is_active_theme( $theme ) {
+		return is_array( $theme ) ? in_array( get_template(), $theme, true ) : get_template() === $theme;
 	}
 
 	/**
-	 * Enqueue block assets for use within Gutenberg.
+	 * Themes to check for.
+	 *
+	 * @since 1.1.0
+	 * @return array
+	 */
+	public function themes() {
+		$themes = array(
+			'twentynineteen',
+			'twentyseventeen',
+			'twentysixteen',
+			'twentyfifteen',
+			'twentyfourteen',
+			'twentythirteen',
+			'twentyeleven',
+			'twentytwelve',
+			'twentyten',
+		);
+
+		return apply_filters( 'blockgallery_theme_body_classes', $themes );
+	}
+
+	/**
+	 * Theme slug.
+	 *
+	 * @since 1.1.0
+	 * @return string
+	 */
+	public function theme_slug() {
+		return esc_attr( wp_get_theme( get_template() )->get( 'TextDomain' ) );
+	}
+
+	/**
+	 * Add .is-{theme} class to the frontend for select themes.
+	 *
+	 * @param array $classes Classes for the body element.
+	 * @return array (Maybe) filtered body classes.
 	 *
 	 * @access public
 	 */
-	public function add_theme_class() {
+	public function body_class( $classes ) {
 
-		// Add a class if selective sharing is enabled.
-		if ( 'twenty-seventeen' || 'twenty-sixteen' || 'twenty-fifteen' || 'twenty-fourteen' === $this->get_theme() ) {
-			$classes[] = 'is-' . $this->get_theme();
+		if ( $this->is_active_theme( $this->themes() ) ) {
+			$classes[] = 'is-' . $this->theme_slug();
 		}
 
 		return $classes;
 	}
 
 	/**
-	 * Enqueue block assets for use within Gutenberg.
+	 * Add .is-{theme} class to the admin editor for select themes.
+	 *
+	 * @param array $classes Classes for the admin editor body element.
+	 * @return array (Maybe) filtered body classes.
 	 *
 	 * @access public
 	 */
-	public function add_theme_class_admin() {
+	public function admin_body_class( $classes ) {
+		global $pagenow;
 
-		// Add a class if selective sharing is enabled.
-		if ( 'twenty-seventeen' || 'twenty-sixteen' || 'twenty-fifteen' || 'twenty-fourteen' === $this->get_theme() ) {
-			$classes = 'is-' . $this->get_theme();
+		// Return if not on viewing the editor.
+		if ( ! in_array( $pagenow, array( 'post.php' ), true ) ) {
+			return $classes;
+		}
+
+		if ( $this->is_active_theme( $this->themes() ) ) {
+			$classes .= 'is-' . $this->theme_slug();
 		}
 
 		return $classes;
