@@ -7,8 +7,10 @@ import map from 'lodash/map';
  * WordPress dependencies
  */
 const { __ } = wp.i18n;
+const { compose } = wp.compose;
 const { Component, Fragment } = wp.element;
 const { ButtonGroup, Button } = wp.components;
+const { withSelect } = wp.data;
 
 class SizeControl extends Component {
 
@@ -32,7 +34,7 @@ class SizeControl extends Component {
 	}
 
 	getSizes() {
-		const { type } = this.props;
+		const { type, wideControlsEnabled } = this.props;
 		const { align } = this.props.attributes;
 
 		const defaultSizes = [
@@ -56,11 +58,11 @@ class SizeControl extends Component {
 
 		const standardSizes = [
 			{
-				shortName: 'wide' == align || 'full' == align ? 'L' : __( 'Large' ),
+				shortName: wideControlsEnabled == true && 'wide' == align || 'full' == align ? 'L' : __( 'Large' ),
 				size: 'lrg',
 			},
 			{
-				shortName: 'wide' == align || 'full' == align ? 'XL' : __( 'Extra Large' ),
+				shortName: wideControlsEnabled == true && 'wide' == align || 'full' == align ? 'XL' : __( 'Extra Large' ),
 				size: 'xlrg',
 			},
 		];
@@ -109,11 +111,11 @@ class SizeControl extends Component {
 
 			const standardSizes = [
 				{
-					shortName: 'wide' == align || 'full' == align ? 'S' : __( 'Small' ),
+					shortName: wideControlsEnabled == true && 'wide' == align || 'full' == align ? 'S' : __( 'Small' ),
 					size: 'sml',
 				},
 				{
-					shortName: 'wide' == align || 'full' == align ? 'M' : __( 'Medium' ),
+					shortName: wideControlsEnabled == true && 'wide' == align || 'full' == align ? 'M' : __( 'Medium' ),
 					size: 'med',
 				},
 			];
@@ -146,9 +148,9 @@ class SizeControl extends Component {
 			return defaultSizes;
 		}
 
-		if ( 'wide' == align ) {
+		if ( wideControlsEnabled == true && 'wide' == align ) {
 			return wideSizes.concat( standardSizes );
-		} else if ( 'full' == align ) {
+		} else if ( wideControlsEnabled == true && 'full' == align ) {
 			return fullSizes.concat( wideSizes ).concat( standardSizes );
 		} else {
 			return standardSizes;
@@ -196,4 +198,8 @@ class SizeControl extends Component {
 	}
 }
 
-export default SizeControl;
+export default compose( [
+	withSelect( ( select ) => ( {
+		wideControlsEnabled: select( 'core/editor' ).getEditorSettings().alignWide,
+	} ) ),
+] )( SizeControl );
