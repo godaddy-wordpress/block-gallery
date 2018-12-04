@@ -87,3 +87,43 @@
 		text-align: center !important;
 	}
 }
+
+.is-twentyeleven {
+
+	// Override the theme's padding/border effect on our blocks.
+	.blockgallery img {
+		border: 0;
+		padding: 0;
+		max-width: 100%;
+	}
+
+	.blockgallery--primary-caption.editor-rich-text__tinymce {
+		padding: 2px 0 0 40px;
+		margin-bottom: -5px;
+		text-align: left;
+		font-family: Georgia, serif;
+		font-size: 12px;
+
+		&::before {
+			color: #666;
+			content: '\2014';
+			font-size: 14px;
+			font-style: normal;
+			font-weight: bold;
+			margin-right: 5px;
+			position: absolute;
+			left: 10px;
+			top: 0;
+		}
+	}
+
+	.wp-block[data-type="blockgallery/stacked"] figcaption {
+		text-align: center;
+		padding-left: 1em;
+		padding-right: 1em;
+
+		&::before {
+			display: none;
+		}
+	}
+}

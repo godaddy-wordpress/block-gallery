@@ -107,3 +107,45 @@
 		padding-bottom: 6px;
 	}
 }
+
+.is-twentyeleven {
+
+	.entry-content div[class*="wp-block-blockgallery"] {
+		margin-top: 33px;
+		margin-bottom: 32px;
+
+		// Override the theme's padding/border effect on our blocks.
+		.blockgallery img {
+			border: 0;
+			padding: 0;
+			max-width: 100%;
+		}
+
+		.blockgallery--primary-caption {
+			margin-bottom: -15px;
+
+			&::before {
+				color: #666;
+				content: '\2014';
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 600;
+				margin-right: 5px;
+				position: absolute;
+				left: 10px;
+				top: 0;
+			}
+		}
+	}
+
+	.wp-block-blockgallery-stacked figcaption {
+		text-align: center !important;
+		padding-left: 1em !important;
+		padding-right: 1em !important;
+
+		&::before {
+			display: none;
+			padding-left: 0;
+		}
+	}
+}
