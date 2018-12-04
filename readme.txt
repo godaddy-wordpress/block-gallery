@@ -79,7 +79,6 @@ New: Add ability to transform Image blocks to Block Gallery blocks
 New: Load frontend assets only on pages that need them
 New: Hide the GalleryUpload component if not selected
 New: Add ":" prefix transforms using each blocks' name.
-     i.e. type ":masonry", followed by a trailing space, in a paragraph block to launch the Masonry block
 Tweak: Hide the GalleryUpload component if not selected
 
 = 1.0.9, November 26, 2018 =
