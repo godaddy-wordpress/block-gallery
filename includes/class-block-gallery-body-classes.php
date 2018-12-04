@@ -24,7 +24,8 @@ class Block_Gallery_Body_Classes {
 	 * The Constructor.
 	 */
 	public function __construct() {
-		add_action( 'body_class', array( $this, 'add_theme_specific_class' ) );
+		add_action( 'body_class', array( $this, 'add_theme_class' ) );
+		add_action( 'admin_body_class', array( $this, 'add_theme_class_admin' ) );
 	}
 
 	/**
@@ -50,11 +51,26 @@ class Block_Gallery_Body_Classes {
 	 *
 	 * @access public
 	 */
-	public function add_theme_specific_class() {
+	public function add_theme_class() {
 
 		// Add a class if selective sharing is enabled.
-		if ( 'is-twenty-seventeen' === $this->get_theme() ) {
-			$classes[] = $this->get_theme();
+		if ( 'twenty-seventeen' === $this->get_theme() ) {
+			$classes[] = 'is-' . $this->get_theme();
+		}
+
+		return $classes;
+	}
+
+	/**
+	 * Enqueue block assets for use within Gutenberg.
+	 *
+	 * @access public
+	 */
+	public function add_theme_class_admin() {
+
+		// Add a class if selective sharing is enabled.
+		if ( 'twenty-seventeen' === $this->get_theme() ) {
+			$classes = 'is-' . $this->get_theme();
 		}
 
 		return $classes;

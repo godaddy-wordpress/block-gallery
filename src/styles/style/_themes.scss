@@ -1,0 +1,32 @@
+.is-twenty-seventeen {
+
+	// Frontend.
+	.wp-block-blockgallery-masonry figcaption {
+		padding-bottom: 6px;
+	}
+
+	.entry-content div[class*="wp-block-blockgallery"] {
+		margin-top: 1.65em;
+		margin-bottom: 1.85em;
+
+		.blockgallery--primary-caption {
+			font-style: italic;
+			margin-bottom: -10px;
+			margin-top: 1em;
+		}
+
+		&:not([class*="masonry"]) {
+
+			.blockgallery:not(.has-caption-color) figcaption {
+				color: #555d66;
+			}
+		}
+	}
+
+	// Editor.
+	.blockgallery--primary-caption.editor-rich-text__tinymce {
+		text-align: left;
+		font-style: italic;
+		margin-bottom: 0;
+	}
+}
