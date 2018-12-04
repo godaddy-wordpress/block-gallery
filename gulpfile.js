@@ -10,6 +10,7 @@ var cleanFiles		  = ['./build/'+project+'/', './build/'+project+' 2/', './build/
 var buildDestination	  = './build/'+project+'/';
 var buildDestinationFiles = './build/'+project+'/**/*';
 
+
 // Styles.
 var styleDestination = './dist/css/';
 var styleAdminSRC    = './src/styles/admin.scss';
@@ -43,6 +44,7 @@ var lastTranslator          	= pkg.author;
 var team                    	= pkg.author_shop;
 var translatePath           	= './languages';
 var translatableFiles       	= ['./**/*.php'];
+var jsPotFile	  		= [ './languages/'+project+'-js.pot', './build/languages/'+project+'-js.pot' ];
 
 /**
  * Load Plugins.
@@ -97,6 +99,11 @@ gulp.task( 'clean', function(done) {
 	done();
 });
 
+gulp.task( 'removeJSPotFile', function(done) {
+	return del( jsPotFile );
+	done();
+});
+
 gulp.task( 'cleanSrc', function(done) {
 	return del( cleanSrcFiles );
 	done();
@@ -113,6 +120,10 @@ gulp.task( 'npmStart', run( 'npm run start' ) )
 gulp.task( 'npmBuild', run( 'npm run build' ) )
 
 gulp.task( 'npmInstall', run( 'npm install' ) )
+
+gulp.task( 'npmMakePot', run( 'npm run makepot' ) )
+
+gulp.task( 'npmMakePotPHP', run( 'npm run makepot:php' ) )
 
 gulp.task( 'copy', function(done) {
 	return gulp.src( buildFiles )
@@ -348,7 +359,7 @@ gulp.task( 'build-notice', function(done) {
 	done();
 });
 
-gulp.task( 'build-process', gulp.series( 'clearCache', 'clean', 'npmBuild', 'welcomeStyles', 'adminStyles', 'frontendScripts', 'vendorsScripts', 'updateVersion', 'copy', 'cleanSrc', 'deleteEmptyDirectories', 'variables', 'debug_mode_off', 'zip',  function(done) {
+gulp.task( 'build-process', gulp.series( 'clearCache', 'clean', 'npmBuild', 'npmMakePot', 'npmMakePotPHP', 'removeJSPotFile', 'welcomeStyles', 'adminStyles', 'frontendScripts', 'vendorsScripts', 'updateVersion', 'copy', 'cleanSrc', 'deleteEmptyDirectories', 'variables', 'debug_mode_off', 'zip',  function(done) {
 	done();
 } ) );
 
