@@ -12,7 +12,7 @@
 
 .is-twentyfifteen {
 
-	.wp-block[data-type="blockgallery/carousel"] {
+	@include blockGalleryEditorBlocks {
 		margin-bottom: 42px;
 		margin-top: 42px;
 	}
@@ -59,8 +59,8 @@
 
 .is-twentythirteen {
 
-	.wp-block[data-type="blockgallery/carousel"] {
-		margin-bottom: 42px;
+	@include blockGalleryEditorBlocks {
+		margin-bottom: 40px;
 		margin-top: 40px;
 	}
 
@@ -106,10 +106,10 @@
 
 		&::before {
 			color: #666;
-			content: '\2014';
+			content: "\2014";
 			font-size: 14px;
 			font-style: normal;
-			font-weight: bold;
+			font-weight: 600;
 			margin-right: 5px;
 			position: absolute;
 			left: 10px;
