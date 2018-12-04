@@ -74,7 +74,7 @@ class Block_Gallery_Action_Links {
 		$url_generator = new Block_Gallery_URL_Generator();
 
 		$support_url = $url_generator->get_store_url(
-			'support',
+			'/',
 			array(
 				'utm_medium'   => 'block-gallery-lite',
 				'utm_source'   => 'plugins-page',
