@@ -359,7 +359,7 @@ gulp.task( 'build-notice', function(done) {
 	done();
 });
 
-gulp.task( 'build-process', gulp.series( 'clearCache', 'clean', 'npmBuild', 'npmMakePot', 'npmMakePotPHP', 'removeJSPotFile', 'welcomeStyles', 'adminStyles', 'frontendScripts', 'vendorsScripts', 'updateVersion', 'copy', 'cleanSrc', 'deleteEmptyDirectories', 'variables', 'debug_mode_off', 'zip',  function(done) {
+gulp.task( 'build-process', gulp.series( 'clearCache', 'clean', 'npmBuild', 'npmMakePot', 'removeJSPotFile', 'welcomeStyles', 'adminStyles', 'frontendScripts', 'vendorsScripts', 'updateVersion', 'copy', 'cleanSrc', 'deleteEmptyDirectories', 'variables', 'debug_mode_off', 'zip',  function(done) {
 	done();
 } ) );
 
