@@ -139,7 +139,6 @@ if ( ! class_exists( 'Block_Gallery' ) ) :
 			require_once BLOCKGALLERY_PLUGIN_DIR . 'includes/class-block-gallery-body-classes.php';
 
 			if ( is_admin() || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
-				require_once BLOCKGALLERY_PLUGIN_DIR . 'includes/admin/class-block-gallery-gutenberg-checker.php';
 				require_once BLOCKGALLERY_PLUGIN_DIR . 'includes/admin/class-block-gallery-url-generator.php';
 				require_once BLOCKGALLERY_PLUGIN_DIR . 'includes/admin/class-block-gallery-action-links.php';
 				require_once BLOCKGALLERY_PLUGIN_DIR . 'includes/admin/class-block-gallery-footer-text.php';
