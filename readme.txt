@@ -74,6 +74,9 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 
 == Changelog ==
 
+= 1.1.1, December 05, 2018 =
+* Tweak: Remove Gutenberg check
+
 = 1.1.0, December 04, 2018 =
 * New: Add ability to transform Image blocks to Block Gallery blocks
 * New: Add ":" prefix transforms using each blocks' name - i.e. ":masonry",
