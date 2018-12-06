@@ -74,6 +74,9 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 
 == Changelog ==
 
+= 1.1.2, December 06, 2018 =
+* New: Add minor style touch-ups for the default Twenty Nineteen WordPress theme
+
 = 1.1.1, December 05, 2018 =
 * Tweak: Remove Gutenberg check
 
