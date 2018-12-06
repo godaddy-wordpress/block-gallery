@@ -1,3 +1,24 @@
+.is-twentynineteen {
+
+	.entry-content div[class*="wp-block-blockgallery"] {
+		margin-bottom: 46px;
+		margin-top: 46px;
+
+		.blockgallery--caption {
+			font-size: 0.71111em;
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+			line-height: 1.6;
+			margin: 0 0 -20px;
+			padding: 0.5rem;
+			text-align: center;
+		}
+	}
+
+	.wp-block-blockgallery-stacked figcaption:not([class*="font-size"]) {
+		font-size: 0.71111em;
+	}
+}
+
 .is-twentyseventeen {
 
 	.entry-content div[class*="wp-block-blockgallery"] {

@@ -10,6 +10,18 @@
 	}
 }
 
+.is-twentynineteen {
+
+	@include blockGalleryEditorBlocks {
+		margin-bottom: 48px;
+		margin-top: 50px;
+	}
+
+	.blockgallery--primary-caption {
+		margin-bottom: -10px;
+	}
+}
+
 .is-twentyfifteen {
 
 	@include blockGalleryEditorBlocks {
