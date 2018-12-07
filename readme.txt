@@ -74,6 +74,9 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 
 == Changelog ==
 
+= 1.1.3, December 07, 2018 =
+* Fix: Resolve issue where block assets were not loading on the blogroll
+
 = 1.1.2, December 06, 2018 =
 * New: Add minor style touch-ups for the default Twenty Nineteen WordPress theme
 
