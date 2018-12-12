@@ -74,6 +74,9 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 
 == Changelog ==
 
+= 1.1.4, December 12, 2018 =
+* Fix: Resolve translatable placeholder issue in the Slider Settings panel. Props to @morganestes
+
 = 1.1.3, December 07, 2018 =
 * Fix: Resolve issue where block assets were not loading on the blogroll
 

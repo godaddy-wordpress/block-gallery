@@ -28,7 +28,7 @@ class SliderPanel extends Component {
 		const time = ( speed > 1 ) ? __( 'seconds' ) : __( 'second' );
 
 		// translators: 1. Speed of the slider, 2: Time until the slide advances
-		return checked ? sprintf( __( 'Automatically advancing to the next gallery item after %1$s %2$d.' ), speed, time ) : __( 'Automatically advance to the next gallery item after a set duration.' );
+		return checked ? sprintf( __( 'Automatically advancing to the next gallery item after %1$d %2$s.' ), speed, time ) : __( 'Automatically advance to the next gallery item after a set duration.' );
 	}
 
 	getDraggableHelp( checked ) {
