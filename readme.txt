@@ -75,7 +75,10 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 == Changelog ==
 
 = 1.1.4, December 12, 2018 =
-* Fix: Resolve translatable placeholder issue in the Slider Settings panel. Props to @morganestes
+* New: Add new "none" Caption Style option
+* New: Add toggles for turning image captions on/off for each block
+* Fix: Resolve translatable placeholder issue in the Slider Settings panel [thanks @morganestes!]
+* Fix: Resolve translatable invalid HTML issue in the Carousel block [thanks @morganestes!]
 
 = 1.1.3, December 07, 2018 =
 * Fix: Resolve issue where block assets were not loading on the blogroll
