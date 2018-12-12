@@ -52,7 +52,7 @@ class Inspector extends Component {
 	}
 
 	getCaptionsHelp( checked ) {
-		return checked ? __( 'Showing captions for each media item.' ) : __( 'Toggle to show captions.' );
+		return checked ? __( 'Showing captions for each media item.' ) : __( 'Toggle to show media captions.' );
 	}
 
 	render() {
