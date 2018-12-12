@@ -250,7 +250,7 @@ const settings = {
 		);
 
 		const flickityOptions = {
-			autoPlay: autoPlay && autoPlaySpeed ? autoPlaySpeed : false,
+			autoPlay: autoPlay && autoPlaySpeed ? parseFloat( autoPlaySpeed ) : false,
 			draggable: draggable,
 			pageDots: pageDots,
 			prevNextButtons: prevNextButtons,
