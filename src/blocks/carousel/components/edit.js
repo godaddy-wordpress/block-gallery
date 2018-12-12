@@ -187,7 +187,6 @@ class Edit extends Component {
 			pageDots,
 			prevNextButtons,
 			primaryCaption,
-			autoPlaySpeed,
 		} = attributes;
 
 		const dropZone = (
