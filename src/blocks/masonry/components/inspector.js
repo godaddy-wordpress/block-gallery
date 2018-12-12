@@ -54,6 +54,10 @@ class Inspector extends Component {
 		this.props.setAttributes( { captionStyle: value } );
 	}
 
+	getCaptionsHelp( checked ) {
+		return checked ? __( 'Showing captions for each media item.' ) : __( 'Toggle to show captions.' );
+	}
+
 	render() {
 
 		const {
@@ -71,6 +75,7 @@ class Inspector extends Component {
 			lightbox,
 			linkTo,
 			radius,
+			captions,
 		} = attributes;
 
 		return (
@@ -96,12 +101,20 @@ class Inspector extends Component {
 								step={ 1 }
 							/> }
 							<LightboxControl { ...this.props } />
-							<SelectControl
-								label={ __( 'Caption Style' ) }
-								value={ captionStyle }
-								onChange={ this.setCaptionStyleTo }
-								options={ captionOptions }
+							<ToggleControl
+								label={ __( 'Captions' ) }
+								checked={ !! captions }
+								onChange={ () => setAttributes( {  captions: ! captions } ) }
+								help={ this.getCaptionsHelp }
 							/>
+							{ captions &&
+								<SelectControl
+									label={ __( 'Caption Style' ) }
+									value={ captionStyle }
+									onChange={ this.setCaptionStyleTo }
+									options={ captionOptions }
+								/>
+							}
 						</PanelBody>
 						{ ! lightbox && <PanelBody
 							title={ __( 'Link Settings' ) }
