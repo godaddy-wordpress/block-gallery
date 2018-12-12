@@ -299,11 +299,11 @@ const settings = {
 							const img = <img src={ image.url } alt={ image.alt } data-id={ image.id } data-link={ image.link } className={ image.id ? `wp-image-${ image.id }` : null } />;
 
 							return (
-								<li key={ image.id || image.url } className="blockgallery--item">
+								<div key={ image.id || image.url } className="blockgallery--item">
 									<figure className={ figureClasses }>
 										{ img }
 									</figure>
-								</li>
+								</div>
 							);
 						} ) }
 					</div>
