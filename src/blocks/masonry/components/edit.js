@@ -132,6 +132,7 @@ class Edit extends Component {
 			gutterMobile,
 			images,
 			linkTo,
+			captions,
 		} = attributes;
 
 		const dropZone = (
@@ -218,6 +219,7 @@ class Edit extends Component {
 											setAttributes={ ( attrs ) => this.setImageAttributes( index, attrs ) }
 											caption={ img.caption }
 											aria-label={ ariaLabel }
+											captions={ captions }
 											supportsCaption={ true }
 										/>
 									</li>

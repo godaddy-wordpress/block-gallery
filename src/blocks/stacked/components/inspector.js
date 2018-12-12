@@ -51,6 +51,10 @@ class Inspector extends Component {
 		return checked ? __( 'Fullwidth images are enabled.' ) : __( 'Toggle to fill the available gallery area with completely fullwidth images.' );
 	}
 
+	getCaptionsHelp( checked ) {
+		return checked ? __( 'Showing captions for each media item.' ) : __( 'Toggle to show media captions.' );
+	}
+
 	render() {
 
 		const {
@@ -71,6 +75,7 @@ class Inspector extends Component {
 			fullwidth,
 			radius,
 			shadow,
+			captions,
 			backgroundPadding,
 		} = attributes;
 
@@ -107,11 +112,19 @@ class Inspector extends Component {
 								reset={ false }
 							/> }
 							<LightboxControl { ...this.props } />
-							<FontSizePicker
-								value={ fontSize.size }
-								onChange={ setFontSize }
-								className="components-blockgallery-inspector__size-control--label"
+							<ToggleControl
+								label={ __( 'Captions' ) }
+								checked={ !! captions }
+								onChange={ () => setAttributes( {  captions: ! captions } ) }
+								help={ this.getCaptionsHelp }
 							/>
+							{ captions &&
+								<FontSizePicker
+									value={ fontSize.size }
+									onChange={ setFontSize }
+									className="components-blockgallery-inspector__size-control--label"
+								/>
+							}
 						</PanelBody>
 						{ ! lightbox && <PanelBody
 							title={ __( 'Link Settings' ) }

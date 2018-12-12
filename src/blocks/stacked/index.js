@@ -179,15 +179,16 @@ const settings = {
 
 		const {
 			captionColor,
+			captions,
 			customCaptionColor,
+			customFontSize,
+			fontSize,
 			fullwidth,
 			gutter,
 			gutterMobile,
 			images,
 			linkTo,
 			shadow,
-			fontSize,
-			customFontSize,
 		} = attributes;
 
 		const wrapperClasses = classnames(
@@ -246,7 +247,7 @@ const settings = {
 							<li key={ image.id || image.url } className="blockgallery--item">
 								<figure className={ figureClasses }>
 									{ href ? <a href={ href }>{ img }</a> : img }
-									{ image.caption && image.caption.length > 0 && (
+									{ captions && image.caption && image.caption.length > 0 && (
 										<RichText.Content tagName="figcaption" className={ captionClasses } value={ image.caption } styles={ captionStyles }/>
 									) }
 								</figure>

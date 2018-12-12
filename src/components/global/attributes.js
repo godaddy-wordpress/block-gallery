@@ -47,6 +47,9 @@ const GlobalAttributes = {
 		type: 'string',
 		default: 'none',
 	},
+	align: {
+		type: 'string',
+	},
 	gutter: {
 		type: 'number',
 		default: 15,
@@ -66,6 +69,10 @@ const GlobalAttributes = {
 	filter: {
 		type: 'string',
 		default: 'none',
+	},
+	captions: {
+		type: 'boolean',
+		default: true,
 	},
 	captionStyle: {
 		type: 'string',
