@@ -47,6 +47,9 @@ const GlobalAttributes = {
 		type: 'string',
 		default: 'none',
 	},
+	align: {
+		type: 'string',
+	},
 	gutter: {
 		type: 'number',
 		default: 15,
