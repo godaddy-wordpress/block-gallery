@@ -67,6 +67,10 @@ const GlobalAttributes = {
 		type: 'string',
 		default: 'none',
 	},
+	captions: {
+		type: 'boolean',
+		default: true,
+	},
 	captionStyle: {
 		type: 'string',
 		default: 'dark',

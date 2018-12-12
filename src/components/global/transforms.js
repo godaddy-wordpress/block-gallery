@@ -23,6 +23,7 @@ function GlobalTransforms( props ) {
 		filter: props.filter,
 		height: props.height,
 		primaryCaption: props.primaryCaption,
+		captions: props.captions,
 		captionColor: props.captionColor,
 		customCaptionColor: props.customCaptionColor,
 		pageDots: props.pageDots,
