@@ -2,9 +2,11 @@
 
 [![WordPress plugin](https://img.shields.io/wordpress/plugin/dt/block-gallery.svg?style=flat)](https://wordpress.org/plugins/block-gallery/) [![WordPress plugin](https://img.shields.io/wordpress/plugin/v/block-gallery.svg?style=flat)](https://wordpress.org/plugins/block-gallery/) [![WordPress](https://img.shields.io/wordpress/v/block-gallery.svg?style=flat)]() [![License](https://img.shields.io/badge/license-GPL--3.0%2B-red.svg)](https://github.com/thatplugincompany/block-gallery/blob/master/license.txt)
 
-[![Block Gallery — Radically stunning gallery blocks built exclusively for the new WordPress Gutenberg block editor. ](https://user-images.githubusercontent.com/1813435/49888455-0d8a5680-fe0d-11e8-80c3-0f8765f7de9d.jpg)](https://wpblockgallery.com?utm_medium=block-gallery-github&utm_source=readme&utm_campaign=readme&utm_content=banner)
+The first of its kind, [Block Gallery](https://wpblockgallery.com/) offers an unrivaled drag and drop gallery building experience in WordPress 5.0. Drop your images in your choice of photo gallery block, customize display settings, hit publish.
 
-> 📦 [Download Block Gallery on WordPress.org →](https://wordpress.org/plugins/block-gallery/)
+An innovative transform system lets you instantly change your photos galleries into another form. Go from a fullscreen masonry gallery to a casual carousel, with just a single click. You won’t find another Gutenberg gallery plugin with this kind of capability. Guaranteed.
+
+[![Block Gallery — Radically stunning gallery blocks built exclusively for the new WordPress Gutenberg block editor. ](https://user-images.githubusercontent.com/1813435/49888455-0d8a5680-fe0d-11e8-80c3-0f8765f7de9d.jpg)](https://wpblockgallery.com?utm_medium=block-gallery-github&utm_source=readme&utm_campaign=readme&utm_content=banner)
 
 ## Winner, Automattic Design Awards 2018 ##
 [![Block Gallery, Winner at the Automattic Design Awards](https://user-images.githubusercontent.com/1813435/49888484-1a0eaf00-fe0d-11e8-9237-cd9d6f7716ae.jpg)](https://richtabor.com/block-gallery-automattic-design-awards/?utm_medium=block-gallery-github&utm_source=readme&utm_campaign=readme&utm_content=design-awards-banner)
