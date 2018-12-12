@@ -13,3 +13,11 @@
 .blockgallery:not(.has-caption-color).has-caption-style-light .blockgallery--figure figcaption {
 	color: $black;
 }
+
+.has-caption-style-none {
+
+	.blockgallery--item .blockgallery--figure figcaption {
+		background: none !important;
+		opacity: 1 !important;
+	}
+}
