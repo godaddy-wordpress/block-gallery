@@ -2,12 +2,16 @@
 
 [![WordPress plugin](https://img.shields.io/wordpress/plugin/dt/block-gallery.svg?style=flat)](https://wordpress.org/plugins/block-gallery/) [![WordPress plugin](https://img.shields.io/wordpress/plugin/v/block-gallery.svg?style=flat)](https://wordpress.org/plugins/block-gallery/) [![WordPress](https://img.shields.io/wordpress/v/block-gallery.svg?style=flat)]() [![License](https://img.shields.io/badge/license-GPL--3.0%2B-red.svg)](https://github.com/thatplugincompany/block-gallery/blob/master/license.txt)
 
-[![Block Gallery — Radically stunning gallery blocks built exclusively for the new WordPress Gutenberg block editor. ](https://user-images.githubusercontent.com/1813435/48589494-c8582f00-e909-11e8-8779-f9fcc57012a5.jpg)](https://wpblockgallery.com?utm_medium=block-gallery-github&utm_source=readme&utm_campaign=readme&utm_content=banner)
+[![Block Gallery — Radically stunning gallery blocks built exclusively for the new WordPress Gutenberg block editor. ](https://user-images.githubusercontent.com/1813435/49888455-0d8a5680-fe0d-11e8-80c3-0f8765f7de9d.jpg)](https://wpblockgallery.com?utm_medium=block-gallery-github&utm_source=readme&utm_campaign=readme&utm_content=banner)
 
-> 💥 WordPress → [Download Block Gallery — on WordPress.org](https://wordpress.org/plugins/block-gallery/).
+> 📦 [Download Block Gallery on WordPress.org →](https://wordpress.org/plugins/block-gallery/)
+
+## Winner, Automattic Design Awards 2018 ##
+[![Block Gallery, Winner at the Automattic Design Awards](https://user-images.githubusercontent.com/1813435/49888484-1a0eaf00-fe0d-11e8-9237-cd9d6f7716ae.jpg)](https://richtabor.com/block-gallery-automattic-design-awards/?utm_medium=block-gallery-github&utm_source=readme&utm_campaign=readme&utm_content=design-awards-banner)
+
+Block Gallery was selected as this year’s winner in the Best Solution category of the [Automattic Design Awards](https://automatticdesignaward.blog/2018/12/08/the-winners/) at WordCamp US 2018. [Continue reading...](https://richtabor.com/block-gallery-automattic-design-awards/)
 
 ## Installation ##
-
 1. Install the offical [Gutenberg](https://wordpress.org/plugins/gutenberg/) plugin. Note that Gutenberg is not suggested for use on production sites.
 2. [Download the latest release](https://github.com/thatplugincompany/block-gallery/releases) from the GitHub repository, or..
 3. Download the plugin from the [WordPress plugin directory](https://wordpress.org/plugins/block-gallery/).
