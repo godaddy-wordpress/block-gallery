@@ -153,18 +153,6 @@ if ( ! class_exists( 'Block_Gallery' ) ) :
 		 */
 		private function init() {
 			add_action( 'init', array( $this, 'load_textdomain' ) );
-			add_action( 'init', array( $this, 'load_dynamic_blocks' ) );
-		}
-
-		/**
-		 * Register server-side code for individual blocks.
-		 *
-		 * @access public
-		 */
-		public function load_dynamic_blocks() {
-			foreach ( glob( dirname( __FILE__ ) . '/src/blocks/*/index.php' ) as $block_logic ) {
-				require $block_logic;
-			}
 		}
 
 		/**
