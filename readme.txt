@@ -81,6 +81,7 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 * Fix: Resolve translatable placeholder issue in the Slider Settings panel [thanks @morganestes]
 * Fix: Resolve translatable invalid HTML issue in the Carousel block [thanks @morganestes]
 * Fix: Resolve issue where the Carousel autoplay speed was not functioning properly [thanks @morganestes]
+* Fix: Resolve PHP 5.4.16 compatibility issue [thanks @ndcadmin]
 
 = 1.1.3, December 07, 2018 =
 * Fix: Resolve issue where block assets were not loading on the blogroll
