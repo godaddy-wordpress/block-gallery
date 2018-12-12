@@ -113,6 +113,7 @@ class GalleryImage extends Component {
 			shadow,
 			supportsCaption,
 			url,
+			captions,
 			'aria-label': ariaLabel,
 		} = this.props;
 
@@ -186,7 +187,7 @@ class GalleryImage extends Component {
 					</div>
 				}
 				{ href ? <a href={ href }>{ img }</a> : img }
-				{ ( supportsCaption === true ) && ( ! RichText.isEmpty( caption ) || isSelected ) ? (
+				{ ( supportsCaption === true ) && ( ! RichText.isEmpty( caption ) || isSelected ) && captions ? (
 					<RichText
 						tagName="figcaption"
 						placeholder={ __( 'Write caption…' ) }
