@@ -14,7 +14,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 [Block Gallery](https://wpblockgallery.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery) is a suite of beautiful gallery Gutenberg blocks for photographers, artists, writers and content marketers. This is the smartest, most powerful photo gallery plugin for WordPress. Block Gallery is absolutely brilliant any way you look at it.
 
-[Discover Block Gallery &rarr;](https://wpblockgallery.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery)
+>Good news! Block Gallery was selected as this year’s winner in the Best Solution category of the [Automattic Design Awards](https://automatticdesignaward.blog/2018/12/08/the-winners/) at WordCamp US 2018. 🔥🔥
 
 ## A short demo of Block Gallery
 [vimeo https://vimeo.com/296746112]
@@ -75,10 +75,12 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 == Changelog ==
 
 = 1.1.4, December 12, 2018 =
-* New: Add new "none" Caption Style option
 * New: Add toggles for turning image captions on/off for each block
-* Fix: Resolve translatable placeholder issue in the Slider Settings panel [thanks @morganestes!]
-* Fix: Resolve translatable invalid HTML issue in the Carousel block [thanks @morganestes!]
+* New: Add new "none" Caption Style option
+* New: Add new options for slider autoplay times up to 10 seconds [thanks @batracy]
+* Fix: Resolve translatable placeholder issue in the Slider Settings panel [thanks @morganestes]
+* Fix: Resolve translatable invalid HTML issue in the Carousel block [thanks @morganestes]
+* Fix: Resolve issue where the Carousel autoplay speed was not functioning properly [thanks @morganestes]
 
 = 1.1.3, December 07, 2018 =
 * Fix: Resolve issue where block assets were not loading on the blogroll
