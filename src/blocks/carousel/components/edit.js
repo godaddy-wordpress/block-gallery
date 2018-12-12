@@ -282,11 +282,11 @@ class Edit extends Component {
 						>
 							<Flickity
 								className={ flickityClasses }
-								options={ flickityOptions }
 								disableImagesLoaded={ false }
-								updateOnEachImageLoad={ true }
-								reloadOnUpdate={ true }
 								flickityRef={ c => this.flkty = c }
+								options={ flickityOptions }
+								reloadOnUpdate={ true }
+								updateOnEachImageLoad={ true }
 							>
 								{ images.map( ( img, index ) => {
 									// translators: %1$d is the order number of the image, %2$d is the total number of images
