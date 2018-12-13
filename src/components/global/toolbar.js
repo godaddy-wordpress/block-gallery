@@ -44,6 +44,7 @@ class GlobalToolbar extends Component {
 			isSelected,
 			setAttributes,
 			hasAlignmentToolbar,
+			allowed = helper.ALLOWED_MEDIA_TYPES,
 		} = this.props;
 
 		const {
@@ -68,7 +69,7 @@ class GlobalToolbar extends Component {
 							<Toolbar>
 								<MediaUpload
 									onSelect={ this.onSelectImages }
-									allowedTypes={ helper.ALLOWED_MEDIA_TYPES }
+									allowedTypes={ allowed }
 									multiple
 									gallery
 									value={ images.map( ( img ) => img.id ) }
@@ -81,6 +82,8 @@ class GlobalToolbar extends Component {
 										/>
 									) }
 								/>
+
+								{ console.log( images ) }
 								<DropdownMenu
 									icon= { icons.imageFilter }
 									label={ __( 'Apply Filter' ) }_

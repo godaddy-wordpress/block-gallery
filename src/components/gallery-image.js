@@ -2,6 +2,7 @@
  * External Dependencies
  */
 import classnames from 'classnames';
+import includes from 'lodash/includes';
 
 /**
  * WordPress dependencies
@@ -92,6 +93,84 @@ class GalleryImage extends Component {
 		}
 	}
 
+	getFileExtension3( filename ) {
+		return filename.slice( ( filename.lastIndexOf(".") - 1 >>> 0 ) + 2 );
+	}
+
+	renderImage() {
+		const {
+			alt,
+			id,
+			link,
+			linkTo,
+			shadow,
+			url,
+			'aria-label': ariaLabel,
+		} = this.props;
+
+		let href;
+
+		switch ( linkTo ) {
+			case 'media':
+				href = url;
+				break;
+			case 'attachment':
+				href = link;
+				break;
+		}
+
+		const classes = classnames( {
+			[ `has-shadow-${ shadow }` ] : shadow != 'none' || shadow != undefined,
+		} );
+
+		const img = (
+			<Fragment>
+				<img
+					src={ url }
+					className={ classes }
+					alt={ alt }
+					data-id={ id }
+					onClick={ this.onImageClick }
+					tabIndex="0"
+					onKeyDown={ this.onImageClick }
+					aria-label={ ariaLabel }
+				/>
+				{ isBlobURL( url ) && <Spinner /> }
+			</Fragment>
+		);
+
+		return (
+			<Fragment>
+				{ href ? <a href={ href }>{ img }</a> : img }
+			</Fragment>
+		);
+	}
+
+	renderVideo() {
+		const {
+			id,
+			shadow,
+			url,
+		} = this.props;
+
+		const classes = classnames( {
+			[ `has-shadow-${ shadow }` ] : shadow != 'none' || shadow != undefined,
+		} );
+
+		return (
+			<Fragment>
+				<video
+					src={ url }
+					className={ classes }
+					onClick={ this.onImageClick }
+					onKeyDown={ this.onImageClick }
+					tabIndex="0"
+					controls
+				/>
+			</Fragment>
+		);
+	}
+
 	render() {
 
 		const {
@@ -117,43 +196,14 @@ class GalleryImage extends Component {
 			'aria-label': ariaLabel,
 		} = this.props;
 
-		let href;
+		const mediaType = this.getFileExtension3( url );
 
-		switch ( linkTo ) {
-			case 'media':
-				href = url;
-				break;
-			case 'attachment':
-				href = link;
+		let mediaElement = this.renderImage();
+		switch ( mediaType ) {
+			case 'mp4':
+				mediaElement = this.renderVideo();
 				break;
 		}
-
-		const imgClasses = classnames( {
-			[ `has-shadow-${ shadow }` ] : shadow != 'none' || shadow != undefined,
-		} );
-
-		// Disable reason: Image itself is not meant to be
-		// interactive, but should direct image selection and unfocus caption fields
-		// eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/click-events-have-key-events
-		const img = (
-			// Disable reason: Image itself is not meant to be interactive, but should
-			// direct image selection and unfocus caption fields.
-			/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-			<Fragment>
-				<img
-					src={ url }
-					className={ imgClasses }
-					alt={ alt }
-					data-id={ id }
-					onClick={ this.onImageClick }
-					tabIndex="0"
-					onKeyDown={ this.onImageClick }
-					aria-label={ ariaLabel }
-				/>
-				{ isBlobURL( url ) && <Spinner /> }
-			</Fragment>
-			/* eslint-enable jsx-a11y/no-noninteractive-element-interactions */
-		);
 
 		const className = classnames( {
 			'is-selected': isSelected,
@@ -175,7 +225,7 @@ class GalleryImage extends Component {
 		// Disable reason: Each block can be selected by clicking on it and we should keep the same saved markup
 		/* eslint-disable jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/onclick-has-role, jsx-a11y/click-events-have-key-events */
 		return (
-			<figure className={ 'blockgallery--figure ' + className } tabIndex="-1" onKeyDown={ this.onKeyDown } ref={ this.bindContainer }>
+			<figure className={ 'blockgallery--figure ' + className } data-type={ mediaType } tabIndex="-1" onKeyDown={ this.onKeyDown } ref={ this.bindContainer } data-id={ id }>
 				{ isSelected &&
 					<div className="components-blockgallery-gallery-item__remove-wrapper">
 						<IconButton
@@ -186,7 +236,9 @@ class GalleryImage extends Component {
 						/>
 					</div>
 				}
-				{ href ? <a href={ href }>{ img }</a> : img }
+
+				{ mediaElement }
+
 				{ ( supportsCaption === true ) && ( ! RichText.isEmpty( caption ) || isSelected ) && captions ? (
 					<RichText
 						tagName="figcaption"

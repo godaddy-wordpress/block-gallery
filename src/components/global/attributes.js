@@ -17,7 +17,7 @@ const GlobalAttributes = {
 		query: {
 			url: {
 				source: 'attribute',
-				selector: 'img',
+				selector: 'img, video',
 				attribute: 'src',
 			},
 			link: {
@@ -33,13 +33,18 @@ const GlobalAttributes = {
 			},
 			id: {
 				source: 'attribute',
-				selector: 'img',
+				selector: 'figure',
 				attribute: 'data-id',
 			},
 			caption: {
 				type: 'array',
 				source: 'children',
 				selector: 'figcaption',
+			},
+			type: {
+				source: 'attribute',
+				selector: 'figure',
+				attribute: 'data-type',
 			},
 		},
 	},

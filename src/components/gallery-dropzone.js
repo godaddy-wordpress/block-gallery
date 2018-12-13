@@ -24,9 +24,9 @@ class GalleryDropZone extends Component {
 
 	addFiles( files ) {
 		const currentImages = this.props.attributes.images || [];
-		const { noticeOperations, setAttributes } = this.props;
+		const { noticeOperations, setAttributes, allowed = helper.ALLOWED_MEDIA_TYPES } = this.props;
 		mediaUpload( {
-			allowedTypes: helper.ALLOWED_MEDIA_TYPES,
+			allowedTypes: allowed,
 			filesList: files,
 			onFileChange: ( images ) => {
 				const imagesNormalized = images.map( ( image ) => helper.pickRelevantMediaFiles( image ) );
@@ -46,6 +46,7 @@ class GalleryDropZone extends Component {
 			noticeOperations,
 			noticeUI,
 			label,
+			allowed = helper.ALLOWED_MEDIA_TYPES,
 		} = this.props;
 
 		return (

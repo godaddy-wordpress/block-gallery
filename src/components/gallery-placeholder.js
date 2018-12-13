@@ -33,6 +33,7 @@ class GalleryPlaceholder extends Component {
 			className,
 			noticeOperations,
 			noticeUI,
+			allowed = helper.ALLOWED_MEDIA_TYPES,
 		} = this.props;
 
 		return (
@@ -46,7 +47,7 @@ class GalleryPlaceholder extends Component {
 					} }
 					onSelect={ this.onSelectImages }
 					accept="image/*"
-					allowedTypes={ helper.ALLOWED_MEDIA_TYPES }
+					allowedTypes={ allowed }
 					multiple
 					notices={ noticeUI }
 					onError={ noticeOperations.createErrorNotice }
