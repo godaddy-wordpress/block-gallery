@@ -110,6 +110,8 @@ class Inspector extends Component {
 								value={ shadow }
 								label={ __( 'Box Shadow' ) }
 								reset={ false }
+								className={ 'components-blockgallery-inspector__size-control--shadow' }
+
 							/> }
 							<LightboxControl { ...this.props } />
 							<ToggleControl
@@ -122,7 +124,6 @@ class Inspector extends Component {
 								<FontSizePicker
 									value={ fontSize.size }
 									onChange={ setFontSize }
-									className="components-blockgallery-inspector__size-control--label"
 								/>
 							}
 						</PanelBody>

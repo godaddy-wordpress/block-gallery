@@ -1,6 +1,7 @@
 /**
  * External dependencies
  */
+import classnames from 'classnames';
 import map from 'lodash/map';
 
 /**
@@ -164,13 +165,20 @@ class SizeControl extends Component {
 			value,
 			resetValue = undefined,
 			label,
+			className,
 			reset = true,
 		} = this.props;
 
+		const classes = classnames(
+			'components-blockgallery-inspector__size-control', {
+				[ className ] : className,
+			}
+		);
+
 		return (
 			<Fragment>
-				{ label && <p className="components-blockgallery-inspector__size-control--label">{ label }</p> }
-				<div className="components-blockgallery-inspector__size-control">
+				{ label && <p className={ 'components-blockgallery-inspector__size-control--label' }>{ label }</p> }
+				<div className={ classes }>
 					<ButtonGroup aria-label={ __( 'Select Size' ) }>
 						{ map( this.getSizes(), ( { size, shortName } ) => (
 							<Button
