@@ -124,6 +124,7 @@ class Edit extends Component {
 			<GalleryDropZone
 				{ ...this.props }
 				label={ sprintf( __( 'Drop to add to the %s gallery' ), title.toLowerCase() ) }
+				allowed={ [ 'image', 'video' ] }
 			/>
 		);
 
@@ -149,6 +150,7 @@ class Edit extends Component {
 					{ ...this.props }
 					label={ sprintf( __( '%s Gallery' ), title ) }
 					icon={ icon }
+					allowed={ [ 'image', 'video' ] }
 				/>
 			);
 		}
@@ -157,6 +159,7 @@ class Edit extends Component {
 			<Fragment>
 				<GlobalToolbar
 					{ ...this.props }
+					allowed={ [ 'image', 'video' ] }
 				/>
 				<Inspector
 					{ ...this.props }
@@ -197,6 +200,7 @@ class Edit extends Component {
 								gutter={ gutter }
 								gutterMobile={ gutterMobile }
 								marginBottom={ true }
+								allowed={ [ 'image', 'video' ] }
 							/>
 						) }
 					</ul>

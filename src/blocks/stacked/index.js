@@ -3,6 +3,7 @@
  */
 import classnames from 'classnames';
 import filter from 'lodash/filter';
+import noop from 'lodash/noop';
 
 /**
  * Internal dependencies
@@ -241,12 +242,23 @@ const settings = {
 								[ `has-shadow-${ shadow }` ] : shadow != 'none' || shadow != undefined ,
 						} );
 
+						const videoClasses = classnames( {
+							[ `has-shadow-${ shadow }` ] : shadow != 'none' || shadow != undefined,
+						} );
+
 						const img = <img src={ image.url } alt={ image.alt } data-id={ image.id } data-link={ image.link } className={ imgClasses } />;
+
+						let mediaElement = href ? <a href={ href }>{ img }</a> : img;
+						switch ( image.type ) {
+							case 'video':
+								mediaElement = <video className={ videoClasses } controls src={ image.url } />;
+							break;
+						}
 
 						return (
 							<li key={ image.id || image.url } className="blockgallery--item">
-								<figure className={ figureClasses }>
-									{ href ? <a href={ href }>{ img }</a> : img }
+								<figure className={ figureClasses } data-type={ image.type } data-id={ image.id }>
+									{ mediaElement }
 									{ captions && image.caption && image.caption.length > 0 && (
 										<RichText.Content tagName="figcaption" className={ captionClasses } value={ image.caption } styles={ captionStyles }/>
 									) }
