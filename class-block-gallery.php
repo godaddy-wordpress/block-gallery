@@ -5,7 +5,7 @@
  * Description: Block Gallery is a suite of beautiful gallery blocks for the WordPress Gutenberg block editor..
  * Author: Rich Tabor
  * Author URI: https://richtabor.com/
- * Version: 1.1.3
+ * Version: 1.1.4
  * Text Domain: @@textdomain
  * Domain Path: /languages
  * Tested up to: @@pkg.tested_up_to
