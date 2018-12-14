@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Block Gallery
  * Plugin URI: https://wpblockgallery.com/
- * Description: Block Gallery is a suite of beautiful gallery blocks for the WordPress Gutenberg block editor..
+ * Description: Block Gallery is a suite of beautiful gallery blocks for the WordPress Gutenberg block editor.
  * Author: Rich Tabor
  * Author URI: https://richtabor.com/
  * Version: 1.1.4
