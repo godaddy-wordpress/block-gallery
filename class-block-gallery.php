@@ -1,16 +1,21 @@
 <?php
 /**
  * Plugin Name: Block Gallery
- * Plugin URI: https://wpblockgallery.com/
- * Description: Block Gallery is a suite of beautiful gallery blocks for the WordPress Gutenberg block editor.
+ * Plugin URI: https://wpblockgallery.com
+ * Description: The most advanced suite of gallery blocks for the Gutenberg block editor. Create stunning <strong>masonry</strong>, <strong>carousel</strong> and <strong>stacked</strong> galleries in seconds, with the brilliantly intuitive interface. Block Gallery is absolutely the best collection of native editor gallery blocks in the world.
  * Author: Rich Tabor
- * Author URI: https://richtabor.com/
+ * Author URI: https://richtabor.com
  * Version: 1.1.4
  * Text Domain: @@textdomain
- * Domain Path: /languages
+ * Domain Path: languages
  * Tested up to: @@pkg.tested_up_to
  *
- * @@pkg.title is distributed in the hope that it will be useful,
+ * Block Gallery is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * any later version.
+ *
+ * Block Gallery is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
