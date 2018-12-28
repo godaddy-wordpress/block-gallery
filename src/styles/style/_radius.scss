@@ -6,5 +6,9 @@
 		.blockgallery--item img {
 			border-radius: #{ $i }px;
 		}
+
+		.blockgallery--item figcaption {
+			border-radius: 0 0 #{ $i }px #{ $i }px;
+		}
 	}
 }
