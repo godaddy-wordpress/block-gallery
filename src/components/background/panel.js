@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import isEmpty from 'lodash/isempty';
+import isEmpty from 'lodash/isEmpty';
 
 /**
  * Internal dependencies
