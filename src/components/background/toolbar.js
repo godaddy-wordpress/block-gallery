@@ -13,7 +13,7 @@ import * as helper from './../../utils/helper';
  */
 const { __ } = wp.i18n;
 const { Component, Fragment } = wp.element;
-const { MediaUpload } = wp.editor;
+const { MediaUpload, MediaUploadCheck } = wp.editor;
 const { Toolbar, IconButton } = wp.components;
 
 /**
@@ -38,30 +38,32 @@ class BackgroundToolbar extends Component {
 
 		return (
 			<Fragment>
-				<Toolbar>
-					{ ! backgroundImg ?
-						<MediaUpload
-							onSelect={ ( media ) => setAttributes( { backgroundImg: media.url } ) }
-							allowedTypes={ helper.ALLOWED_MEDIA_TYPES }
-							value={ backgroundImg }
-							render={ ( { open } ) => (
-								<IconButton
-									className="components-toolbar__control"
-									label={ __( 'Add Background Image' ) }
-									icon={ icons.backgroundImage }
-									onClick={ open }
-								/>
-							) }
-						/>
-					:
-						<IconButton
-							className="components-toolbar__control"
-							label={ __( 'Remove background image' ) }
-							icon={ icons.trash }
-							onClick={ () => setAttributes( { backgroundImg: '', backgroundOverlay: 0, } ) }
-						/>
-					}
-				</Toolbar>
+				<MediaUploadCheck>
+					<Toolbar>
+						{ ! backgroundImg ?
+							<MediaUpload
+								onSelect={ ( media ) => setAttributes( { backgroundImg: media.url } ) }
+								allowedTypes={ helper.ALLOWED_MEDIA_TYPES }
+								value={ backgroundImg }
+								render={ ( { open } ) => (
+									<IconButton
+										className="components-toolbar__control"
+										label={ __( 'Add Background Image' ) }
+										icon={ icons.backgroundImage }
+										onClick={ open }
+									/>
+								) }
+							/>
+						:
+							<IconButton
+								className="components-toolbar__control"
+								label={ __( 'Remove background image' ) }
+								icon={ icons.trash }
+								onClick={ () => setAttributes( { backgroundImg: '', backgroundOverlay: 0, } ) }
+							/>
+						}
+					</Toolbar>
+				</MediaUploadCheck>
 			</Fragment>
 		);
 	}

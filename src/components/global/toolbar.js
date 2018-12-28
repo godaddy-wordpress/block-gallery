@@ -18,6 +18,7 @@ const {
 const {
 	BlockControls,
 	MediaUpload,
+	MediaUploadCheck,
 	AlignmentToolbar,
 } = wp.editor;
 
@@ -66,21 +67,23 @@ class GlobalToolbar extends Component {
 						<BackgroundToolbar { ...this.props }/>
 						{ !! images.length && (
 							<Toolbar>
-								<MediaUpload
-									onSelect={ this.onSelectImages }
-									allowedTypes={ helper.ALLOWED_MEDIA_TYPES }
-									multiple
-									gallery
-									value={ images.map( ( img ) => img.id ) }
-									render={ ( { open } ) => (
-										<IconButton
-											className="components-toolbar__control"
-											label={ __( 'Edit Gallery' ) }
-											icon="edit"
-											onClick={ open }
-										/>
-									) }
-								/>
+								<MediaUploadCheck>
+									<MediaUpload
+										onSelect={ this.onSelectImages }
+										allowedTypes={ helper.ALLOWED_MEDIA_TYPES }
+										multiple
+										gallery
+										value={ images.map( ( img ) => img.id ) }
+										render={ ( { open } ) => (
+											<IconButton
+												className="components-toolbar__control"
+												label={ __( 'Edit Gallery' ) }
+												icon="edit"
+												onClick={ open }
+											/>
+										) }
+									/>
+								</MediaUploadCheck>
 								<DropdownMenu
 									icon= { icons.imageFilter }
 									label={ __( 'Apply Filter' ) }_
