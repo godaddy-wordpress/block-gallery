@@ -74,6 +74,11 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 
 == Changelog ==
 
+= 1.1.5, January 1, 2019 =
+* Tweak: Use the MediaUploadCheck component to make sure the current user has upload permissions
+* Fix: Resolve lodash/isEmpty issue with the npm start command [thanks @mtekk]
+* Fix: Resolve issue where image radius styles were not applied to child captions [thanks @wido]
+
 = 1.1.4, December 12, 2018 =
 * New: Add toggles for turning image captions on/off for each block
 * New: Add new "none" Caption Style option
