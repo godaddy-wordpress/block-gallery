@@ -6,7 +6,7 @@
   "author_uri": "https://wpblockgallery.com",
   "description": "The most advanced suite of gallery blocks for the Gutenberg block editor. Create stunning <strong>masonry</strong>, <strong>carousel</strong> and <strong>stacked</strong> galleries in seconds, with the brilliantly intuitive interface. Block Gallery is absolutely the best collection of native editor gallery blocks in the world.",
   "requires": "4.9",
-  "tested_up_to": "5.0.0",
+  "tested_up_to": "5.0.2",
   "license": "GPL-3.0",
   "copyright": "Copyright (c) 2019, Inventionn LLC",
   "downloadid": "",
