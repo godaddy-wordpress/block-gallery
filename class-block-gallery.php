@@ -5,7 +5,7 @@
  * Description: The most advanced suite of gallery blocks for the Gutenberg block editor. Create stunning <strong>masonry</strong>, <strong>carousel</strong> and <strong>stacked</strong> galleries in seconds, with the brilliantly intuitive interface. Block Gallery is absolutely the best collection of native editor gallery blocks in the world.
  * Author: Rich Tabor
  * Author URI: https://richtabor.com
- * Version: 1.1.4
+ * Version: 1.1.5
  * Text Domain: @@textdomain
  * Domain Path: languages
  * Tested up to: @@pkg.tested_up_to
