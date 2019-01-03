@@ -63,9 +63,6 @@ To get the full experience of the next-generation WordPress block editor,  you'l
 = What themes work with Block Gallery =
 Most WordPress themes that have baked in Gutenberg support will work with Block Gallery. If you’re looking for exceptional themes, check out my theme catalogue at [ThemeBeans](https://themebeans.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery).
 
-= Should I use Gutenberg on my live site? =
-The new block editor is still very much in active development and is not recommended for production websites just yet.
-
 = Is Block Gallery free? =
 Yes! Block Gallery's core features are absolutely free. I am working on a a Pro version of Block Gallery, which will include more gallery blocks and enhanced features. [Subscribe here](https://wpblockgallery.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=subscribe-here) and I'll let you know when it's ready.
 
