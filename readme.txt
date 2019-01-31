@@ -41,6 +41,9 @@ We've built a highly interactive and intuitive experience with a focus on speed 
 ## From a trusted developer
 This plugin is created and maintained by [Rich Tabor](https://richtabor.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery) from [ThemeBeans](https://themebeans.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery) and open for contributions on [GitHub](https://github.com/thatplugincompany/block-gallery).
 
+## Works with CoBlocks
+If you enjoy Block Gallery, check out [CoBlocks](https://wordpress.org/plugins/coblocks), a suite of page builder WordPress blocks and tools for the Gutenberg editor — also built by Rich. It's fantastic!
+
 == Screenshots ==
 
 1. Masonry Grid block
