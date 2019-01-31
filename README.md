@@ -8,7 +8,6 @@ The first of its kind, [Block Gallery](https://wpblockgallery.com/) offers an un
 
 An innovative transform system lets you instantly change your photos galleries into another form. Go from a fullscreen masonry gallery to a casual carousel, with just a single click. You won’t find another Gutenberg gallery plugin with this kind of capability. Guaranteed.
 
-## Winner, Automattic Design Awards 2018 ##
 [![Block Gallery, Winner at the Automattic Design Awards](https://user-images.githubusercontent.com/1813435/49888484-1a0eaf00-fe0d-11e8-9237-cd9d6f7716ae.jpg)](https://richtabor.com/block-gallery-automattic-design-awards/?utm_medium=block-gallery-github&utm_source=readme&utm_campaign=readme&utm_content=design-awards-banner)
 
 Block Gallery was selected as this year’s winner in the Best Solution category of the [Automattic Design Awards](https://automatticdesignaward.blog/2018/12/08/the-winners/) at WordCamp US 2018. [Continue reading...](https://richtabor.com/block-gallery-automattic-design-awards/)
