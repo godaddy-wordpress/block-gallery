@@ -3,7 +3,7 @@
  */
 const { registerBlockType } = wp.blocks;
 
-// Category slug and title.
+// Category slug and title
 const category = {
 	slug: 'block-gallery',
 	title: 'Block Gallery',
@@ -12,7 +12,7 @@ const category = {
 // Custom foreground icon color based on the Block Gallery branding
 const iconColor = '#f05d7b';
 
-// Register block category
+// Register block icons
 import icons from './utils/block-category';
 
 // Editor and Frontend Styles
