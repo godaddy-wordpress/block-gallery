@@ -88,10 +88,6 @@ const settings = {
 
 	description: __( 'Display multiple images in a beautiful carousel gallery.' ),
 
-	icon: {
-		src: icon,
-	},
-
 	keywords: keywords,
 
 	attributes: blockAttributes,

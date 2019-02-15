@@ -52,10 +52,6 @@ const settings = {
 
 	description: __( 'Display multiple images in an organized masonry gallery.' ),
 
-	icon: {
-		src: icon,
-	},
-
 	keywords: keywords,
 
 	attributes: blockAttributes,

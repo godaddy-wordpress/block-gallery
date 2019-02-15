@@ -3,24 +3,23 @@
  */
 const { registerBlockType } = wp.blocks;
 
-// Register block category.
-import icons from './utils/block-category';
-
-// Category slug and title.
+// Category slug and title
 const category = {
 	slug: 'block-gallery',
 	title: 'Block Gallery',
 };
 
-/**
- * Utility Editor and Frontend Styles
- */
+// Custom foreground icon color based on the Block Gallery branding
+const iconColor = '#f05d7b';
+
+// Register block icons
+import icons from './utils/block-category';
+
+// Editor and Frontend Styles
 import './styles/editor.scss';
 import './styles/style.scss';
 
-/**
- * Register Blocks
- */
+//  Register Blocks
 import * as carousel from './blocks/carousel';
 import * as masonry from './blocks/masonry';
 import * as stacked from './blocks/stacked';
@@ -36,9 +35,9 @@ export function registerBlocks () {
 			return;
 		}
 
-		const { name, settings } = block;
+		const { name, icon, settings } = block;
 
-		registerBlockType( `blockgallery/${ name }`, { category: category.slug, ...settings } );
+		registerBlockType( `blockgallery/${ name }`, { category: category.slug, icon: { src: icon, foreground: iconColor, }, ...settings } );
 	} );
 };
 registerBlocks();
