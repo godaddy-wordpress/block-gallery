@@ -67,10 +67,6 @@ const settings = {
 
 	description: __( 'Display multiple images in an single column stacked gallery.' ),
 
-	icon: {
-		src: icon,
-	},
-
 	keywords: keywords,
 
 	attributes: blockAttributes,
