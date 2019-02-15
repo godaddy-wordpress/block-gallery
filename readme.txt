@@ -74,6 +74,10 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 
 == Changelog ==
 
+= 1.1.6, February 15, 2019 =
+* New: Block Gallery now supports WordPress 5.1 and Gutenberg 5.0
+* Tweak: Add Block Gallery color to icons within the block inserter
+
 = 1.1.5, January 1, 2019 =
 * Tweak: Use the MediaUploadCheck component to make sure the current user has upload permissions
 * Fix: Resolve lodash/isEmpty issue with the npm start command [thanks @mtekk]
