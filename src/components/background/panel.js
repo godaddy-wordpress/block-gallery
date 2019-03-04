@@ -29,28 +29,15 @@ class BackgroundPanel extends Component {
 		this.getColors = this.getColors.bind( this );
 	}
 
-	componentDidUpdate( prevProps ) {
-		{ ( isEmpty( this.props.attributes.backgroundImg ) && isEmpty( this.props.backgroundColor.color ) ) &&
-			this.props.setAttributes( {
-				backgroundPadding: 0,
-				backgroundPaddingMobile: 0,
-			} );
-		}
-		{ ( ! isEmpty( this.props.attributes.backgroundImg ) || ! isEmpty( this.props.backgroundColor.color ) ) && this.props.attributes.backgroundPadding == 0 &&
-			this.props.setAttributes( {
-				backgroundPadding: 30,
-				backgroundPaddingMobile: 30,
-			} );
-		}
+	setBackgroundPaddingTo( value ) {
+		this.props.setAttributes( { backgroundPadding: value } );
+
 		if ( this.props.attributes.backgroundPadding <= 0 ) {
 			this.props.setAttributes( {
 				backgroundRadius: 0,
 			} );
 		}
-	}
 
-	setBackgroundPaddingTo( value ) {
-		this.props.setAttributes( { backgroundPadding: value } );
 	}
 
 	setBackgroundPaddingMobileTo( value ) {
@@ -65,12 +52,38 @@ class BackgroundPanel extends Component {
 			captionColor,
 			setCaptionColor,
 			hasCaption,
+			attributes,
 		} = this.props;
+
+		const {
+			backgroundImg,
+			backgroundPadding,
+			backgroundPaddingMobile,
+		} = attributes;
 
 		const background = [
 			{
 				value: backgroundColor.color,
-				onChange: setBackgroundColor,
+				onChange: ( nextBackgroundColor ) => {
+
+					setBackgroundColor( nextBackgroundColor );
+
+					// Add default padding, if they are not yet present.
+					if ( ! backgroundPadding && ! backgroundPaddingMobile  ) {
+						this.props.setAttributes( {
+							backgroundPadding: 30,
+							backgroundPaddingMobile: 30,
+						} );
+					}
+
+					// Reset when cleared.
+					if ( ! nextBackgroundColor && ! backgroundImg ) {
+						this.props.setAttributes( {
+							backgroundPadding: 0,
+							backgroundPaddingMobile: 0,
+						} );
+					}
+				},
 				label: __( 'Background Color' ),
 			},
 		];
