@@ -84,10 +84,10 @@ class Block_Gallery_Action_Links {
 		);
 
 		if ( BLOCKGALLERY_PLUGIN_BASE === $plugin_file ) {
-			$row_meta = [
+			$row_meta = array(
 				'docs'   => '<a href="' . esc_url( $support_url ) . '" aria-label="' . esc_attr( __( 'View Block Gallery Documentation', '@@textdomain' ) ) . '" target="_blank">' . __( 'Help & FAQs', '@@textdomain' ) . '</a>',
 				'review' => '<a href="' . esc_url( BLOCKGALLERY_REVIEW_URL ) . '" aria-label="' . esc_attr( __( 'Review Block Gallery on WordPress.org', '@@textdomain' ) ) . '" target="_blank">' . __( 'Leave a Review', '@@textdomain' ) . '</a>',
-			];
+			);
 
 			$plugin_meta = array_merge( $plugin_meta, $row_meta );
 		}
