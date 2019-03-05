@@ -13,6 +13,7 @@ function BackgroundStyles( attributes ) {
 	const styles = {
 		backgroundImage: attributes.backgroundImg ? `url(${ attributes.backgroundImg })` : undefined,
 		backgroundColor: backgroundClass ? undefined : attributes.customBackgroundColor,
+		backgroundPosition: attributes.focalPoint && ! attributes.hasParallax ? `${ attributes.focalPoint.x * 100 }% ${ attributes.focalPoint.y * 100 }%` : undefined,
 	};
 
 	return styles;

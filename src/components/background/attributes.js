@@ -43,6 +43,9 @@ const BackgroundAttributes = {
 	customBackgroundColor: {
 		type: 'string',
 	},
+	focalPoint: {
+		type: 'object',
+	},
 };
 
 export default BackgroundAttributes;

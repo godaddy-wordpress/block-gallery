@@ -17,6 +17,7 @@ function BackgroundTransforms( props ) {
 		backgroundRadius: props.backgroundRadius,
 		hasParallax: props.hasParallax,
 		captionStyle: props.captionStyle,
+		focalPoint: props.focalPoint,
 	};
 
 	return transforms;

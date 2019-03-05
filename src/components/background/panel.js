@@ -15,11 +15,8 @@ const { __ } = wp.i18n;
 const { Component, Fragment } = wp.element;
 const { compose } = wp.compose;
 const { withColors, ColorPalette, PanelColorSettings } = wp.editor;
-const { SelectControl, RangeControl, ToggleControl, PanelBody, Button } = wp.components;
+const { SelectControl, RangeControl, ToggleControl, PanelBody, Button, FocalPointPicker } = wp.components;
 
-/**
- * Gutter Controls Component
- */
 class BackgroundPanel extends Component {
 
 	constructor() {
@@ -115,6 +112,7 @@ class BackgroundPanel extends Component {
 		} = this.props;
 
 		const {
+			focalPoint,
 			align,
 			backgroundPosition,
 			backgroundRepeat,
@@ -154,6 +152,22 @@ class BackgroundPanel extends Component {
 
 		const backgroundSizeDefault = ( typeof options !== 'undefined' && typeof options.backgroundSize !== 'undefined' ) ? options.backgroundSize : 'cover';
 
+		const onSelectRepeat = ( backgroundRepeat ) => {
+
+			if ( backgroundRepeat === 'no-repeat' ) {
+				setAttributes( {
+					backgroundRepeat: backgroundRepeat,
+					backgroundSize: 'cover',
+				} );
+			} else {
+				setAttributes( {
+					backgroundRepeat: backgroundRepeat,
+					backgroundSize: 'contain',
+					focalPoint: undefined,
+				} );
+			}
+		}
+
 		return (
 			<Fragment>
 				<PanelColorSettings
@@ -166,6 +180,7 @@ class BackgroundPanel extends Component {
 					<PanelBody
 						title={ __( 'Background Settings' ) }
 						initialOpen={ false }
+						className="components-panel__body--blockgallery-background-panel"
 					>
 						<ResponsiveTabsControl { ...this.props }
 							label={ __( 'Padding' ) }
@@ -188,8 +203,23 @@ class BackgroundPanel extends Component {
 						}
 						{ backgroundImg && (
 							<Fragment>
+								<ToggleControl
+									label={ __( 'Fixed Background' ) }
+									className='components-blockgallery-inspector__background-parallax'
+									checked={ !! hasParallax }
+									onChange={ () => setAttributes( {  hasParallax: ! hasParallax } ) }
+								/>
+								{ ! hasParallax && FocalPointPicker && backgroundRepeat !== 'repeat' && (
+									<FocalPointPicker
+										label={ __( 'Focal Point' ) }
+										url={ backgroundImg }
+										value={ focalPoint }
+										onChange={ ( value ) => setAttributes( { focalPoint: value } ) }
+										className="components-focal-point-picker--blockgallery"
+									/>
+								) }
 								<RangeControl
-									label={ __( 'Image Overlay' ) }
+									label={ __( 'Background Opacity' ) }
 									className='components-blockgallery-inspector__background-image-overlay'
 									value={ backgroundOverlay }
 									onChange={ ( nextBackgroundOverlay ) => setAttributes( {  backgroundOverlay: nextBackgroundOverlay } ) }
@@ -198,19 +228,21 @@ class BackgroundPanel extends Component {
 									step={ 10 }
 								/>
 								<SelectControl
-									label={ __( 'Position' ) }
-									className='components-blockgallery-inspector__background-position'
-									value={ backgroundPosition ? backgroundPosition : 'center center' }
-									options={ backgroundPositionOptions }
-									onChange={ ( nextbackgroundPosition ) => setAttributes( { backgroundPosition: nextbackgroundPosition } ) }
-								/>
-								<SelectControl
 									label={ __( 'Repeat' ) }
-									className='components-blockgallery-inspector__background-repeat'
+									className="components-background-display-select--blockgallery"
 									value={ backgroundRepeat ? backgroundRepeat : 'no-repeat' }
 									options={ backgroundRepeatOptions }
-									onChange={ ( nextbackgroundRepeat ) => setAttributes( { backgroundRepeat: nextbackgroundRepeat } ) }
+									onChange={ ( nextbackgroundRepeat ) => onSelectRepeat( nextbackgroundRepeat ) }
 								/>
+								{ ! FocalPointPicker && (
+									<SelectControl
+										label={ __( 'Position' ) }
+										className='components-blockgallery-inspector__background-position'
+										value={ backgroundPosition ? backgroundPosition : 'center center' }
+										options={ backgroundPositionOptions }
+										onChange={ ( nextbackgroundPosition ) => setAttributes( { backgroundPosition: nextbackgroundPosition } ) }
+									/>
+								) }
 								<SelectControl
 									label={ __( 'Display' ) }
 									className='components-blockgallery-inspector__background-size'
@@ -218,18 +250,31 @@ class BackgroundPanel extends Component {
 									options={ backgroundSizeOptions }
 									onChange={ ( nextbackgroundSize ) => setAttributes( { backgroundSize: nextbackgroundSize } ) }
 								/>
-								<ToggleControl
-									label={ __( 'Fixed Background' ) }
-									className='components-blockgallery-inspector__background-parallax'
-									checked={ !! hasParallax }
-									onChange={ () => setAttributes( {  hasParallax: ! hasParallax } ) }
-								/>
 								<Button
 									isLarge
-									className='components-blockgallery-inspector__background-remove-button'
-									onClick={ () => setAttributes( { backgroundImg: '', backgroundOverlay: 0, } ) }
+									className='components-button--blockgallery-remove-background-image'
+									type="button"
+									isDefault
+									label={ __( 'Remove background Image' ) }
+									onClick={ () => {
+										setAttributes( {
+											backgroundImg: '',
+											backgroundOverlay: 0,
+											backgroundRepeat: 'no-repeat',
+											backgroundPosition: '',
+											backgroundSize: 'cover',
+											hasParallax: false,
+										} );
+
+										if ( ! backgroundColor ) {
+											setAttributes( {
+												backgroundPadding: 0,
+												backgroundPaddingMobile: 0,
+											} );
+										}
+									} }
 								>
-									{ __( 'Remove Background Image' ) }
+									{ __( 'Remove Image' ) }
 								</Button>
 							</Fragment>
 						) }

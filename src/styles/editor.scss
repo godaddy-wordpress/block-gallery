@@ -43,3 +43,24 @@
 .components-blockgallery-inspector__size-control--shadow {
 	margin-bottom: 2.85em;
 }
+
+// Hide the position display fields.
+.components-focal-point-picker--blockgallery {
+	margin-bottom: 1.9em !important;
+
+	.components-focal-point-picker_position-display-container {
+		display: none;
+	}
+}
+
+.components-background-display-select--blockgallery {
+	margin-top: -1.05em !important;
+}
+
+.components-panel__body--blockgallery-background-panel {
+
+	> .components-base-control:first-of-type {
+		margin-bottom: 1.3em !important;
+		margin-top: 0.7em !important;
+	}
+}

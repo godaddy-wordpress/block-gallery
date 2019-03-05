@@ -84,14 +84,6 @@ class Inspector extends Component {
 				<Fragment>
 					<InspectorControls>
 						<PanelBody title={ sprintf( __( '%s Settings' ), title ) }>
-							{ wideControlsEnabled &&
-								<ToggleControl
-									label={ images.length > 1 ? __( 'Fullwidth Images' ) : __( 'Fullwidth Image' ) }
-									checked={ !! fullwidth }
-									help={ this.getFullwidthImagesHelp }
-									onChange={ this.setFullwidthTo }
-								/>
-							}
 							{ images.length > 1 &&
 								<ResponsiveTabsControl { ...this.props }
 									label={ __( 'Gutter' ) }
@@ -105,6 +97,14 @@ class Inspector extends Component {
 								max={ 20 }
 								step={ 1 }
 							/> }
+							{ wideControlsEnabled &&
+								<ToggleControl
+									label={ images.length > 1 ? __( 'Fullwidth Images' ) : __( 'Fullwidth Image' ) }
+									checked={ !! fullwidth }
+									help={ this.getFullwidthImagesHelp }
+									onChange={ this.setFullwidthTo }
+								/>
+							}
 							{ ! fullwidth && <SizeControl { ...this.props }
 								onChange={ this.setShadowTo }
 								value={ shadow }
