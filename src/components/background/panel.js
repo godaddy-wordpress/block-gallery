@@ -156,6 +156,12 @@ class BackgroundPanel extends Component {
 
 		return (
 			<Fragment>
+				<PanelColorSettings
+					title={ __( 'Color Settings' ) }
+					initialOpen={ false }
+					colorSettings={ this.getColors() }
+				>
+				</PanelColorSettings>
 				{ ( ! isEmpty( backgroundImg ) || ! isEmpty( backgroundColor.color ) ) && (
 					<PanelBody
 						title={ __( 'Background Settings' ) }
@@ -229,12 +235,6 @@ class BackgroundPanel extends Component {
 						) }
 					</PanelBody>
 				) }
-				<PanelColorSettings
-					title={ __( 'Color Settings' ) }
-					initialOpen={ false }
-					colorSettings={ this.getColors() }
-				>
-				</PanelColorSettings>
 			</Fragment>
 		);
 	}
