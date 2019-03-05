@@ -182,25 +182,6 @@ class BackgroundPanel extends Component {
 						initialOpen={ false }
 						className="components-panel__body--blockgallery-background-panel"
 					>
-						<ResponsiveTabsControl { ...this.props }
-							label={ __( 'Padding' ) }
-							value={ backgroundPadding }
-							valueMobile={ backgroundPaddingMobile }
-							onChange={ this.setBackgroundPaddingTo }
-							onChangeMobile={ this.setBackgroundPaddingMobileTo }
-							min={ 5 }
-							max={ 100 }
-						/>
-						{ ( ( ! isEmpty( backgroundImg ) || ! isEmpty( backgroundColor.color ) ) && backgroundPadding > 0 ) && align != 'full' &&
-							<RangeControl
-								label={ __( 'Rounded Corners' ) }
-								value={ backgroundRadius }
-								onChange={ ( nextBackgroundRadius ) => setAttributes( {  backgroundRadius: nextBackgroundRadius } ) }
-								min={ 0 }
-								max={ 20 }
-								step={ 1 }
-							/>
-						}
 						{ backgroundImg && (
 							<Fragment>
 								<ToggleControl
@@ -227,6 +208,29 @@ class BackgroundPanel extends Component {
 									max={ 90 }
 									step={ 10 }
 								/>
+							</Fragment>
+						) }
+						<ResponsiveTabsControl { ...this.props }
+							label={ __( 'Padding' ) }
+							value={ backgroundPadding }
+							valueMobile={ backgroundPaddingMobile }
+							onChange={ this.setBackgroundPaddingTo }
+							onChangeMobile={ this.setBackgroundPaddingMobileTo }
+							min={ 5 }
+							max={ 100 }
+						/>
+						{ ( ( ! isEmpty( backgroundImg ) || ! isEmpty( backgroundColor.color ) ) && backgroundPadding > 0 ) && align != 'full' &&
+							<RangeControl
+								label={ __( 'Rounded Corners' ) }
+								value={ backgroundRadius }
+								onChange={ ( nextBackgroundRadius ) => setAttributes( {  backgroundRadius: nextBackgroundRadius } ) }
+								min={ 0 }
+								max={ 20 }
+								step={ 1 }
+							/>
+						}
+						{ backgroundImg && (
+							<Fragment>
 								<SelectControl
 									label={ __( 'Repeat' ) }
 									className="components-background-display-select--blockgallery"

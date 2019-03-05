@@ -47,6 +47,10 @@
 	}
 }
 
+.components-blockgallery-inspector__background-image-overlay {
+	margin-bottom: 10px !important;
+}
+
 .components-blockgallery-inspector__lightbox-style {
 	margin-top: -0.75em !important;
 }
@@ -65,19 +69,4 @@
 
 .components-blockgallery-inspector__autoplayspeed-select {
 	margin-bottom: 1.75em !important;
-}
-
-.components-blockgallery-inspector__background-size {
-	margin-bottom: 2em !important;
-}
-
-.components-button--blockgallery-remove-background-image {
-	// justify-content: center;
-	// line-height: 26px;
-	// width: 100%;
-}
-
-.components-blockgallery-inspector__background-image-overlay {
-	margin-bottom: 0.7em !important;
-	margin-top: -0.7em !important;
 }
