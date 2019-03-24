@@ -171,8 +171,6 @@ class Block_Gallery_Block_Assets {
 	 */
 	public function frontend_scripts() {
 
-		global $post;
-
 		// Define where the asset is loaded from.
 		$dir = Block_Gallery()->asset_source( 'js' );
 
@@ -180,7 +178,7 @@ class Block_Gallery_Block_Assets {
 		$vendors_dir = Block_Gallery()->asset_source( 'js', 'vendors' );
 
 		// Masonry block.
-		if ( is_home() || ( $post && null !== $post->post_content && strpos( $post->post_content, 'wp-block-blockgallery-masonry' ) ) ) {
+		if(has_block('blockgallery/masonry')){
 			wp_enqueue_script(
 				$this->_slug . '-masonry',
 				$dir . $this->_slug . '-masonry' . BLOCKGALLERY_ASSET_SUFFIX . '.js',
@@ -191,7 +189,7 @@ class Block_Gallery_Block_Assets {
 		}
 
 		// Carousel block.
-		if ( is_home() || ( $post && null !== $post->post_content && strpos( $post->post_content, 'wp-block-blockgallery-carousel' ) ) ) {
+		if(has_block('blockgallery/carousel')){
 			wp_enqueue_script(
 				$this->_slug . '-flickity',
 				$vendors_dir . 'flickity' . BLOCKGALLERY_ASSET_SUFFIX . '.js',
