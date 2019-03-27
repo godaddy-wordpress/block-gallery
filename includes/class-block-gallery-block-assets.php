@@ -178,7 +178,7 @@ class Block_Gallery_Block_Assets {
 		$vendors_dir = Block_Gallery()->asset_source( 'js', 'vendors' );
 
 		// Masonry block.
-		if(has_block('blockgallery/masonry')){
+		if ( has_block( 'blockgallery/masonry' ) ) {
 			wp_enqueue_script(
 				$this->_slug . '-masonry',
 				$dir . $this->_slug . '-masonry' . BLOCKGALLERY_ASSET_SUFFIX . '.js',
@@ -189,7 +189,7 @@ class Block_Gallery_Block_Assets {
 		}
 
 		// Carousel block.
-		if(has_block('blockgallery/carousel')){
+		if ( has_block( 'blockgallery/carousel' ) ) {
 			wp_enqueue_script(
 				$this->_slug . '-flickity',
 				$vendors_dir . 'flickity' . BLOCKGALLERY_ASSET_SUFFIX . '.js',
