@@ -10,7 +10,7 @@ const category = {
 };
 
 // Custom foreground icon color based on the Block Gallery branding
-const iconColor = '#f05d7b';
+const iconColor = '#1e35b9';
 
 // Register block icons
 import icons from './utils/block-category';
