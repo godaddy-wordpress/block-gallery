@@ -61,29 +61,35 @@ If you enjoy Block Gallery, check out [CoBlocks](https://wordpress.org/plugins/c
 == Frequently Asked Questions ==
 
 = How do I start using Gutenberg? =
-To get the full experience of the next-generation WordPress block editor,  you'll need a Gutenberg-ready WordPress theme, like [Tabor](https://themebeans.com/themes/tabor?utm_medium=block-gallery-lite&utm_source=readme&utm_campaign=readme&utm_content=tabor) or [Stash](https://themebeans.com/themes/stash?utm_medium=block-gallery-lite&utm_source=readme&utm_campaign=readme&utm_content=stash). Then install the [Gutenberg](https://wordpress.org/plugins/gutenberg/) WordPress plugin. That's it! 💥
+To get the full experience of the next-generation WordPress block editor, you'll need a Gutenberg-ready WordPress theme, like [Tabor](https://themebeans.com/themes/tabor?utm_medium=block-gallery-lite&utm_source=readme&utm_campaign=readme&utm_content=tabor) or [Stash](https://themebeans.com/themes/stash?utm_medium=block-gallery-lite&utm_source=readme&utm_campaign=readme&utm_content=stash). Then install the [Gutenberg](https://wordpress.org/plugins/gutenberg/) WordPress plugin. That's it! 💥
 
 = What themes work with Block Gallery =
 Most WordPress themes that have baked in Gutenberg support will work with Block Gallery. If you’re looking for exceptional themes, check out my theme catalogue at [ThemeBeans](https://themebeans.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery).
 
 = Is Block Gallery free? =
-Yes! Block Gallery's core features are absolutely free. I am working on a a Pro version of Block Gallery, which will include more gallery blocks and enhanced features. [Subscribe here](https://wpblockgallery.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=subscribe-here) and I'll let you know when it's ready.
+Yes! Block Gallery's core features are absolutely free.
 
 = Where can I ask for help? =
 Please reach out via the official [support forum on WordPress.org](https://wordpress.org/support/plugin/block-gallery/).
 
 == Changelog ==
 
-= 1.1.6, February 15, 2019 =
+= 1.1.7 =
+* New: Add official support for Gutenberg 5.4 and the upcoming WordPress 5.2 release 🎊
+* New: Add support for Gutenberg 5.2+ Focal Point pickers for background images
+* Tweak: Use has_block() to determine whether a $post contains a specific block
+* Tweak: Background opacity value now goes from 0-100%
+
+= 1.1.6 =
 * New: Block Gallery now supports WordPress 5.1 and Gutenberg 5.0
 * Tweak: Add Block Gallery color to icons within the block inserter
 
-= 1.1.5, January 1, 2019 =
+= 1.1.5 =
 * Tweak: Use the MediaUploadCheck component to make sure the current user has upload permissions
 * Fix: Resolve lodash/isEmpty issue with the npm start command [thanks @mtekk]
 * Fix: Resolve issue where image radius styles were not applied to child captions [thanks @wido]
 
-= 1.1.4, December 12, 2018 =
+= 1.1.4 =
 * New: Add toggles for turning image captions on/off for each block
 * New: Add new "none" Caption Style option
 * New: Add new options for slider autoplay times up to 10 seconds [thanks @batracy]
@@ -93,16 +99,16 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 * Fix: Resolve PHP 5.4.16 compatibility issue [thanks @ndcadmin]
 * Tweak: Adjust Stacked Inspector interface
 
-= 1.1.3, December 07, 2018 =
+= 1.1.3 =
 * Fix: Resolve issue where block assets were not loading on the blogroll
 
-= 1.1.2, December 06, 2018 =
+= 1.1.2 =
 * New: Add minor style touch-ups for the default Twenty Nineteen WordPress theme
 
-= 1.1.1, December 05, 2018 =
+= 1.1.1 =
 * Tweak: Remove Gutenberg check
 
-= 1.1.0, December 04, 2018 =
+= 1.1.0 =
 * New: Add ability to transform Image blocks to Block Gallery blocks
 * New: Add ":" prefix transforms using each blocks' name - i.e. ":masonry",
 * New: Load frontend assets only on pages that need them
@@ -119,18 +125,18 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 * Tweak: Hide the GalleryUpload component if not selected
 * Tweak: Improve Flickity focus styles for better theme compatibility
 
-= 1.0.9, November 26, 2018 =
+= 1.0.9 =
 Tweak: Use better specificity for figcaption margins
 Tweak: Add inherit color for caption link hovers
 
-= 1.0.8, November 20, 2018 =
+= 1.0.8 =
 * Tweak: Remove unnecessary style dependancies
 
-= 1.0.7, November 19, 2018 =
+= 1.0.7 =
 * Tweak: Indicate uploading using a spinner
 * Tweak: Adjust figcaption margin for better theme compatibility
 
-= 1.0.6, November 16, 2018 =
+= 1.0.6 =
 * Tweak: Adjust mobile styles for the block inspector controls UI
 * Tweak: Adjust UI of SizeControl controls
 * Tweak: Adjust pickRelevantMediaFiles
@@ -139,7 +145,7 @@ Tweak: Add inherit color for caption link hovers
 * Tweak: Tweak mobile styles for Carousel block arrows
 * Tweak: Adjust height of Stacked image uploader
 
-= 1.0.5, November 15, 2018 =
+= 1.0.5 =
 * Tweak: Ensure the last figcaption in the Stacked Block is styled appropriately
 * Tweak: Update styling of feedback notice
 * Tweak: Improve language of the gallery instructions for placeholders
@@ -150,10 +156,10 @@ Tweak: Add inherit color for caption link hovers
 * Tweak: Add tab navigation support for gallery images
 * Tweak: Tweak editor styles for captions
 
-= 1.0.4, November 06, 2018 =
+= 1.0.4 =
 * Fix: Resolve issue with the Stacked block shadow attribute
 
-= 1.0.3, November 06, 2018 =
+= 1.0.3 =
 * New: Add support for adding a primary caption to the Carousel block
 * New: Add font size option for the Stacked gallery block
 * Tweak: Improve UI of the slider arrows within the editor
@@ -164,14 +170,14 @@ Tweak: Add inherit color for caption link hovers
 * Fix Improved reliablity of the Stacked block when triggering fullwidth imagery
 * Fix: Improve display of carousel arrows
 
-= 1.0.2, November 02, 2018 =
+= 1.0.2 =
 * Tweak: Improve figcaption display
 * Tweak: Improve block category registration
 * Tweak: Add icon to the block category for Gutenberg 4.2+
 * Fix: Color palette colors properly render in the editor
 
-= 1.0.1, October 30, 2018 =
+= 1.0.1 =
 * New: Improve block registration
 
-= 1.0.0, October 25, 2018 =
+= 1.0.0 =
 * Initial release on WordPress.org. Enjoy!
