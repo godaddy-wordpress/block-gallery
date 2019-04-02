@@ -79,6 +79,7 @@ class Block_Gallery_Block_Assets {
 		add_action( 'init', array( $this, 'editor_assets' ) );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'localization' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'frontend_scripts' ) );
+		add_action( 'the_post', array( $this, 'frontend_scripts' ) );
 	}
 
 	/**
