@@ -8,7 +8,7 @@
  * Version: 1.1.6
  * Text Domain: @@textdomain
  * Domain Path: languages
- * Tested up to: @@pkg.tested_up_to
+ * Tested up to: 5.2
  *
  * Block Gallery is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

@@ -4,7 +4,7 @@ Plugin URI: https://wpblockgallery.com
 Contributors: richtabor, thatplugincompany
 Tags: blocks, gutenberg, gallery, page builder, gutenberg blocks, editor, photo gallery, masonry, block, slider, carousel
 Requires at least: 4.9.0
-Tested up to: @@pkg.tested_up_to
+Tested up to: 5.2
 Requires PHP: 5.2.4
 Stable tag: @@pkg.version
 License: GPL-3.0
