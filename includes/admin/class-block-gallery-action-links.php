@@ -2,10 +2,7 @@
 /**
  * Add links to @@pkg.title on the plugins admin page.
  *
- * @package   @@pkg.title
- * @author    @@pkg.author
- * @link      @@pkg.author_uri
- * @license   @@pkg.license
+ * @package Block Gallery
  */
 
 // Exit if accessed directly.
