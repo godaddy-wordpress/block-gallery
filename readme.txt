@@ -70,9 +70,6 @@ Please reach out via the official [support forum on WordPress.org](https://wordp
 
 == Changelog ==
 
-= 1.1.7 =
-* Update: GPL-2.0 License
-
 = 1.1.6 =
 * New: Block Gallery now supports WordPress 5.1 and Gutenberg 5.0
 * Tweak: Add Block Gallery color to icons within the block inserter
