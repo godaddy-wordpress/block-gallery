@@ -23,10 +23,7 @@
  * You should have received a copy of the GNU General Public License
  * along with @@pkg.title. If not, see <http://www.gnu.org/licenses/>.
  *
- * @package   @@pkg.title
- * @author    @@pkg.author
- * @link      @@pkg.author_uri
- * @license   @@pkg.license
+ * @package Block Gallery
  */
 
 // Exit if accessed directly.

@@ -2,10 +2,7 @@
 /**
  * Modifies the "Thank you" text displayed in the admin footer
  *
- * @package   @@pkg.title
- * @author    @@pkg.author
- * @link      @@pkg.author_uri
- * @license   @@pkg.license
+ * @package Block Gallery
  */
 
 // Exit if accessed directly.
