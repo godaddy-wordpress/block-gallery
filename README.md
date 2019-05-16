@@ -1,6 +1,6 @@
 # Block Gallery — WordPress Gallery Gutenberg blocks
 
-[![WordPress plugin](https://img.shields.io/wordpress/plugin/dt/block-gallery.svg?style=flat)](https://wordpress.org/plugins/block-gallery/) [![WordPress plugin](https://img.shields.io/wordpress/plugin/v/block-gallery.svg?style=flat)](https://wordpress.org/plugins/block-gallery/) [![WordPress](https://img.shields.io/wordpress/v/block-gallery.svg?style=flat)]() [![License](https://img.shields.io/badge/license-GPL--3.0%2B-red.svg)](https://github.com/thatplugincompany/block-gallery/blob/master/license.txt)
+[![WordPress plugin](https://img.shields.io/wordpress/plugin/dt/block-gallery.svg?style=flat)](https://wordpress.org/plugins/block-gallery/) [![WordPress plugin](https://img.shields.io/wordpress/plugin/v/block-gallery.svg?style=flat)](https://wordpress.org/plugins/block-gallery/) [![WordPress](https://img.shields.io/wordpress/v/block-gallery.svg?style=flat)]() [![License](https://img.shields.io/badge/license-GPL--3.0%2B-red.svg)](https://github.com/godaddy/block-gallery/blob/master/license.txt)
 
 [![Block Gallery — Radically stunning gallery blocks built exclusively for the new WordPress Gutenberg block editor. ](https://user-images.githubusercontent.com/1813435/49888455-0d8a5680-fe0d-11e8-80c3-0f8765f7de9d.jpg)](https://wpblockgallery.com?utm_medium=block-gallery-github&utm_source=readme&utm_campaign=readme&utm_content=banner)
 
@@ -14,11 +14,11 @@ Block Gallery was selected as this year’s winner in the Best Solution category
 
 ## Installation ##
 1. Install the offical [Gutenberg](https://wordpress.org/plugins/gutenberg/) plugin. Note that Gutenberg is not suggested for use on production sites.
-2. [Download the latest release](https://github.com/thatplugincompany/block-gallery/releases) from the GitHub repository, or..
+2. [Download the latest release](https://github.com/godaddy/block-gallery/releases) from the GitHub repository, or..
 3. Download the plugin from the [WordPress plugin directory](https://wordpress.org/plugins/block-gallery/).
 
 ## Development ##
-1. Clone the GitHub repository: `https://github.com/thatplugincompany/block-gallery.git`
+1. Clone the GitHub repository: `https://github.com/godaddy/block-gallery.git`
 2. Browse to the folder in the command line.
 3. Run the `npm install` command to install the plugin's dependencies within a /node_modules/ folder.
 4. Run the `npm start` command for development.
@@ -28,16 +28,16 @@ Block Gallery was selected as this year’s winner in the Best Solution category
 Need help? This is a developer's portal for Block Gallery — and should not be used for general support and queries. Please visit the [Block Gallery — support forum on WordPress.org](https://wordpress.org/support/plugin/block-gallery) if you need help using the plugin.
 
 ## Bugs ##
-If you find a 🐞 or an issue, [create an issue](https://github.com/thatplugincompany/block-gallery/issues/new).
+If you find a 🐞 or an issue, [create an issue](https://github.com/godaddy/block-gallery/issues/new).
 
 ## Contributions ##
-Please read the [guidelines for contributing](https://github.com/thatplugincompany/block-gallery/blob/master/CONTRIBUTING.md) to Block Gallery —. Anyone is welcome to contribute!
+Please read the [guidelines for contributing](https://github.com/godaddy/block-gallery/blob/master/CONTRIBUTING.md) to Block Gallery —. Anyone is welcome to contribute!
 
 There are various ways you can contribute:
 
-1. Raise an [Issue](https://github.com/thatplugincompany/block-gallery/issues/new) on GitHub
+1. Raise an [Issue](https://github.com/godaddy/block-gallery/issues/new) on GitHub
 2. Send a pull request with your bug fixes and/or new features
-3. Provide feedback and suggestions on [enhancements](https://github.com/thatplugincompany/block-gallery/issues?direction=desc&labels=Enhancement&page=1&sort=created&state=open)
+3. Provide feedback and suggestions on [enhancements](https://github.com/godaddy/block-gallery/issues?direction=desc&labels=Enhancement&page=1&sort=created&state=open)
 
 ## Screenshots
 
