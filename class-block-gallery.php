@@ -3,8 +3,8 @@
  * Plugin Name: Block Gallery
  * Plugin URI: https://wpblockgallery.com
  * Description: The most advanced suite of gallery blocks for the Gutenberg block editor. Create stunning <strong>masonry</strong>, <strong>carousel</strong> and <strong>stacked</strong> galleries in seconds, with the brilliantly intuitive interface. Block Gallery is absolutely the best collection of native editor gallery blocks in the world.
- * Author: Rich Tabor
- * Author URI: https://richtabor.com
+ * Author: GoDaddy
+ * Author URI: https://www.godaddy.com
  * Version: 1.1.6
  * Text Domain: @@textdomain
  * Domain Path: languages
