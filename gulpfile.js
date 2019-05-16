@@ -304,16 +304,8 @@ gulp.task( 'variables', function(done) {
 			replacement: pkg.license
 		},
 		{
-			match: 'pkg.copyright',
-			replacement: pkg.copyright
-		},
-		{
 			match: 'textdomain',
 			replacement: pkg.name
-		},
-		{
-			match: 'pkg.downloadid',
-			replacement: pkg.downloadid
 		},
 		{
 			match: 'pkg.description',
