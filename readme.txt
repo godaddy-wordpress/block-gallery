@@ -1,7 +1,7 @@
 === Block Gallery - Photo Gallery Gutenberg Blocks ===
-Author URI: https://richtabor.com
+Author URI: https://www.godaddy.com
 Plugin URI: https://wpblockgallery.com
-Contributors: richtabor, thatplugincompany
+Contributors: richtabor
 Tags: blocks, gutenberg, gallery, page builder, gutenberg blocks, editor, photo gallery, masonry, block, slider, carousel
 Requires at least: 4.9.0
 Tested up to: 5.2
@@ -36,10 +36,6 @@ We've built a highly interactive and intuitive experience with a focus on speed 
 * Masonry Gallery - ([demo](https://richtabor.com/block-gallery-blocks/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery-masonry-demo#masonry))
 * Fullscreen Stacked Gallery - ([demo](https://richtabor.com/block-gallery-blocks/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery-stacked-demo#stacked))
 * Carousel Slider - ([demo](https://richtabor.com/block-gallery-blocks/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery-carousel-demo#carousel))
-* More in the works! — ([subscribe for updates](https://wpblockgallery.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=subscribe-for-updates))
-
-## From a trusted developer
-This plugin is created and maintained by [Rich Tabor](https://richtabor.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery) from [ThemeBeans](https://themebeans.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery) and open for contributions on [GitHub](https://github.com/thatplugincompany/block-gallery).
 
 ## Works with CoBlocks
 If you enjoy Block Gallery, check out [CoBlocks](https://wordpress.org/plugins/coblocks), a suite of page builder WordPress blocks and tools for the Gutenberg editor — also built by Rich. It's fantastic!
@@ -67,7 +63,7 @@ To get the full experience of the next-generation WordPress block editor,  you'l
 Most WordPress themes that have baked in Gutenberg support will work with Block Gallery. If you’re looking for exceptional themes, check out my theme catalogue at [ThemeBeans](https://themebeans.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery).
 
 = Is Block Gallery free? =
-Yes! Block Gallery's core features are absolutely free. I am working on a a Pro version of Block Gallery, which will include more gallery blocks and enhanced features. [Subscribe here](https://wpblockgallery.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=subscribe-here) and I'll let you know when it's ready.
+Yes! Block Gallery's core features are absolutely free.
 
 = Where can I ask for help? =
 Please reach out via the official [support forum on WordPress.org](https://wordpress.org/support/plugin/block-gallery/).
