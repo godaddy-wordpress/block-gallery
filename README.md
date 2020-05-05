@@ -1,8 +1,8 @@
 # Block Gallery — WordPress Gallery Gutenberg blocks
 
-[![WordPress plugin](https://img.shields.io/wordpress/plugin/dt/block-gallery.svg?style=flat)](https://wordpress.org/plugins/block-gallery/) [![WordPress plugin](https://img.shields.io/wordpress/plugin/v/block-gallery.svg?style=flat)](https://wordpress.org/plugins/block-gallery/) [![WordPress](https://img.shields.io/wordpress/v/block-gallery.svg?style=flat)]() [![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg)](https://github.com/godaddy/block-gallery/blob/master/license.txt)
+#### Notice: Block Gallery in being deprecated in favor of the wonderful gallery blocks within <a href="https://github.com/godaddy-wordpress/block-gallery/">CoBlocks</a>. Each Block Gallery block may be transformed into it's corresponding CoBlocks gallery block. 
 
-[![Block Gallery — Radically stunning gallery blocks built exclusively for the new WordPress Gutenberg block editor. ](https://user-images.githubusercontent.com/1813435/49888455-0d8a5680-fe0d-11e8-80c3-0f8765f7de9d.jpg)](https://wpblockgallery.com?utm_medium=block-gallery-github&utm_source=readme&utm_campaign=readme&utm_content=banner)
+-
 
 The first of its kind, [Block Gallery](https://wpblockgallery.com/) offers an unrivaled drag and drop gallery building experience in WordPress 5.0. Drop your images in your choice of photo gallery block, customize display settings, hit publish.
 
