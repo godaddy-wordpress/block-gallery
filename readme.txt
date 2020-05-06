@@ -12,6 +12,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
+## Important notice
+**Block Gallery in being deprecated** in favor of the wonderful gallery blocks within [CoBlocks](https://wordpress.org/plugins/coblocks). Each Block Gallery block may be transformed into it's corresponding CoBlocks gallery block via traditional block transforms.
+
 [Block Gallery](https://wpblockgallery.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=block-gallery) is a suite of beautiful gallery Gutenberg blocks for photographers, artists, writers and content marketers. This is the smartest, most powerful photo gallery plugin for WordPress. Block Gallery is absolutely brilliant any way you look at it.
 
 >Good news! Block Gallery was selected as this year’s winner in the Best Solution category of the [Automattic Design Awards](https://automatticdesignaward.blog/2018/12/08/the-winners/) at WordCamp US 2018. 🔥🔥
